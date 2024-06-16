@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+		
+------------------------Hostile-----------
+
+<FactionDef ParentName="FungiFactionBaseHostile" Name="FungiFactionBaseAIHostileSpore" Abstract="True">
+    <defName>FungiHostileSpore</defName>
+    <label>Hostile fungi spore tribe</label>
+    <permanentEnemy>false</permanentEnemy>
+	<naturalEnemy>true</naturalEnemy>
+		<description>Nestled within the shadows of the forest, a tribe of xenophobic Fungis lurks, harboring a deep-seated distrust of any outsiders who dare to encroach upon their territory. This enigmatic tribe exists as a strange fusion of Stone Age customs and advanced biological technology, blending the ancient with the modern in eerie harmony. Renowned for their mastery in the utilization of spores and diseases as lethal weapons, they ruthlessly annihilate any pesky humans who dare to cross their path, leaving behind only devastation and despair in their wake.</description>
+		
+		<pawnSingular>Fungi</pawnSingular>
+		<pawnsPlural>Fungis</pawnsPlural>
+	<basicMemberKind>FungiMelee</basicMemberKind>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>false</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<factionIconPath>World/SporeVillage</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>	
+			
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		
+		<techLevel>Neolithic</techLevel>
+	<allowedCultures>
+		<li>Corunan</li>
+	</allowedCultures>
+		<backstoryCategories>
+			<li>Tribal</li>
+		</backstoryCategories>
+		<leaderTitle>Leader of Spore</leaderTitle>
+	
+		<caravanTraderKinds>
+			<li>Caravan_Fungi_Spore</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Caravan_Fungi_Spore</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Fungi_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-40</min>
+			<max>50</max>
+		</allowedArrivalTemperatureRange>		
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>		
+		
+				<pawnGroupMakers>
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+                                        <MoldForce>5</MoldForce>
+					<SporeForce>12</SporeForce>
+					<FungiChief>3</FungiChief>
+                                        <FungiPlague>5</FungiPlague>
+                                        <FleshLord>8</FleshLord>
+                                        <FungiMelee>15</FungiMelee>
+                                        <Shroomimal>20</Shroomimal>
+                                        <Shroomigiant>5</Shroomigiant>
+			  </options>
+			</li>	
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+                                        <MoldForce>5</MoldForce>
+					<SporeForce>5</SporeForce>
+					<FungiChief>3</FungiChief>
+                                        <Shroomimal>12</Shroomimal>
+                                        <Shroomigiant>5</Shroomigiant>
+			  </options>
+			</li>		
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+                                        <MoldForce>5</MoldForce>
+					<SporeForce>12</SporeForce>
+					<FungiChief>3</FungiChief>
+                                        <FungiPlague>5</FungiPlague>
+                                        <FleshLord>8</FleshLord>
+                                        <FungiMelee>15</FungiMelee>
+                                        <Shroomimal>20</Shroomimal>
+				</options>
+			</li>
+			
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<FungiTrader>1</FungiTrader>
+				</traders>
+				<carriers>
+
+					<Shroomigiant>10</Shroomigiant>
+                                        <Alpaca>1</Alpaca>
+
+				</carriers>
+				<guards>
+                                        <FungiPlague>1</FungiPlague>
+                                        <FungiMelee>1</FungiMelee>
+                                        <Shroomimal>2</Shroomimal>
+                                        <Shroomigiant>1</Shroomigiant>					
+				</guards>
+			</li>
+
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+                                        <MoldForce>5</MoldForce>
+					<SporeForce>12</SporeForce>
+					<FungiChief>3</FungiChief>
+                                        <FungiPlague>5</FungiPlague>
+                                        <FleshLord>8</FleshLord>
+                                        <FungiMelee>15</FungiMelee>
+                                        <Shroomimal>20</Shroomimal>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	<raidLootValueFromPointsCurve>
+		<points>
+			<li>(35,     30)</li>
+			<li>(100,   200)</li>
+			<li>(1000,  500)</li>
+			<li>(2000,  800)</li>
+			<li>(4000, 1000)</li>
+		</points>
+	</raidLootValueFromPointsCurve>
+	</FactionDef>
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+</Defs>

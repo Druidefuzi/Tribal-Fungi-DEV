@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Name="FungiBase" Abstract="True">
+		<defaultFactionType>FungiFactionBase</defaultFactionType>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>2~6</initialResistanceRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="FungiMelee" Parentname="FungiBase">
+		<defName>FungiMelee</defName>
+		<label>fighter</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>10~16</initialResistanceRange>
+			
+		
+		<initialWillRange>4~6</initialWillRange>
+
+		<combatPower>35</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>1.8</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>300</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>155</min>
+			<max>450</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NeolithicMeleeDecent</li>
+			<li>NeolithicMeleeAdvanced</li>
+			<li>FungiMelee</li>
+		</weaponTags>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	<PawnKindDef Parentname="FungiMelee">
+		<defName>FungiTrader</defName>
+		<label>keeper</label>
+		<trader>true</trader>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+  
+		<invNutrition>3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>35</combatPower>
+		<minGenerationAge>2</minGenerationAge>
+		<maxGenerationAge>13</maxGenerationAge>
+		<gearHealthRange>
+			<min>1</min>
+			<max>2.5</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>450</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>500</min>
+			<max>1200</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NeolithicMeleeAdvanced</li>
+                        <li>NeolithicMeleeDecent</li>
+
+		</weaponTags>	
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>	
+	</PawnKindDef>
+	
+	<PawnKindDef Name="FungiRanged" Parentname="FungiBase">
+		<defName>FungiRanged</defName>
+		<label>Sporler</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+  
+    
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<combatPower>35</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>350</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NeolithicRangedBasic</li>
+                        <li>NeolithicRangedHeavy</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+<PawnKindDef Name="FungiPlague" Parentname="FungiBase">
+		<defName>FungiPlague</defName>
+		<label>plague</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiPlague</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+                        <li>FungiPlague</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+<PawnKindDef Name="SporeForce" Parentname="FungiBase">
+		<defName>SporeForce</defName>
+		<label>Spore force</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiSpore</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>60</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+                        <li>SporeForce</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+<PawnKindDef Name="MoldForce" Parentname="FungiBase">
+		<defName>MoldForce</defName>
+		<label>Mold force</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiSpore</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>60</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+                        <li>FungiMold</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+<PawnKindDef Name="FleshLord" Parentname="FungiBase">
+		<defName>FleshLord</defName>
+		<label>Flesh lord</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiFleshlord</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+                <li>FleshLord</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+<PawnKindDef Name="HeartLord" Parentname="FungiBase">
+		<defName>Heartlord</defName>
+		<label>Heart lord</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiFleshlord</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+              <li>HeartLord</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+
+<PawnKindDef Name="FungiWorm" Parentname="FungiBase">
+		<defName>FungiWorm</defName>
+		<label>Wormer</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+	<initialResistanceRange>10~16</initialResistanceRange>
+
+
+	<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<combatPower>100</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>350</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags>
+                        <li>FungiWorm</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	<PawnKindDef Parentname="FungiBase">
+		<defName>FungiChief</defName>
+		<label>primogenitor</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+		  <li>
+			<categories>
+                    <li>FungiBackstory</li>
+			</categories>
+		  </li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>15</minGenerationAge>
+		<combatPower>50</combatPower>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<itemQuality>Good</itemQuality>
+		<factionLeader>true</factionLeader>
+		<gearHealthRange>
+			<min>0.75</min>
+			<max>3.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>500</min>
+			<max>1500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>750</min>
+			<max>950</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Fleshlord</li>
+			<li>Heartlord</li>
+                        <li>FungiWorm</li>
+		</weaponTags>
+		<apparelTags>
+<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>	
+</Defs>

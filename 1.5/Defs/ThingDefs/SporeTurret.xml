@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_SporeTurret</defName>
+    <label>Spore Turret</label>
+    <description>Perched atop a bracket of arms, the shrooman-infused lung serves as a sinister weapon of fungal warfare. With each breath, it expels clouds of malevolent spores, saturating the air and infiltrating the bodies of unsuspecting targets. Upon inhalation, these spores take root within the victim's flesh, initiating a rapid and insidious infection that spreads throughout the body. As the fungal tendrils take hold, the victim becomes consumed by the relentless advance of the infection, their fate sealed by the unholy alliance of shrooman and arm. Beware the spore-laden breath of this abomination, for its touch heralds a fate worse than death.</description>
+    <thingClass>Building_TurretGun</thingClass>
+	<drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/SporeTurretIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Spore Storage</fuelLabel>
+        <fuelGizmoLabel>Spore Storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>30</fuelCapacity>
+		  
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.99</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1.0</minimumFueledThreshold>
+        <fuelMultiplier>5</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of Spores</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>50</DruidShroomans>
+    </costList>
+	  
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <building>
+	  <combatPower>45</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_SporeTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+	 <designationHotKey>Misc2</designationHotKey>
+    <researchPrerequisites>
+      <li>FungiSporeFirst</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+
+ <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_SporeTurret</defName>
+    <label>Spore Gun</label>
+    <description>Perched atop a bracket of arms, the shrooman-infused lung is a grotesque organ of fungal warfare. Its purpose is clear: to expel clouds of malevolent spores with each breath, saturating the air and infiltrating the bodies of unsuspecting targets. Once inhaled, these insidious spores take root within the victim's flesh, initiating a rapid and relentless infection that spreads like wildfire. With each exhalation, the lung becomes a conduit for the spread of fungal corruption, its vile emissions sealing the fate of those unfortunate enough to be caught in its path. Beware the spore-laden breath of this abomination, for its touch heralds a fate worse than death.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/SporeTurret_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 
+ 
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+		<RangedWeapon_Cooldown>2</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Spore</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>20</range>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <burstShotCount>4</burstShotCount>
+        <soundCast>SporegunSound</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>2.5</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Spore</defName>
+    <label>Sporecloud</label>
+    <graphicData>
+      <texPath>Things/Projectile/Turret_Spore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>FlesheatingSporesTurret</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+
+------------------------Humimal-------------------------------
+  <ThingDef ParentName="BuildingBase">
+    <defName>Turret_HumimalTurret</defName>
+    <label>Humimal Turret</label>
+    <description>A writhing mass of flesh, this abomination serves as a twisted conduit for the transformation of humans into humimals. Upon contact, victims are subjected to a frenzied metamorphosis, their bodies contorted into monstrous forms imbued with savage instincts. Launched into battle in a berserk state, these newly minted humimals become relentless assailants, striking fear into the hearts of enemies with their ferocious onslaught. Those who survive the chaos of combat are subdued and brought into the fold of your colony, their wild instincts tamed through unknown means. Beware the horrifying power of this fleshly abomination, for its influence knows no bounds, transforming friend into foe and reshaping the very fabric of existence.WARNING: NEVER let a human load this turret. The pawn will disappear and the game will freeze.Only use alien races to load humans into this turret.</description>
+    <thingClass>Building_TurretGun</thingClass>
+	  <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurretDouble</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/HeartTurretDoubleIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+       </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Meat Storage</fuelLabel>
+        <fuelGizmoLabel>Meat Storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>100</fuelCapacity>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <showFuelGizmo>false</showFuelGizmo>
+        <minimumFueledThreshold>1.0</minimumFueledThreshold>
+        <fuelMultiplier>1</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>false</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of Meat</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>10</DruidShroomans>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <building>
+		<combatPower>45</combatPower>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_HumimalTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>FungiBreederFifth</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+ <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_HumimalTurret</defName>
+    <label>Humimal Gun</label>
+    <description>The Breeding chamber of the humimal turret.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HumimalThrower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>SporegunSound</soundInteract>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <DeteriorationRate>0</DeteriorationRate>
+		<RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+          <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+       <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <defaultProjectile>Humimalbullet</defaultProjectile>
+        <consumeFuelPerShot>50</consumeFuelPerShot>
+        <warmupTime>1.5</warmupTime>
+        <range>45</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>Humimalbullet</defName>
+		<thingClass>ChickmanGun.Humimalbullet</thingClass>
+		<label>Humimals</label>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Humimal/Bullet</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1.8)</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>12</speed>
+		</projectile>
+	</ThingDef>
+
+
+
+----------------------Humike------------------------------
+
+<ThingDef ParentName="BuildingBase">
+    <defName>Turret_HumikeTurret</defName>
+    <label>Humike Thrower</label>
+    <description>A grotesque mass of flesh, this abomination serves as a conduit for the transformation of humans into humikes—human-like beings with the venomous traits of snakes. Upon contact, victims undergo a harrowing metamorphosis, their bodies morphing into twisted amalgamations of human and serpent. Launched into battle in a berserk state, these newly formed humikes unleash their venomous fury upon enemies, striking with deadly precision and ferocity. Those who endure the carnage and emerge victorious are subdued and brought into your colony, their wild instincts subdued through mysterious means. Beware the terrifying power of this fleshy monstrosity, for it wields the ability to reshape life itself in its gruesome image.WARNING: NEVER let an human load this turret. It will disappear and the game will freeze.Only use alien races to load humans into this turret.</description>
+    <thingClass>Building_TurretGun</thingClass>
+	<drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurretDouble</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/HumikeThrowerIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+       </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Breakdownable"/>
+		<li Class="CompProperties_Refuelable">
+        <fuelLabel>Meat Storage</fuelLabel>
+        <fuelGizmoLabel>Meat Storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </fuelFilter>
+      
+        <fuelCapacity>100</fuelCapacity>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1.0</minimumFueledThreshold>
+        <fuelMultiplier>1</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of Humans</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>10</DruidShroomans>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_HumikeTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>FungiBreederFifth</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+ <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_HumikeTurret</defName>
+    <label>Humike thrower</label>
+    <description>The Breeding chamber of the humike turret.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HumikeThrower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>SporegunSound</soundInteract>
+
+
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+          <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+       <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <defaultProjectile>Humikebullet</defaultProjectile>
+        <consumeFuelPerShot>50</consumeFuelPerShot>
+        <warmupTime>3</warmupTime>
+        <range>40</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>Humikebullet</defName>
+		<thingClass>ChickmanGun.Humikebullet</thingClass>
+		<label>Worms</label>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Humike/Bullet</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1.5)</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>12</speed>
+		</projectile>
+	</ThingDef>
+
+<ThingDef ParentName="BuildingBase">
+    <defName>Turret_WormiTurret</defName>
+    <label>Infestator</label>
+    <description>Amidst decay, the Worm Infuser stands tall,Capturing victims, transforming them, enthralled.Once human, now drones in the horde's thrall,A grim fate, within its shadowy sprawl.</description>
+    <thingClass>Building_TurretGun</thingClass>
+	<drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurretDouble</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/WormiTurretIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Mannable">
+        <manWorkType>Violent</manWorkType>
+       </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Meat Storage</fuelLabel>
+        <fuelGizmoLabel>Meat Storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <fuelCapacity>100</fuelCapacity>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1.0</minimumFueledThreshold>
+        <fuelMultiplier>1</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of Humans</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>10</DruidShroomans>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_WormiTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+	
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>InfestationFungi</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+ <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_WormiTurret</defName>
+    <label>Infestator hatchcannon</label>
+    <description>The breeding chamber of the infestator. Poor humans wander in and agressive psychopathic wormoid drones come out of it.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/WormiTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>SporegunSound</soundInteract>
+    
+
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+          <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+       <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <defaultProjectile>Wormibullet</defaultProjectile>
+        <consumeFuelPerShot>50</consumeFuelPerShot>
+        <warmupTime>3</warmupTime>
+        <range>30</range>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+  </ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>Wormibullet</defName>
+		<thingClass>ChickmanGun.Wormibullet</thingClass>
+	
+		<label>Wormoid</label>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Wormi/Body/Bullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>12</speed>
+		</projectile>
+	</ThingDef>
+  
+<ThingDef ParentName="BuildingBase">
+    <defName>Turret_WorminfestorTurret</defName>
+    <label>Infestation Turret</label>
+    <description>One of the first attempts of the infested tribe to corrupt living beings.After enough damage is applied, the target is growing a wormoid inside of it, which will grow faster the more damage is applied.</description>
+    <thingClass>Building_TurretGun</thingClass>
+	<drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/InfestorTurretIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Worm storage</fuelLabel>
+        <fuelGizmoLabel>Worm storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>DruidShroomworms</li>
+          </thingDefs>
+        </fuelFilter>
+        <showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+        <fuelCapacity>40</fuelCapacity>
+        <initialFuelPercent>0.5</initialFuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1.0</minimumFueledThreshold>
+        <fuelMultiplier>2</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of Worms</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>1</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>50</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>10</DruidShroomans>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+    <building>
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_WorminfestorTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>FungiInfestSecond</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+ <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_WorminfestorTurret</defName>
+    <label>Infestation worm thrower</label>
+    <description>One of the first attempts of the infested tribe to corrupt living beings.After enough damage is applied, the target is growing a wormoid inside of it, which will grow faster the more damage is applied.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/InfestorTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>SporegunSound</soundInteract>
+   
+   
+    <statBases>
+      <AccuracyTouch>0.7</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>2</AccuracyMedium>
+      <AccuracyLong>3</AccuracyLong>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>15</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+          <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+       <ai_AvoidFriendlyFireRadius>10</ai_AvoidFriendlyFireRadius>
+        <defaultProjectile>WorminfestorBullet</defaultProjectile>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+        <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <warmupTime>3</warmupTime>
+        <range>50</range>
+      </li>
+    </verbs>
+  </ThingDef>
+
+<ThingDef ParentName="BaseBullet">
+		<defName>WorminfestorBullet</defName>
+		<label>infestor worm</label>
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Wormi/Body/Bullet</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.8)</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>WormPregnantDamageTurret</damageDef>
+			<damageAmountBase>30</damageAmountBase>
+			<speed>150</speed>
+		</projectile>
+	</ThingDef>
+  
+
+
+ 
+
+  
+
+
+  
+
+
+</Defs>

@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_Fungi</defName>
+		<label>Fungi</label>
+		<description>Ancient pictures show them as kind of a slave race , genetic experiments led to an Mushroom-Human DNA. They are often seen only at night. They hate humans.</description>
+
+		<alienRace>
+			<generalSettings>
+				<humanRecipeImport>true</humanRecipeImport>
+				<abilities MayRequire="Ludeon.RimWorld.Biotech">
+
+				
+
+				
+				</abilities>
+					<ageStatOverrides>
+
+					<WorkSpeedGlobal>
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1,0.2)</li>
+								<li>(2,0.8)</li>
+								<li>(3,1)</li>
+							</points>
+						</curve>
+					</WorkSpeedGlobal>
+
+					<ShootingAccuracyChildFactor MayRequire="Ludeon.RimWorld.Biotech">
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1,0.95)</li>
+								<li>(2,0.98)</li>
+								<li>(3,1)</li>
+							</points>
+						</curve>
+					</ShootingAccuracyChildFactor>
+
+					<MarketValue>
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1,0.5)</li>
+								<li>(2,0.9)</li>
+								<li>(3,1)</li>
+							</points>
+						</curve>
+					</MarketValue>
+					<MeleeHitChance>
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1,0.05)</li>
+								<li>(2,0.8)</li>
+								<li>(3,1)</li>
+							</points>
+						</curve>
+					</MeleeHitChance>
+
+					<AimingDelayFactor>
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1,1.8)</li>
+								<li>(2,1.1)</li>
+								<li>(3,1)</li>
+							</points>
+						</curve>
+					</AimingDelayFactor>
+					<ImmunityGainSpeed>
+						<curve>
+							<points>
+								<li>(0.65,0.5)</li>
+								<li>(0.8,0.6)</li>
+								<li>(1.0,0.7)</li>
+								<li>(1.1,0.8)</li>
+								<li>(1.2,1)</li>
+							</points>
+						</curve>
+					</ImmunityGainSpeed>
+
+					<ArrestSuccessChance>
+						<useBiologicalYears>true</useBiologicalYears>
+						<curve>
+							<points>
+								<li>(1, 0.05)</li>
+								<li>(2, 0.8)</li>
+								<li>(3, 1)</li>
+							</points>
+						</curve>
+					</ArrestSuccessChance>
+
+				</ageStatOverrides>
+				<growthAges>
+					<li>1</li>
+					<li>2</li>
+					<li>4</li>
+					<li>5</li>
+				</growthAges>
+				<maleGenderProbability>0.5</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<canLayDown>true</canLayDown>
+		
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>SunHater</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<options>
+							<li>
+								<defName Degree="1">HAR_Xenophobia</defName>
+							</li>
+						
+						</options>
+					</li>
+				
+					<li>
+						<defName>FungiGenetics</defName>
+						
+						<chance>100</chance>
+					</li>
+					
+				</forcedRaceTraitEntries>
+            <disallowedTraits>
+            </disallowedTraits>
+            <minAgeForAdulthood>3</minAgeForAdulthood>
+
+				
+           	<factionRelations>
+               <li>
+                  <factions>
+							
+							<li>FungiPlayerTribe</li>
+                  </factions>
+                  <goodwill>
+                     <min>-30</min>
+                     <max>0</max>
+                  </goodwill>
+               </li>               
+            </factionRelations>	
+				
+				<maxDamageForSocialfight>5</maxDamageForSocialfight>
+				<alienPartGenerator>
+          <headTypes Inherit="False">
+            <li>Female_Evfu_Normal</li>
+            <li>Female_Evfu2_Normal</li>
+            <li>Female_Evfu3_Normal</li>
+            <li>Female_FungiBob</li>
+            <li>Female_FungiBobBlue</li>
+            <li>Female_FungiBobRed</li>
+            <li>Female_FungiLong</li>
+            <li>Female_FungiLongBlue</li>
+            <li>Female_FungiLongBlueTwo</li>
+            <li>Female_FungiSchnorres</li>
+            <li>Female_FungiSchnorresBlue</li>
+            <li>Female_FungiSchnorresGreen</li>
+            <li>Female_NorFu_Normal</li>
+            <li>Female_NorFu2_Normal</li>
+            <li>Female_NorFu3_Normal</li>
+            <li>Female_stefu_Normal</li>
+            <li>Female_stefu2_Normal</li>
+            <li>Female_stefu3_Normal</li>
+            <li>Male_Evfu_Normal</li>
+            <li>Male_Evfu2_Normal</li>
+            <li>Male_Evfu3_Normal</li>
+            <li>Male_FungiBob</li>
+            <li>Male_FungiBobBlue</li>
+            <li>Male_FungiBobRed</li>
+            <li>Male_FungiLong</li>
+            <li>Male_FungiLongBlue</li>
+            <li>Male_FungiLongBlueTwo</li>
+            <li>Male_FungiSchnorres</li>
+            <li>Male_FungiSchnorresBlue</li>
+            <li>Male_FungiSchnorresGreen</li>
+            <li>Male_NorFu_Normal</li>
+            <li>Male_NorFu2_Normal</li>
+            <li>Male_NorFu3_Normal</li>
+            <li>Male_stefu_Normal</li>
+            <li>Male_stefu2_Normal</li>
+            <li>Male_stefu3_Normal</li>
+          </headTypes>
+   <bodyTypes Inherit="False">
+	   <li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+	   <li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+            <li>Thin</li>
+            <li>Fat</li>
+            <li>Male</li>
+            <li>Female</li>
+			<li>Hulk</li>
+          </bodyTypes>
+      
+<colorChannels>
+	<li>
+		<name>skin</name>
+		<first Class="ColorGenerator_Options">
+			<options>
+				<li>
+					<weight>12</weight>
+					<min>RGBA(227, 227, 227, 255)</min>
+					<max>RGBA(207, 207, 207, 255)</max>
+				</li>
+				<li>
+					<weight>5</weight>
+					<min>RGBA(247,171,171,255)</min>
+					<max>RGBA(209,21,21,255)</max>
+				</li>
+
+				<li>
+					<weight>6</weight>
+					<min>RGBA(171,247,203,255)</min>
+					<max>RGBA(65,236,136,255))</max>
+				</li>
+
+				<li>
+					<weight>6</weight>
+					<min>RGBA(204,204,255,255)</min>
+					<max>RGBA(204,153,255,255)</max>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>RGBA(106, 210, 101, 255)</min>
+					<max>RGBA(81, 185, 75, 255)</max>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>RGBA(180, 238, 191, 255)</min>
+					<max>RGBA(121, 211, 216, 255)</max>
+				</li>
+				<li>
+					<weight>6</weight>
+					<min>RGBA(235, 224, 188, 255)</min>
+					<max>RGBA(231, 217, 172, 255)</max>
+				</li>
+			</options>
+		</first>
+	</li>
+</colorChannels>
+
+					
+					
+				</alienPartGenerator>			
+			</generalSettings>
+			      <graphicPaths>
+        <body>Things/Pawn/Humanlike/Fungi/Body/</body>
+        <head>Things/Pawn/Humanlike/Fungi/Head/</head>
+        <skinShader>Cutout</skinShader>
+      </graphicPaths>
+
+	
+
+
+				<styleSettings>
+            <li>
+                <key>HairDef</key>
+                <value>
+                    <hasStyle>false</hasStyle>
+                </value>
+            </li>
+
+            <li>
+                <key>BeardDef</key>
+                <value>
+                    <hasStyle>false</hasStyle>
+                </value>
+            </li>
+        </styleSettings>
+                
+			
+	<thoughtSettings>
+			<cannotReceiveThoughts>
+				<li>ObservedLayingCorpse</li>
+				<li>EnvironmentDark</li>
+				<li>NeedOutdoors</li>
+				<li>AteCorpse</li>
+				<li>AteHumanlikeMeatDirect</li>
+				<li>AteHumanlikeMeatAsIngredient</li>
+				<li>AteHumanlikeMeatAsIngredientCannibal</li>
+				<li>SoldPrisoner</li>
+				<li>KnowGuestOrganHarvested</li>
+				<li>KnowButcheredHumanlikeCorpse</li>
+				<li>ButcheredHumanlikeCorpse</li>
+				<li>WitnessedDeathNonAlly</li>
+				<li>PrisonerBanishedToDie</li>
+				<li>Naked</li>
+				<li>ButcheredHumanlikeCorpseOpinion</li>
+                                <li>NightOwlDuringTheDay</li>
+                                <li>NightOwlDuringTheNight</li>
+                                <li>EnvironmentDark</li>
+                                
+                                <li>KnowPrisonerDiedInnocent</li>
+                                <li>PrisonerBanishedToDie</li>
+                                <li>AteRawHumanlikeMeat</li>
+                                <li>KnowGuestExecuted</li>
+				<li>AteCorpse</li>
+				<li>AteKibble</li>
+				<li>AteHumanlikeMeatDirect</li>
+				<li>AteHumanlikeMeatAsIngredient</li>
+				<li>KnowPrisonerSold</li>
+				<li>KnowGuestOrganHarvested</li>
+				<li>KnowButcheredHumanlikeCorpse</li>
+				<li>ButcheredHumanlikeCorpse</li>
+				<li>ButcheredHumanlikeCorpseOpinion</li>
+				<li>WitnessedDeathNonAlly</li>
+				<li>PrisonerBanishedToDie</li>
+				<li>Naked</li>
+				<li>ApparelDamaged</li>
+				<li>DeadMansApparel</li>
+				
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Memory</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartCovered_Disapproved_Social_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Memory</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">AnyBodyPartButGroinCovered_Disapproved_Social_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinUncovered_Disapproved_Social_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinOrChestUncovered_Disapproved_Social_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestOrHairUncovered_Disapproved_Social_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Female</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Male</li>
+				<li MayRequire="Ludeon.RimWorld.Ideology">GroinChestHairOrFaceUncovered_Disapproved_Social_Female</li>
+				<!-- Fungi sow their children, so they don't have a taboo against Growth Vats, even if the Faction they are in does. -->
+				<li MayRequire="ludeon.rimworld.biotech">GrowthVat_Prohibited_GrowthVatInColony</li>
+				<li MayRequire="ludeon.rimworld.biotech">GrowthVat_Prohibited_ChildInGrowthVat</li>
+				<li MayRequire="ludeon.rimworld.biotech">RotStinkLingering</li>
+				<li MayRequire="ludeon.rimworld.biotech">RotStink</li>
+                          
+			</cannotReceiveThoughts>
+
+
+            <restrictedThoughts>
+                <li>FungiHateLight</li>
+                <li>FungiLoveNight</li>
+				<li>FungiLoveRot</li>
+				<li>FungiLoveTox</li>
+            </restrictedThoughts>
+
+		</thoughtSettings>
+
+
+			<relationSettings>
+
+				<renamer>
+					<li>
+					  <relation>Parent</relation>
+					  <label>Progenitor</label>
+					  <femaleLabel>Progenitor</femaleLabel>
+					</li>
+					<li>
+						<relation>Child</relation>
+						<label>Child</label>
+						<femaleLabel>Child</femaleLabel>
+					</li>
+					<li>
+						<relation>Spouse</relation>
+						<label>Spouse</label>
+						<femaleLabel>Spouse</femaleLabel>
+					</li>
+					<li>
+						<relation>ExSpouse</relation>
+						<label>ExSpouse</label>
+						<femaleLabel>ExSpouse</femaleLabel>
+					</li>
+					<li>
+						<relation>Sibling</relation>
+						<label>Sibling</label>
+						<femaleLabel>Sibling</femaleLabel>
+					</li>
+					<li>
+						<relation>Fiance</relation>
+						<label>Betrothed</label>
+						<femaleLabel>Betrothed</femaleLabel>
+					</li>
+				</renamer>
+				<relationChanceModifierLover>2</relationChanceModifierLover>
+				<relationChanceModifierExLover>2</relationChanceModifierExLover>
+				<relationChanceModifierFiance>2</relationChanceModifierFiance>
+				<relationChanceModifierSpouse>2</relationChanceModifierSpouse>
+				<relationChanceModifierExSpouse>2</relationChanceModifierExSpouse>
+				<relationChanceModifierParent>2</relationChanceModifierParent>
+				<relationChanceModifierChild>2</relationChanceModifierChild>
+				<relationChanceModifierSibling>2</relationChanceModifierSibling>
+			</relationSettings>
+			<raceRestriction>
+ <onlyUseRaceRestrictedApparel>false</onlyUseRaceRestrictedApparel>
+ <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+ <onlyBuildRaceRestrictedBuildings>false</onlyBuildRaceRestrictedBuildings>
+            <buildingList>
+           
+            </buildingList>
+<weaponList>
+
+</weaponList>
+			<apparelList>
+				<!--
+                                <li>Traditional</li>
+                                <li>Fleshsuit</li>
+                                <li>Skinsuit</li>
+								-->
+			</apparelList>
+            <plantList>
+
+            </plantList>
+           
+					<whiteApparelList>
+						
+                                               
+					</whiteApparelList>
+			
+
+
+
+				<recipeList>
+			
+                                      
+                                                 
+				</recipeList>
+				<workGiverList>
+ 
+
+</workGiverList>
+            <researchList>
+          
+            </researchList>
+				<blackGeneList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">FacialRidges</li>
+				</blackGeneList>
+
+				<onlyUseRaceRestrictedXenotypes>true</onlyUseRaceRestrictedXenotypes>
+				<xenotypeList>
+					<li>FungiBaseXeno</li>
+					<li>FungiSporeXeno</li>
+					<li>FungiBreederXeno</li>
+					<li>FungiWormXeno</li>
+				</xenotypeList>
+				<whiteXenotypeList>
+				
+					<li MayRequire="Druid.AgariRim">DruidSporeling</li>
+				</whiteXenotypeList>
+
+				<geneList>
+			
+					<li>DruidChemosynthesis</li>
+				</geneList>
+				
+
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+				 
+					<li>HairColor</li>
+					<li>EyeColor</li>
+					
+					
+					<li>Ears</li>
+					
+					<li>Nose</li>
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>Headbone</li>
+					<li>HairStyle</li>
+					<li>BeardStyle</li>
+					<!--
+				    <li>SkinColorOverride</li> -->
+					
+					<li>Tail</li> 
+				
+				</blackGeneTags>
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Melanin</li>
+				
+					<li>HairColor</li>
+					<li>Jaw</li>
+					<li>Head</li>
+				
+				</blackEndoCategories>
+			
+			</raceRestriction>
+			<compatibility>
+				<isSentient>false</isSentient>
+			</compatibility>
+		</alienRace>		
+		<statBases>
+			<MarketValue>1500</MarketValue>
+			<MoveSpeed>3.5</MoveSpeed>
+			<Flammability>0.8</Flammability>
+			<ComfyTemperatureMin>18</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<LeatherAmount>25</LeatherAmount>
+			<PsychicSensitivity>0.25</PsychicSensitivity>
+			<PlantWorkSpeed>0.9</PlantWorkSpeed>
+			<ResearchSpeed>1.2</ResearchSpeed>
+			<Mass>50</Mass>
+			<RoyalFavorValue MayRequire="ludeon.rimworld.royalty">3</RoyalFavorValue>
+			<Fertility MayRequire="Ludeon.Rimworld.Biotech">1</Fertility>
+			<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+			<ToxicResistance>1</ToxicResistance>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>			
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>8.2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>		
+		</tools>
+		<race>
+			<canBecomeShambler>true</canBecomeShambler>
+			<renderTree>Humanlike</renderTree>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>	
+			<lifeExpectancy>15</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			<bloodDef>Filth_DruidFungi</bloodDef>
+			<fleshType>DruidFungi</fleshType>
+			
+			<body>FungiBody</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1.25</baseHealthScale>
+			<foodType>CarnivoreAnimalStrict, CarnivoreAnimal, Meat, Fungus, Meal, Processed, Fluid, Liquor, Kibble</foodType>
+			<gestationPeriodDays>15</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges Inherit="False">
+				<li>
+					<def>FungiSporelingStage</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>FungiYoungStage</def>
+					<minAge>1</minAge>
+				</li>
+				<li>
+					<def>FungiAdolescentStage</def>
+					<minAge>3</minAge>
+				</li>
+				<li>
+					<def>FungiAdultStage</def>
+					<minAge>4</minAge>
+				</li>
+				<li>
+					<def>FungiElderStage</def>
+					<minAge>13</minAge>
+				</li>
+				<li>
+					<def>FungiAncientStage</def>
+					<minAge>16</minAge>
+				</li>
+			</lifeStageAges>
+			<lifeStageWorkSettings MayRequire="Ludeon.Rimworld.Biotech">
+				<Firefighter>0</Firefighter>
+				<Patient>0</Patient>
+				<Doctor>3</Doctor>
+				<PatientBedRest>0</PatientBedRest>
+				<Childcare MayRequire="Ludeon.Rimworld.Biotech">0</Childcare>
+				<BasicWorker>0</BasicWorker>
+				<Warden>0</Warden>
+				<Handling>1</Handling>
+				<Cooking>0</Cooking>
+				<Hunting>3</Hunting>
+				<Construction>1</Construction>
+				<Growing>0</Growing>
+				<Mining>2</Mining>
+				<PlantCutting>1</PlantCutting>
+				<Smithing>1</Smithing>
+				<Tailoring>1</Tailoring>
+				<Art>4</Art>
+				<Crafting>1</Crafting>
+				<Hauling>0</Hauling>
+				<Cleaning>0</Cleaning>
+				<Research>3</Research>
+			</lifeStageWorkSettings>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve Inherit="False">
+				<points Inherit="False">
+					<li>(0,0)</li>
+					<li>(0.7,0)</li>
+					<li>(2,50)</li>
+					<li>(2.1,0)</li>
+					<li>(2.2,0)</li>
+					<li>(3,0)</li>
+					<li>(3.5,0)</li>
+					<li>(4,0.1)</li>
+					<li>(5,0.4)</li>
+					<li>(6,0.5)</li>
+					<li>(8,11)</li>
+					<li>(9,20)</li>
+					<li>(10,22)</li>
+					<li>(11,3.1)</li>
+					<li>(12,1)</li>
+					<li>(13,1)</li>
+					<li>(14,1)</li>
+					<li>(15,1)</li>
+					<li>(16,1)</li>
+					<li>(20,0)</li>
+					<li>(50,0)</li>
+					<li>(75,0)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+    <recipes>
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+      <li>InstallFungiArms</li>
+      <li>InstallFungiLeg</li>
+      <li>InstallFungiEye</li>
+      <li>InstallFungiFinger</li>
+      <li>InstallFungiToe</li>
+      <li>InstallFungiStomach</li>
+      <li>InstallFungiHeart</li>
+      <li>InstallFungiNose</li>
+    </recipes>
+
+		<comps>
+			
+			
+		</comps>
+	</AlienRace.ThingDef_AlienRace>
+	
+	<AlienRace.RaceSettings>
+		<defName>FungiRaceSettings</defName>
+	
+		<pawnKindSettings>
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>PlayerFungi</li>
+							</kindDefs>
+							<chance>7.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerTribe</li> 
+					</factionDefs>
+				</li>
+			</startingColonists>
+		
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerFungi</li>
+					</kindDefs>
+					<chance>12.0</chance>
+				</li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerFungi</li>
+					</kindDefs>
+					<chance>6.0</chance>
+				</li>
+			</alienrefugeekinds>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>FungiMelee</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerColony</li>
+						<li>PlayerTribe</li>
+						<li>FungiPlayerTribe</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>			
+		</pawnKindSettings>
+	
+	</AlienRace.RaceSettings>
+</Defs>

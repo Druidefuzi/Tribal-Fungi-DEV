@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="PlantFoodRawBase">
+  <defName>RAW_SHROOMANSINFESTED_RESOURCE_DEF</defName>
+  <label>Shroomworms</label>
+  <description>Parasitic Shroomworms.Used to create implants.</description>
+		<graphicData>
+			<texPath>InfestedShroomanPlant/Resource</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+  <statBases>
+    <MarketValue>2</MarketValue>
+    <Mass>0.3</Mass>
+  </statBases>
+  <comps>
+
+  </comps>
+  <ingestible>
+    <preferability>RawTasty</preferability>
+    <tasteThought></tasteThought>
+    <foodType>Meat</foodType>
+  </ingestible>
+    <stuffProps>
+     		<categories>
+			<li>Shrooman</li>
+		</categories>
+      <commonality>0.05</commonality>
+      <statFactors>
+        <Beauty>.1</Beauty>
+      </statFactors>
+
+    </stuffProps>
+
+</ThingDef>
+</Defs>

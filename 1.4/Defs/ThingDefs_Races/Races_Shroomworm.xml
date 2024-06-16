@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ShroomoidPawn">
+    <defName>Shroomworm</defName>
+    <label>Shroomworm</label>
+    <description>Once parasitic and very dangerous, the Fungi managed to tame this disgusting worms and make them only infest shroomans(most of the time). Now they use them to create specialized worms for multiple tasks in the human body of their victims.Sometimes very big worms hatch out of the shroomans, the Fungi use them as guards.</description>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>   
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault> 
+<statBases>
+      <LeatherAmount>0</LeatherAmount>
+       <MeatAmount>0</MeatAmount>
+      <MoveSpeed>4</MoveSpeed>
+      <ComfyTemperatureMin>20</ComfyTemperatureMin>
+<ComfyTemperatureMax>30</ComfyTemperatureMax>
+      <MarketValue>10</MarketValue>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+	  <!--
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+	  -->
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <tools>
+            <li>
+         <label>head</label>
+        <capacities>
+          <li>ToxicBite</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>0.6</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+
+      </li>
+    </tools>
+    <comps>
+    </comps>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <deathActionWorkerClass>DeathActionWorker_FungiDestroyselfdeath</deathActionWorkerClass>
+      <body>MushroomWorm</body>
+      <baseHealthScale>0.1</baseHealthScale>
+      <herdAnimal>false</herdAnimal>
+      <baseBodySize>0.4</baseBodySize>
+      <baseHungerRate>0.9</baseHungerRate>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef></leatherDef>
+      <wildness>0</wildness>
+      <trainability>Advanced</trainability>
+	  <nuzzleMtbHours>180</nuzzleMtbHours>
+	  <packAnimal>false</packAnimal>
+      <lifeExpectancy>1</lifeExpectancy>
+      <lifeStageAges>
+
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0</minAge>
+          <soundWounded>MushWorm1</soundWounded>
+          <soundDeath>MushWorm2</soundDeath>
+          <soundCall>MushWorm2</soundCall>
+          <soundAngry>MushWorm1</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>BulletImpact_Flesh</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>BulletImpact_Flesh</soundMeleeHitBuilding>
+      <soundMeleeMiss>BulletImpact_Flesh</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef ParentName="BaseShroomoidKind">
+    <defName>Shroomworm</defName>
+    <label>Shroomworm</label>
+    <race>Shroomworm</race>
+    <combatPower>4</combatPower>
+<alternateGraphicChance>0</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Worm/Worm2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Worm/Worm3</texPath></li>
+
+    </alternateGraphics>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Worm</texPath>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Dessicated_Worm</texPath>
+          <drawSize>2.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

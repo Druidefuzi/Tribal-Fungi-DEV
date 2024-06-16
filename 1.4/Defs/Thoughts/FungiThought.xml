@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<TraitDef>
+    <defName>SunHater</defName>
+    <commonality>0.001</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sun Hater</label>
+        <description>{PAWN_nameDef} absolutely hates the disgusting sun.For {PAWN_nameDef} the sun is the corrupted source of life for the humans. \n\n{PAWN_pronoun} gets a mood bonus if awake at night (23h-6h) and mood loss if awake during the day (11h-18h).\n\n The night is holy for {PAWN_nameDef}</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+
+	<TraitDef>
+		<defName>FungiGenetics</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Genetic Memory</label>
+				<description>{PAWN_nameDef} may be cursed with a very short life due to {PAWN_possessive} genetics, but {PAWN_pronoun} has the advantage of sharing genetic memories with {PAWN_possessive} ancestors. Therefore, {PAWN_pronoun} gains early experience in all sorts of tasks. Since {PAWN_nameDef} is basically in the age of human children, the effects aren´t that strong.</description>
+				<skillGains>
+					<li>
+						<key>Cooking</key>
+						<value>3</value>
+					</li>
+					<li>
+						<key>Crafting</key>
+						<value>6</value>
+					</li>
+					<li>
+						<key>Construction</key>
+						<value>5</value>
+					</li>
+					<li>
+						<key>Animals</key>
+						<value>5</value>
+					</li>
+					<li>
+						<key>Plants</key>
+						<value>5</value>
+					</li>
+					<li>
+						<key>Mining</key>
+						<value>3</value>
+					</li>
+
+					<li>
+						<key>Melee</key>
+						<value>3</value>
+					</li>
+					<li>
+						<key>Shooting</key>
+						<value>3</value>
+					</li>
+					<li>
+						<key>Intellectual</key>
+						<value>3</value>
+					</li>
+					<li>
+						<key>Medicine</key>
+						<value>6</value>
+					</li>
+					
+				</skillGains>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	
+
+
+	<ThoughtDef>
+    <defName>FungiHateLight</defName>
+    <workerClass>ThoughtWorker_IsDayForNightOwl</workerClass>
+        <requiredTraits>
+      <li>SunHater</li>
+    </requiredTraits>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Withering</label>
+        <description>I understand why humans like the sun. It is disgusting and dangerous. Just like them. My head aches!</description>
+        <baseMoodEffect>-30</baseMoodEffect>
+      </li>
+      
+    </stages>
+  </ThoughtDef>
+
+<ThoughtDef>
+    <defName>FungiLoveNight</defName>
+    <workerClass>ThoughtWorker_IsNightForNightOwl</workerClass>
+     <requiredTraits>
+     <li>SunHater</li>
+    </requiredTraits>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Thriving</label>
+        <description>I feel so energized! I love the Night!</description>
+        <baseMoodEffect>+20</baseMoodEffect>
+      </li>
+      
+    </stages>
+  </ThoughtDef>
+
+
+  
+
+
+
+  <ThoughtDef>
+    <defName>DissassemblyWorms</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>Fungi_Hediff_Dissassembly_Worms</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Loosing control</label>
+        <description>What´s happening to me? I can´t fully control my arms and legs anymore, they move themself. It hurts. I want it to stop , please , PLEASE!</description>
+        <baseMoodEffect>-40</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

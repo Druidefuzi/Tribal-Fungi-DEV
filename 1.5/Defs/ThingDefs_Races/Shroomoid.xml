@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="TestFungiPawn">
+		<defName>TestFungiPawn</defName>
+		<label>Shroomoid</label>
+		<description>The shroomoid, a grotesque fusion of humigiant and parasitic worm, defies belief with its horrifying presence. Descended from humans, its once-human form is now marred by gaping wounds from which large worms emerge, exerting control over the humigiant like insidious parasites. Despite its repulsive nature, the organ responsible for producing these worms harbors a deadly potential; if one were to butcher this abomination, it could be utilized as a formidable weapon. Such is the grim reality of the shroomoid—a monstrous amalgamation of flesh and parasite, driven by the twisted machinations of fungal experimentation.</description>
+		<statBases>
+			<MoveSpeed>1.9</MoveSpeed>
+			<PsychicSensitivity>0.75</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>50</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+			<li>
+				<label>Shroomworm</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>0.2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<race>
+			<gestationPeriodDays>100</gestationPeriodDays>
+			<intelligence>Humanlike</intelligence>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>Humanlike</thinkTreeConstant>
+			<body>Human</body>
+			<baseBodySize>1.8</baseBodySize>
+			<baseHealthScale>4.32</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>HumiGiant1</soundWounded>
+					<soundDeath>HumiGiant2</soundDeath>
+					<soundCall>HumiGiant1</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundMeleeHitPawn>BulletImpact_Flesh</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>BulletImpact_Flesh</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+		<butcherProducts>
+			<WormGun>2</WormGun>
+		</butcherProducts>
+	</ThingDef>
+  <ThingDef Name="ShroomoidPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+    <ToxicResistance>0</ToxicResistance>
+      <Mass>70</Mass>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+	  <!--
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+	  -->
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <receivesSignals>true</receivesSignals>
+    <race>
+<deathAction>
+	<workerClass>DeathActionWorker_HumigiantEvent</workerClass>
+</deathAction>
+      <fleshType>Normal</fleshType>
+      <needsRest>true</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <bloodDef>Filth_Blood</bloodDef>
+		<gestationPeriodDays>100</gestationPeriodDays>
+    </race>
+
+  </ThingDef>
+
+  <PawnKindDef Name="BaseShroomoidKind" Abstract="True">
+    <defaultFactionType>AncientsHostile</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>
+
+  <!-- Centipede -->
+  
+  <ThingDef ParentName="ShroomoidPawn">
+    <defName>Shroomoid_humigiant</defName>
+    <label>Shroomoid</label>
+    <description>The shroomoid, a grotesque fusion of humigiant and parasitic worm, defies belief with its horrifying presence. Descended from humans, its once-human form is now marred by gaping wounds from which large worms emerge, exerting control over the humigiant like insidious parasites. Despite its repulsive nature, the organ responsible for producing these worms harbors a deadly potential; if one were to butcher this abomination, it could be utilized as a formidable weapon. Such is the grim reality of the shroomoid—a monstrous amalgamation of flesh and parasite, driven by the twisted machinations of fungal experimentation.</description>
+    <statBases>
+      <MoveSpeed>1.9</MoveSpeed>
+      <PsychicSensitivity>0.75</PsychicSensitivity>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>50</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+            <li>
+         <label>Shroomworm</label>
+        <capacities>
+          <li>ToxicBite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>0.2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+
+      </li>
+<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>			
+    </tools>
+    <race>
+		<renderTree>Misc</renderTree>
+		<gestationPeriodDays>100</gestationPeriodDays>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <body>Human</body>
+      <baseBodySize>1.8</baseBodySize>
+      <baseHealthScale>4.32</baseHealthScale>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>HumiGiant1</soundWounded>
+          <soundDeath>HumiGiant2</soundDeath>
+          <soundCall>HumiGiant1</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+      <soundMeleeHitPawn>BulletImpact_Flesh</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>BulletImpact_Flesh</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <WormGun>2</WormGun>
+    </butcherProducts>
+  </ThingDef>
+	<PawnKindDef ParentName="BaseShroomoidKind">
+		<defName>TestFungiPawn</defName>
+		<label>Humigiant</label>
+		<race>TestFungiPawn</race>
+		<combatPower>600</combatPower>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<alternateGraphicChance>0.666</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant2</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant3</texPath>
+			</li>
+
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant</texPath>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>9999~9999</weaponMoney>
+		<weaponTags>
+			<li>ShroomoidGunHeavyEvent</li>
+		</weaponTags>
+	</PawnKindDef>
+  
+	
+	<PawnKindDef ParentName="BaseShroomoidKind">
+    <defName>Shroomoid_humigiant</defName>
+    <label>Humigiant</label>
+    <race>Shroomoid_humigiant</race>
+    <combatPower>100</combatPower>
+<alternateGraphicChance>0.666</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant3</texPath></li>
+
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+	  
+	  
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>ShroomoidGunHeavy</li>
+    </weaponTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="BaseShroomoidKind">
+    <defName>Shroomoid_humigiantEvent</defName>
+    <label>Humigiant</label>
+    <race>Shroomoid_humigiant</race>
+    <combatPower>600</combatPower>
+<alternateGraphicChance>0.666</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant3</texPath></li>
+
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomoid/Shroomoid_humigiant</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.8, 0.6)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>ShroomoidGunHeavyEvent</li>
+    </weaponTags>
+  </PawnKindDef>
+	
+	
+
+</Defs>

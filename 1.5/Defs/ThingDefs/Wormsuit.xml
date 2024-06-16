@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef  Name="Fungi_Worm" ParentName="ApparelMakeableBase" Abstract="True">
+    <defName>Fungi_Worm</defName>
+
+    
+    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>
+
+
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+
+      <recipeUsers>
+        <li>Fleshforge</li>
+      </recipeUsers>
+    <researchPrerequisites>
+      <li>FungiInfestTribe</li>
+    </researchPrerequisites>
+    </recipeMaker>
+
+       <costList>
+       <DruidShroomworms>30</DruidShroomworms>
+       </costList>
+
+		<generateCommonality>0.01</generateCommonality>
+		
+    <statBases>
+      <MaxHitPoints>180</MaxHitPoints>
+      <WorkToMake>1500</WorkToMake>
+      <Mass>1.2</Mass>
+      <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+     <StuffEffectMultiplierInsulation_Heat>1.8</StuffEffectMultiplierInsulation_Heat>
+     <StuffEffectMultiplierInsulation_Cold>1.8</StuffEffectMultiplierInsulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    <Insulation_Cold>20</Insulation_Cold>
+    <Insulation_Heat>15</Insulation_Heat>
+    </statBases>
+    <thingCategories>
+
+      <li>FungiApparel</li>
+
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>FungiWormElite</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+
+  </ThingDef>
+ 
+<ThingDef ParentName="Fungi_Worm">
+    <defName>Wormsuit</defName>
+    <label>Wormsuit</label>
+    <description>Heavy Armor made of shroomworms. Covers everything except the head and legs.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Wormsuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+       <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+  
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Hands</li>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Wormsuit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+	<li>FungiWormElite</li>
+<ThingDef ParentName="Fungi_Worm">
+    <defName>WormsuitHat</defName>
+    <label>Wormsuit helmet</label>
+    <description>Heavy Helmet made of shroomworms. Protects the head very well (For a tribal piece of armor).</description>
+    <graphicData>
+      <texPath>Things/Apparel/WormsuitHat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+       <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>FungiWormElite</li>
+      </tags>
+  
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/WormsuitHat</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+</Defs>

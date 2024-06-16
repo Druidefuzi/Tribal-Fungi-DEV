@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>FungiBreederTribe</defName>
+		<label>Breeder Tribes</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creating of advanced biological tribal weapons</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>Fleshforging</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>0.5</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiBreederFirst</defName>
+		<label>Breeding methods</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creating of advanced biological tribal weapons</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiBreederTribe</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>FungiBreederSecond</defName>
+		<label>Limb forging</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creating of advanced biological tribal weapons</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiBreederTribe</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiBreederThird</defName>
+		<label>Advanced limbforging</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creating of advanced biological tribal weapons</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiBreederSecond</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+
+
+
+
+
+<ResearchProjectDef>
+    <defName>FungiBreederFourth</defName>
+    <label>Lifeform Manipulation</label>
+    <tab>Fleshforging</tab>
+    <description>Allows the combining of different materials into living creatures</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>FungiBreederFirst</li>
+    </prerequisites>
+	<researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+
+
+
+	<ResearchProjectDef>
+		<defName>FungiBreederFifth</defName>
+		<label>Weaponized life</label>
+		<tab>Fleshforging</tab>
+		<description>Utilizes the fast growing of living beings in warfare.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiBreederFourth</li>
+		</prerequisites>
+		<researchViewX>5</researchViewX>
+		<researchViewY>0</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>FungiSporeTribe</defName>
+		<label>Spore Tribes</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the utilization of spores.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>Fleshforging</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>2.5</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiSporeFirst</defName>
+		<label>Spore forging</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creating of virulent biological tribal weapons.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiSporeTribe</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiSporeSecond</defName>
+		<label>Spore infusion</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creation of spores with the parasitic nature of the shroomworms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiSporeFirst</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>2</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiSporeThird</defName>
+		<label>Plague forging</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creation of spores with the parasitic nature of the shroomworms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiSporeTribe</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiSporeFourth</defName>
+		<label>Plague infusion</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the creation of spores with the parasitic nature of the shroomworms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiSporeThird</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>3</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>FungiInfestTribe</defName>
+		<label>Infesting Tribes</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the utilization of worms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>Fleshforging</li>
+		</prerequisites>
+		<researchViewX>2</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiInfestFirst</defName>
+		<label>Infesting Weapons</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the utilization of worms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiInfestTribe</li>
+		</prerequisites>
+		<researchViewX>3</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef>
+		<defName>FungiInfestSecond</defName>
+		<label>Worm-forgery</label>
+		<tab>Fleshforging</tab>
+		<description>Allows the utilization of worms.</description>
+		<baseCost>500</baseCost>
+		<techLevel>Neolithic</techLevel>
+		<prerequisites>
+			<li>FungiInfestTribe</li>
+		</prerequisites>
+		<researchViewX>4</researchViewX>
+		<researchViewY>4</researchViewY>
+	</ResearchProjectDef>
+</Defs>
+
+
+

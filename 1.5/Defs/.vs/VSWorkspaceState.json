@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Buildings",
+    "\\Plants",
+    "\\Research",
+    "\\Scenarios",
+    "\\SoundDefs",
+    "\\Terrain",
+    "\\TerrainDefs",
+    "\\ThingDefs",
+    "\\ThingDefs_Plants"
+  ],
+  "SelectedNode": "\\Buildings\\Transformer.xml",
+  "PreviewInSolutionExplorer": false
+}

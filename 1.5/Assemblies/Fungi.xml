@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fungi</name>
+    </assembly>
+    <members>
+        <member name="T:Fungi.DruidBackstoryDefOf">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="F:Fungi.DruidBackstoryDefOf.Fungi24">
+            <summary>
+            The pm sheep chef
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:ChickmanGun.Humikebullet.Humikedef" -->
+        <member name="M:ChickmanGun.Main.SettingsCategory">
+            		public override void DoSettingsWindowContents(Rect inRect)
+            		{
+            			base.DoSettingsWindowContents(inRect);
+            		}
+            		*
+        </member>
+    </members>
+</doc>

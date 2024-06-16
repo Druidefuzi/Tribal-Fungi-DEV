@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <BodyPartDef>
+    <defName>Stinger_tail</defName>
+    <label>Stinger Tail</label>
+    <hitPoints>20</hitPoints>
+    <permanentInjuryChanceFactor>0.2</permanentInjuryChanceFactor>
+    <skinCovered>false</skinCovered>
+    <solid>true</solid>
+    <alive>true</alive>
+    <bleedRate>0</bleedRate>
+  </BodyPartDef>
+      
+</Defs>

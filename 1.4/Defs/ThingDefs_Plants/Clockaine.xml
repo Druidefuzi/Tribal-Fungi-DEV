@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Clockaine</defName>
+    <label>Clockaine</label>
+    <description>Clockaine, a potent powder derived from time berries, offers a tantalizing yet perilous experience to those who partake. When smoked, it unleashes a surge of unparalleled strength and vitality, compelling the body to expend energy at an accelerated rate. However, this exhilarating effect comes at a grave cost—the accelerated aging of the body. It is rumored that for each time Clockaine is smoked, one year of life is forfeited. Despite the horrific consequences, the intoxicating allure of Clockaine proves irresistibly addictive to many, who are willing to endure its harrowing effects for the fleeting euphoria it provides.</description>
+    <descriptionHyperlinks>
+      <HediffDef>ClockaineHigh</HediffDef>
+      <HediffDef>ClockaineTolerance</HediffDef>
+      <HediffDef>ClockaineAddiction</HediffDef>
+      <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Yayo</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(150,170,150)</color>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>250</WorkToMake>
+      <MarketValue>14</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Neolithic</techLevel>
+    <minRewardCount>10</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.70</joy>
+      <baseIngestTicks>650</baseIngestTicks>
+      <nurseable>true</nurseable>
+      <drugCategory>Hard</drugCategory>
+      <ingestSound>Ingest_Smoke</ingestSound>
+      <ingestEffect>Smoke_Flake</ingestEffect>
+      <ingestEffectEat>EatVegetarian</ingestEffectEat>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.23,0,0.065)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Smoke {0}</ingestCommandString>
+      <ingestReportString>Smoking {0}.</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ClockaineHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Clockaine</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_OffsetNeed">
+          <need>Rest</need>
+          <offset>0.2</offset>
+          <toleranceChemical>Clockaine</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>ClockaineTolerance</hediffDef>
+          <severity>0.04</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+        <li Class="IngestionOutcomeDoer_Ageshrooms">
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+      <recipeUsers>
+        <li>Sporeforge</li>
+        <li>Timeforge</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Timeberry>4</Timeberry>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Clockaine</chemical>
+        <addictiveness>0.05</addictiveness>
+        <existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <listOrder>110</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.015</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <HediffDef>
+    <defName>ClockaineHigh</defName>
+    <label>high on clockaine</label>
+    <labelNoun>a clockaine high</labelNoun>
+    <description>Active clockaine in the bloodstream. Generates a strong euphoric, debilitating high.The pawn acts unnaturally fast and strong.</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-4.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+         <stages>
+      <li>
+        <painFactor>0.6</painFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.5</offset>
+          </li>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>2</offset>
+          </li>
+          <li>
+            <capacity>BloodFiltration</capacity>
+            <offset>1</offset>
+          </li>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>1</offset>
+          </li>
+           <li>
+            <capacity>Metabolism</capacity>
+            <offset>1</offset>
+          </li>
+          <li>
+            <capacity>Breathing</capacity>
+            <offset>1</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+	<HediffDef>
+		<defName>TimeShroomHigh</defName>
+		<label>high on clockaine</label>
+		<labelNoun>a clockaine high</labelNoun>
+		<description>Active clockaine in the bloodstream. Generates a strong euphoric, debilitating high.The pawn acts unnaturally fast and strong.</description>
+		<hediffClass>Hediff_High</hediffClass>
+		<defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+		<scenarioCanAdd>true</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-4.0</severityPerDay>
+				<showHoursToRecover>true</showHoursToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<painFactor>0.6</painFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>0.5</offset>
+					</li>
+					<li>
+						<capacity>Sight</capacity>
+						<offset>2</offset>
+					</li>
+					<li>
+						<capacity>BloodFiltration</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>BloodPumping</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Metabolism</capacity>
+						<offset>1</offset>
+					</li>
+					<li>
+						<capacity>Breathing</capacity>
+						<offset>1</offset>
+					</li>
+				</capMods>
+			</li>
+		</stages>
+	</HediffDef>
+
+
+
+	<ThoughtDef>
+    <defName>ClockaineHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ClockaineHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>high on clockaine</label>
+        <description>So fast, so strong!So mighty! I feel like a god!</description>
+        <baseMoodEffect>45</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+	<ThoughtDef>
+		<defName>TimeShroomHigh</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>TimeShroomHigh</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>high on timeshrooms</label>
+				<description>So fast, so strong!So mighty! I feel like a god!</description>
+				<baseMoodEffect>45</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+  <ChemicalDef>
+    <defName>Clockaine</defName>
+    <label>clockaine</label>
+    <addictionHediff>ClockaineAddiction</addictionHediff>
+    <toleranceHediff>ClockaineTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ClockainePoisoning</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+  </ChemicalDef>
+	<ChemicalDef>
+		<defName>TimeShroom</defName>
+		<label>clockaine</label>
+		<addictionHediff>TimeShroomAddiction</addictionHediff>
+		<toleranceHediff>TimeShroomTolerance</toleranceHediff>
+		<onGeneratedAddictedToleranceChance>0.0</onGeneratedAddictedToleranceChance>
+		<onGeneratedAddictedEvents>
+			
+		</onGeneratedAddictedEvents>
+	</ChemicalDef>
+
+
+	<NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Clockaine</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Clockaine</label>
+    <description>Because of an clockaine addiction, this person needs to regularly consume clockaine to avoid withdrawal symptoms.</description>
+    <listPriority>35</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>ClockaineTolerance</defName>
+    <label>clockaine tolerance</label>
+    <description>A built-up tolerance to clockaine. The more severe this tolerance is, the more clockaine it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.04</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Clockaine</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ClockainePoisoning</hediff>
+        <minSeverity>0.50</minSeverity>
+        <baseMtbDays>10</baseMtbDays>
+        <partsToAffect>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        </partsToAffect>
+      </li>
+
+    </hediffGivers>
+  </HediffDef>
+	<NeedDef ParentName="DrugAddictionNeedBase">
+	<defName>Chemical_TimeShroom</defName>
+	<needClass>Need_Chemical</needClass>
+	<label>TimeShroom</label>
+	<description>Because of an clockaine addiction, this person needs to regularly consume clockaine to avoid withdrawal symptoms.</description>
+	<listPriority>35</listPriority>
+	</NeedDef>
+
+	<HediffDef ParentName="DrugToleranceBase">
+		<defName>TimeShroomTolerance</defName>
+		<label>Time shroom tolerance</label>
+		<description>A built-up tolerance to clockaine. The more severe this tolerance is, the more clockaine it takes to get the same effect.</description>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-1</severityPerDay>
+			</li>
+			<li Class="HediffCompProperties_DrugEffectFactor">
+				<chemical>TimeShroom</chemical>
+			</li>
+		</comps>
+		<hediffGivers>
+		
+
+		</hediffGivers>
+	</HediffDef>
+
+  <HediffDef ParentName="AddictionBase">
+    <defName>ClockaineAddiction</defName>
+    <label>clockaine addiction</label>
+    <description>A chemical addiction to clockaine. Long-term presence of clockaine can cause the brain to "overdrive" it seems like it ages very rapidly and slowly develops dementia in that state. Sometimes body parts can´t take the increasing time and get a weird infection, altering the time rapidly for the user, increasing the age by around 5 years.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Clockaine</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <socialFightChanceFactor>3.0</socialFightChanceFactor>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.4</postFactor>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugMajor</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>ClockaineWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>ClockaineAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>clockaine withdrawal</label>
+        <description>I-I´m so weak! So slow!It hurts.My limbs feel tired, my skin feels so.</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+	<HediffDef ParentName="AddictionBase">
+		<defName>TimeShroomAddiction</defName>
+		<label>clockaine addiction</label>
+		<description>A chemical addiction to clockaine. Long-term presence of clockaine can cause the brain to "overdrive" it seems like it ages very rapidly and slowly develops dementia in that state. Sometimes body parts can´t take the increasing time and get a weird infection, altering the time rapidly for the user, increasing the age by around 5 years.</description>
+		<hediffClass>Hediff_Addiction</hediffClass>
+		<causesNeed>Chemical_Clockaine</causesNeed>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>-0.0333</severityPerDay>
+				<showDaysToRecover>true</showDaysToRecover>
+			</li>
+		</comps>
+		<stages>
+			<li>
+			</li>
+			<li>
+				<label>withdrawal</label>
+				<socialFightChanceFactor>3.0</socialFightChanceFactor>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<offset>-0.4</offset>
+					</li>
+					<li>
+						<capacity>Moving</capacity>
+						<offset>-0.30</offset>
+					</li>
+					<li>
+						<capacity>Manipulation</capacity>
+						<postFactor>0.4</postFactor>
+					</li>
+				</capMods>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Binging_DrugMajor</mentalState>
+						<mtbDays>40</mtbDays>
+					</li>
+				</mentalStateGivers>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<ThoughtDef>
+		<defName>TimeShroomWithdrawal</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>ClockaineAddiction</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<visible>false</visible>
+			</li>
+			<li>
+				<label>clockaine withdrawal</label>
+				<description>I-I´m so weak! So slow!It hurts.My limbs feel tired, my skin feels so.</description>
+				<baseMoodEffect>-35</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+<ThingDef ParentName="MakeableDrugBase">
+	<defName>ShroomofAging</defName>
+	<label>Shroom Of Age</label>
+	<description>A mighty shrooman, capable of bending time itself.The Shrooman will let the target age for 20 years. The Shrooman is unstable , it will vanish after use.</description>
+	<descriptionHyperlinks>
+		
+	</descriptionHyperlinks>
+	<graphicData>
+		<texPath>Things/Item/Time/Mature</texPath>
+		<graphicClass>Graphic_Random</graphicClass>
+		<drawSize>0.75</drawSize>
+	</graphicData>
+	<rotatable>false</rotatable>
+	<statBases>
+		<WorkToMake>250</WorkToMake>
+		<MarketValue>14</MarketValue>
+		<Mass>0.05</Mass>
+	</statBases>
+	<techLevel>Neolithic</techLevel>
+	<minRewardCount>10</minRewardCount>
+	<ingestible>
+		<foodType>Processed</foodType>
+		<joyKind>Chemical</joyKind>
+		<joy>0.70</joy>
+		<baseIngestTicks>650</baseIngestTicks>
+		<nurseable>true</nurseable>
+		<drugCategory>Hard</drugCategory>
+		<ingestSound>Ingest_Smoke</ingestSound>
+		<ingestEffect>Smoke_Flake</ingestEffect>
+		<ingestEffectEat>EatVegetarian</ingestEffectEat>
+		<ingestHoldOffsetStanding>
+			<northDefault>
+				<offset>(0.23,0,0.065)</offset>
+			</northDefault>
+		</ingestHoldOffsetStanding>
+		<ingestHoldUsesTable>false</ingestHoldUsesTable>
+		<ingestCommandString>Smoke {0}</ingestCommandString>
+		<ingestReportString>Smoking {0}.</ingestReportString>
+		<useEatingSpeedStat>false</useEatingSpeedStat>
+		<outcomeDoers>
+		
+		
+			<li Class="IngestionOutcomeDoer_ShroomOfAges">
+			</li>
+		</outcomeDoers>
+	</ingestible>
+	<recipeMaker>
+		<researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+		<recipeUsers>
+
+			<li>Timeforge</li>
+		</recipeUsers>
+	</recipeMaker>
+	<costList>
+		<RAW_TIMESHROOM_RESOURCE_DEF>10</RAW_TIMESHROOM_RESOURCE_DEF>
+	
+</costList>
+	<comps>
+		<li Class="CompProperties_Drug">
+			<chemical>TimeShroom</chemical>
+			<addictiveness>0</addictiveness>
+			<existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+			<needLevelOffset>0.1</needLevelOffset>
+			<listOrder>110</listOrder>
+			<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+			<largeOverdoseChance>0.015</largeOverdoseChance>
+		</li>
+	</comps>
+</ThingDef>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>ShroomofRejuvenating</defName>
+		<label>Shroom Of Youth</label>
+		<description>A mighty shrooman, capable of bending time itself.The Target will be 10 years younger. The Shrooman is unstable , it will vanish after use.</description>
+		<descriptionHyperlinks>
+
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Time/Youth</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>250</WorkToMake>
+			<MarketValue>14</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.70</joy>
+			<baseIngestTicks>650</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Smoke</ingestSound>
+			<ingestEffect>Smoke_Flake</ingestEffect>
+			<ingestEffectEat>EatVegetarian</ingestEffectEat>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.23,0,0.065)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Smoke {0}</ingestCommandString>
+			<ingestReportString>Smoking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+
+
+				<li Class="IngestionOutcomeDoer_ShroomOfYouth">
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+			<recipeUsers>
+
+				<li>Timeforge</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<RAW_TIMESHROOM_RESOURCE_DEF>10</RAW_TIMESHROOM_RESOURCE_DEF>
+		
+	</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>TimeShroom</chemical>
+				<addictiveness>0</addictiveness>
+				<existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+				<needLevelOffset>0.1</needLevelOffset>
+				<listOrder>110</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.015</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>ShroomofGrowth</defName>
+		<label>Shroom Of Growth</label>
+		<description>A mighty shrooman, capable of bending time itself.The Shrooman will let the target age for 3 years. The Shrooman is unstable , it will vanish after use.</description>
+		<descriptionHyperlinks>
+
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Time/Mature</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>250</WorkToMake>
+			<MarketValue>14</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.70</joy>
+			<baseIngestTicks>650</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Smoke</ingestSound>
+			<ingestEffect>Smoke_Flake</ingestEffect>
+			<ingestEffectEat>EatVegetarian</ingestEffectEat>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.23,0,0.065)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Smoke {0}</ingestCommandString>
+			<ingestReportString>Smoking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+
+
+				<li Class="IngestionOutcomeDoer_ShroomOfGrowth">
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+			<recipeUsers>
+
+				<li>Timeforge</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<RAW_TIMESHROOM_RESOURCE_DEF>10</RAW_TIMESHROOM_RESOURCE_DEF>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>TimeShroom</chemical>
+				<addictiveness>0</addictiveness>
+				<existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+				<needLevelOffset>0.1</needLevelOffset>
+				<listOrder>110</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.015</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>ShroomofWithering</defName>
+		<label>Shroom Of Withering</label>
+		<description>A mighty shrooman, capable of bending time itself.The Shrooman will let the target age for 200 years. The Shrooman is unstable , it will vanish after use.</description>
+		<descriptionHyperlinks>
+
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/Time/Wither</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>250</WorkToMake>
+			<MarketValue>14</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.70</joy>
+			<baseIngestTicks>650</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Smoke</ingestSound>
+			<ingestEffect>Smoke_Flake</ingestEffect>
+			<ingestEffectEat>EatVegetarian</ingestEffectEat>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.23,0,0.065)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Smoke {0}</ingestCommandString>
+			<ingestReportString>Smoking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+
+
+				<li Class="IngestionOutcomeDoer_ShroomOfWithering">
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+			<recipeUsers>
+
+				<li>Timeforge</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<RAW_TIMESHROOM_RESOURCE_DEF>10</RAW_TIMESHROOM_RESOURCE_DEF>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>TimeShroom</chemical>
+				<addictiveness>0</addictiveness>
+				<existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+				<needLevelOffset>0.1</needLevelOffset>
+				<listOrder>110</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.015</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="MakeableDrugBase">
+		<defName>TimeberryExtract</defName>
+		<label>Timberry extract</label>
+		<description>This extract exhibits potent effects on mushroom animals, inducing DNA alterations and activating embryonal functions that facilitate the regeneration of missing limbs. However, its impact on non-shroom animals is peculiar, yielding unpredictable and often bizarre outcomes.</description>
+		<descriptionHyperlinks>
+
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/FungiPlants/TimeBush/Resource</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>0.75</drawSize>
+		</graphicData>
+		<rotatable>false</rotatable>
+		<statBases>
+			<WorkToMake>250</WorkToMake>
+			<MarketValue>14</MarketValue>
+			<Mass>0.05</Mass>
+		</statBases>
+		<techLevel>Neolithic</techLevel>
+		<minRewardCount>10</minRewardCount>
+		<ingestible>
+			<foodType>Processed</foodType>
+			<joyKind>Chemical</joyKind>
+			<joy>0.70</joy>
+			<baseIngestTicks>650</baseIngestTicks>
+			<nurseable>true</nurseable>
+			<drugCategory>Hard</drugCategory>
+			<ingestSound>Ingest_Smoke</ingestSound>
+			<ingestEffect>Smoke_Flake</ingestEffect>
+			<ingestEffectEat>EatVegetarian</ingestEffectEat>
+			<ingestHoldOffsetStanding>
+				<northDefault>
+					<offset>(0.23,0,0.065)</offset>
+				</northDefault>
+			</ingestHoldOffsetStanding>
+			<ingestHoldUsesTable>false</ingestHoldUsesTable>
+			<ingestCommandString>Smoke {0}</ingestCommandString>
+			<ingestReportString>Smoking {0}.</ingestReportString>
+			<useEatingSpeedStat>false</useEatingSpeedStat>
+			<outcomeDoers>
+
+
+				<li Class="IngestionOutcomeDoer_RegrowParts">
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>FungiTimeManipulation</researchPrerequisite>
+			<recipeUsers>
+
+				<li>Timeforge</li>
+			</recipeUsers>
+		</recipeMaker>
+		<costList>
+			<Timeberry>10</Timeberry>
+		</costList>
+		<comps>
+			<li Class="CompProperties_Drug">
+				<chemical>TimeShroom</chemical>
+				<addictiveness>0</addictiveness>
+				<existingAddictionSeverityOffset>0.30</existingAddictionSeverityOffset>
+				<needLevelOffset>0.1</needLevelOffset>
+				<listOrder>110</listOrder>
+				<overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+				<largeOverdoseChance>0.015</largeOverdoseChance>
+			</li>
+		</comps>
+	</ThingDef>
+	
+</Defs>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   <WorkGiverDef>
+    <defName>DoBillsMakeWeaponsFungi</defName>
+    <label>make weapons</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Smithing</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Sporeforge</li>
+      <li>Fleshforge</li>
+      <li>Timeforge</li>
+    </fixedBillGiverDefs>
+    <verb>smith</verb>
+    <gerund>smithing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+
+   <WorkGiverDef>
+    <defName>DoBillsMakeWeaponsFungiTwo</defName>
+    <label>make stuff</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Tailoring</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Sporeforge</li>
+      <li>Fleshforge</li>
+      <li>Timeforge</li>
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>crafting at at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+   <WorkGiverDef>
+    <defName>DoBillsMakeWeaponsFungiThree</defName>
+    <label>make stuff</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>Crafting</workType>
+    <priorityInType>115</priorityInType>
+    <fixedBillGiverDefs>
+      <li>Sporeforge</li>
+      <li>Fleshforge</li>
+      <li>Timeforge</li>
+    </fixedBillGiverDefs>
+    <verb>craft</verb>
+    <gerund>crafting at at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+</Defs>

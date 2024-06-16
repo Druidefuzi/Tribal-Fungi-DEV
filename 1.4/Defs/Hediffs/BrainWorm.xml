@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Brain_Worms</defName>
+		<label>Brain Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Brain worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Brain_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+					<li>
+						<mentalState>Berserk</mentalState>
+						<mtbDays>0.2</mtbDays>
+					</li>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<statOffsets>
+					<MeleeDodgeChance>10</MeleeDodgeChance>
+					<MeleeHitChance>10</MeleeHitChance>
+					<MeleeWeapon_CooldownMultiplier>-.3</MeleeWeapon_CooldownMultiplier>
+					<MentalBreakThreshold>0.05</MentalBreakThreshold>
+					<NegotiationAbility>-1.5</NegotiationAbility>
+          			<SocialImpact>-1.5</SocialImpact>
+					<AimingDelayFactor>-0.15</AimingDelayFactor>
+				</statOffsets>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>0.001</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+
+<li Class="HediffGiver_Random">
+            <hediff>CatatonicBreakdown</hediff>
+            <mtbDays>0.5</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>When afflicted by brain worms, the victim gradually descends into a catatonic state over time. As the insidious parasites infest their mind, the individual becomes increasingly detached from reality, eventually slipping into a state of unresponsiveness and immobility.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Brain_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+</Defs>

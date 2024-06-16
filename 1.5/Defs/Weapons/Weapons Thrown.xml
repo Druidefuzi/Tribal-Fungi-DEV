@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>SporeBombFungi</defName>
+    <label>Spore capsule</label>
+    <description>A capsule filled with mold spores and shroomworm powder.After the Capsule is shattered, poisonous spores attack the breathing systems of everyone who breathes it in. However, the spores are very unstable. The infection will vanish after 2 hours.</description>
+    <tickerType>Normal</tickerType>
+    <recipeMaker>
+      <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <researchPrerequisite>FungiSporeFourth</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <effectWorking>Tailor</effectWorking>
+      <!-- SmithingSpeed -->
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+        <li>Sporeforge</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+    </recipeMaker>
+    <weaponTags>
+      <li>FungiMold</li>
+      <li>FungiGrenade</li>
+		<li>FungiSporeBomb</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/SporeThrower</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <Mass>15</Mass>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <WorkToMake>2500</WorkToMake>
+    </statBases>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <costList>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		  <range>14</range>
+		  <forcedMissRadius>0.5</forcedMissRadius>
+		  <warmupTime>2.5</warmupTime>
+		  <noiseRadius>4</noiseRadius>
+		  <ai_AvoidFriendlyFireRadius>20</ai_AvoidFriendlyFireRadius>
+		  <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Spore_Bomb</defaultProjectile>
+        <soundCast>SporeThrower</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <requireLineOfSight>true</requireLineOfSight>
+        <onlyManualCast>true</onlyManualCast>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Spore_Bomb</defName>
+    <label>Spore Capsule</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/SporeBomb</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <projectile>
+		<postExplosionGasType MayRequire="Ludeon.RimWorld.Biotech">ToxGas</postExplosionGasType>
+		<postExplosionSpawnThingDef>Filth_DruidWorm</postExplosionSpawnThingDef>
+		<speed>8</speed>
+		<explosionRadius>3</explosionRadius>
+		<damageAmountBase>2</damageAmountBase>
+      <damageDef>Sporecapsule</damageDef>
+      <explosionDelay>4</explosionDelay>
+      <soundExplode>Spores</soundExplode>
+    </projectile>
+  </ThingDef>
+
+
+	<ThingDef ParentName="BaseMakeableGrenade">
+		<defName>DruidWormSporeThrower</defName>
+		<label>Worm capsule</label>
+		<description>These capsules contain a deadly mixture of worm spores and shroomworm powder. Once shattered, the capsules release a cloud of microscopic worm spores that attack anyone who inhales them. These spores, in reality, are tiny worms that burrow into the victim's body, causing severe pain and internal damage. Despite their destructive nature, the worms have a very limited lifespan and die off within seconds. In very rare instances, if the worms consume enough tissue, they can form a slimy egg that may explode and hatch a little voracious worg, continuing the cycle of devastation.</description>
+		<tickerType>Normal</tickerType>
+		<recipeMaker>
+			<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+			<workSkill>Crafting</workSkill>
+			<researchPrerequisite>FungiInfestSecond</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+			<effectWorking>Tailor</effectWorking>
+			<!-- SmithingSpeed -->
+			<soundWorking>Recipe_Tailor</soundWorking>
+			<recipeUsers>
+				<li>Sporeforge</li>
+			</recipeUsers>
+			<unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+		</recipeMaker>
+		<weaponTags>
+			<li>FungiWormSpore</li>
+			
+		</weaponTags>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WormBombThrower</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Grenade</soundInteract>
+		<techLevel>Neolithic</techLevel>
+		<statBases>
+			<Mass>15</Mass>
+			<RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+			<MaxHitPoints>75</MaxHitPoints>
+			<MarketValue>200</MarketValue>
+			<WorkToMake>2500</WorkToMake>
+		</statBases>
+		<tradeTags>
+			<li>ExoticMisc</li>
+		</tradeTags>
+		<costList>
+			<DruidShroomworms>50</DruidShroomworms>
+		</costList>
+		<thingCategories>
+			<li>Grenades</li>
+		</thingCategories>
+		<verbs>
+			<li>
+				<verbClass>Verb_LaunchProjectile</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<range>14</range>
+				<forcedMissRadius>0.5</forcedMissRadius>
+				<warmupTime>2.5</warmupTime>
+				<noiseRadius>4</noiseRadius>
+				<ai_AvoidFriendlyFireRadius>20</ai_AvoidFriendlyFireRadius>
+				<ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<defaultProjectile>DruidWormSporeBomb</defaultProjectile>
+				<soundCast>SporeThrower</soundCast>
+				<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+				<requireLineOfSight>true</requireLineOfSight>
+				<onlyManualCast>true</onlyManualCast>
+			</li>
+		</verbs>
+	</ThingDef>
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>DruidWormSporeBomb</defName>
+		<label>Worm spore Capsule</label>
+		<thingClass>Projectile_Explosive</thingClass>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WormBomb</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<projectile>
+		
+			<postExplosionSpawnThingDef>Filth_DruidWorm</postExplosionSpawnThingDef>
+			<speed>8</speed>
+			<explosionRadius>4</explosionRadius>
+			<damageAmountBase>1</damageAmountBase>
+			<damageDef>DruidWormCapsuleDamage</damageDef>
+			<explosionDelay>5</explosionDelay>
+			<soundExplode>Spores</soundExplode>
+		</projectile>
+	</ThingDef>
+<ThingDef ParentName="BaseMakeableGrenade">
+    <defName>SporeBombInfectionFungi</defName>
+    <label>Spore plague capsule</label>
+    <description>A capsule filled with bacterias and shroomworm powder.After the Capsule is shattered, poisonous spores attack the breathing systems of everyone who breathes it in. However, the spores are very unstable. The infection will vanish after 2 hours, but can inflict several diseases in that time.</description>
+    <tickerType>Normal</tickerType>
+    <recipeMaker>
+      <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <researchPrerequisite>FungiSporeFourth</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+      <effectWorking>Tailor</effectWorking>
+      <!-- SmithingSpeed -->
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <recipeUsers>
+       <li>Sporeforge</li>
+      </recipeUsers>
+      <unfinishedThingDef>UnfinishedBelt</unfinishedThingDef>
+    </recipeMaker>
+    <weaponTags>
+      <li>FungiGrenade</li>
+      <li>FungiPlague</li>
+	  <li>SporeBombPlague</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Things/Item/Equipment/SporeInfectionThrower</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <techLevel>Neolithic</techLevel>
+    <statBases>
+      <Mass>15</Mass>
+      <RangedWeapon_Cooldown>3</RangedWeapon_Cooldown>
+      <MaxHitPoints>75</MaxHitPoints>
+      <MarketValue>200</MarketValue>
+      <WorkToMake>2500</WorkToMake>
+    </statBases>
+    <tradeTags>
+      <li>ExoticMisc</li>
+    </tradeTags>
+    <costList>
+      <DruidShroomworms>50</DruidShroomworms>
+    </costList>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <verbs>
+      <li>
+        <verbClass>Verb_LaunchProjectile</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>14</range>
+        <forcedMissRadius>0.5</forcedMissRadius>
+        <warmupTime>2.5</warmupTime>
+        <noiseRadius>4</noiseRadius>
+        <ai_AvoidFriendlyFireRadius>20</ai_AvoidFriendlyFireRadius>
+        <ai_IsBuildingDestroyer>false</ai_IsBuildingDestroyer>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>Spore_InfectionBomb</defaultProjectile>
+        <soundCast>SporeThrower</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <requireLineOfSight>true</requireLineOfSight>
+        <onlyManualCast>true</onlyManualCast>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>Spore_InfectionBomb</defName>
+    <label>Spore Infection Capsule</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Item/Equipment/SporeInfectionBomb</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <projectile>
+		<postExplosionGasType MayRequire="Ludeon.RimWorld.Biotech">RotStink</postExplosionGasType>
+		<postExplosionSpawnThingDef>Filth_DruidSpore</postExplosionSpawnThingDef>
+      <speed>8</speed>
+      <explosionRadius>3</explosionRadius>
+      <damageAmountBase>2</damageAmountBase>
+      <damageDef>Sporecapsuleinfection</damageDef>
+      <explosionDelay>4</explosionDelay>
+      <soundExplode>Spores</soundExplode>
+    </projectile>
+  </ThingDef>
+</Defs>

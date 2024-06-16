@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ScenarioDef>
+		<defName>Infestationbegins</defName>
+		<label>Infestation begins.</label>
+<description>To gain more influence and power the infested Fungi tribes decided to send settlers to claim more land. The tribes gifted them with an infestator, to turn every pesky human they find into slaves for their needs.</description>
+			<scenario>
+	
+		<summary>Infestation begins.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>FungiPlayerTribe</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>10</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Silver</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineHerbal</thingDef>
+				<count>24</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Traditional</thingDef>
+				<count>4</count>
+			</li>
+			<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Wormigiant</animalKind>
+				<count>2</count>
+				<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>400</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<count>6</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>250</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>RAW_SHROOMANS_RESOURCE_DEF</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>The settlers discovered a place to settle down. To celebrate this, they had a night of heavy drinking. Maybe it wasn´t the best idea to start hungover into the first day of this colony.</text>
+				<textKey>GameStartDialog</textKey>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>HumigiantPasses</incident>
+				<intervalDays>25</intervalDays>
+				<repeat>True</repeat>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>FungiAbominations</incident>
+				<intervalDays>50</intervalDays>
+				<repeat>True</repeat>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>AdvancedShroomwormBiology</project>
+			</li>
+			<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantWorkSpeed</stat>
+				<factor>1.2</factor>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>WildManWandersIn</incident>
+				<intervalDays>10</intervalDays>
+				<repeat>True</repeat>
+			</li>
+			<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantHarvestYield</stat>
+				<factor>1.2</factor>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MoldHeartGun</thingDef>
+				<stuff>RAW_SHROOMANS_RESOURCE_DEF</stuff>
+				<count>2</count>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.8</chance>
+				<context>PlayerStarter</context>
+				<hediff>Hangover</hediff>
+				<severityRange>0.03851861~0.6874073</severityRange>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>SporeBombFungi</thingDef>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>Organology</project>
+			</li>
+		
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MeleeWeapon_MoldaxeBattle</thingDef>
+				<stuff>RAW_SHROOMANS_RESOURCE_DEF</stuff>
+			</li>
+			
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Turret_WormiTurret</thingDef>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Meat_Human</thingDef>
+				<count>500</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>RAW_SHROOMANSINFESTED_RESOURCE_DEF</thingDef>
+				<count>200</count>
+			</li>
+		</parts>
+	</scenario>
+	</ScenarioDef>
+</Defs>

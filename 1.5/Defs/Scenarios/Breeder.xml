@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ScenarioDef>
+		<defName>OhlookBreeder</defName>
+		<label>Breeding herders</label>
+		<description>The Fungi Human Breeder Tribe stands as a formidable force, their mastery over biological manipulation unmatched. Nestled within the depths of their labyrinthine lair, they meticulously breed and transform humans to serve their every whim, shaping them into whatever form or function the tribe requires.
+
+			Accompanying the tribe are their loyal creations: humans bred in a dog-like shape, possessing unwavering loyalty and unyielding obedience. These humanoid canines serve as faithful companions and guardians, their canine instincts finely tuned to complement the desires of their Fungi masters. Together, they form an inseparable bond, forging a symbiotic relationship that ensures the dominance and survival of the Breeder Tribe in their dark and twisted domain.</description>
+		<scenario>
+		<summary>A group of herders arrived.</summary>
+
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>FungiPlayerTribe</factionDef>
+		</playerFaction>
+		<parts>
+			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>10</pawnChoiceCount>
+			</li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Silver</thingDef>
+				<count>200</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MedicineHerbal</thingDef>
+				<count>24</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Traditional</thingDef>
+				<count>4</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>HeartGun</thingDef>
+				<stuff>DruidShroomans</stuff>
+			</li>
+			
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>MeleeWeapon_HumanFleshsword</thingDef>
+				<stuff>DruidShroomans</stuff>
+			</li>
+			<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Humimals</animalKind>
+				<count>6</count>
+				<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Humigiants</animalKind>
+				<count>1</count>
+				<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingAnimal">
+				<def>StartingAnimal</def>
+				<animalKind>Chickman</animalKind>
+				<count>6</count>
+				<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Turret_HumimalTurret</thingDef>
+			</li>
+
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>400</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>ShipChunk</thingDef>
+				<count>6</count>
+			</li>
+			<li Class="ScenPart_ScatterThingsAnywhere">
+				<def>ScatterThingsAnywhere</def>
+				<thingDef>Steel</thingDef>
+				<count>250</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>DruidShroomans</thingDef>
+				<count>400</count>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>Meat_Human</thingDef>
+				<count>350</count>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Anomaly" Class="ScenPart_MonolithGeneration">
+				<def>ScenPart_MonolithGeneration</def>
+				<method>NearColonists</method>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>What are these things? They look just like our animals.</text>
+				<textKey>GameStartDialog</textKey>
+				<closeSound>GameStartSting</closeSound>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>HumigiantPasses</incident>
+				<intervalDays>10</intervalDays>
+				<minDays>20</minDays>
+				<maxDays>50</maxDays>
+				<repeat>True</repeat>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>FungiAbominations</incident>
+				<intervalDays>20</intervalDays>
+				<repeat>True</repeat>
+				<minDays>20</minDays>
+				<maxDays>50</maxDays>
+			</li>
+			<li Class="ScenPart_ForcedHediff">
+				<def>ForcedHediff</def>
+				<chance>0.25</chance>
+				<context>PlayerStarter</context>
+				<hediff>Malnutrition</hediff>
+				<severityRange>0.09533334~0.22</severityRange>
+			</li>
+			<li Class="ScenPart_StartingResearch">
+				<def>StartingResearch</def>
+				<project>FungiBreederTribe</project>
+			</li>
+			<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantWorkSpeed</stat>
+				<factor>1.2</factor>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<incident>WildManWandersIn</incident>
+				<intervalDays>5</intervalDays>
+
+				<repeat>True</repeat>
+			</li>
+			<li Class="ScenPart_StatFactor">
+				<def>StatFactor</def>
+				<stat>PlantHarvestYield</stat>
+				<factor>1.2</factor>
+			</li>
+			<li Class="ScenPart_CreateIncident">
+				<def>CreateIncident</def>
+				<minDays>20</minDays>
+				<maxDays>50</maxDays>
+				<incident>RaidEnemy</incident>
+				<intervalDays>6</intervalDays>
+				<repeat>True</repeat>
+			</li>
+	
+		</parts>
+	</scenario>
+	</ScenarioDef>
+</Defs>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<DesignationCategoryDef>
+		<defName>FungiBuildings</defName>
+		<label>Fungi</label>
+		<order>93</order>
+		<specialDesignatorClasses>
+			<li>Designator_Cancel</li>
+			<li>Designator_Deconstruct</li>
+			<li>Designator_RemoveFloor</li>
+		</specialDesignatorClasses>
+		<preferredColumn>1</preferredColumn>
+		<researchPrerequisites>
+			<li>Fleshforging</li>
+		</researchPrerequisites>
+	</DesignationCategoryDef>
+
+</Defs>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_Berserk</defName>
+    <label>&lt;color=#02620c&gt;Berserk mode &lt;/color&gt;</label>
+    <description>In this state or condition, an individual feels nothing but an overwhelming, uncontrollable anger. Every thought and emotion is eclipsed by a seething rage that consumes their being, leaving no room for any other feelings or sensations.</description>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <defaultLabelColor>(0, 1, 0)</defaultLabelColor>
+    <minSeverity>0.06</minSeverity>
+    <maxSeverity>0.8</maxSeverity>
+    <initialSeverity>0.09</initialSeverity>
+    <lethalSeverity>3</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-0.25</immunityPerDayNotSick>
+        <immunityPerDaySick>0.2</immunityPerDaySick>
+        <severityPerDayNotImmune>1</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.5</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.8</severityPerDay>
+        <!-- 0.01 -->
+      </li>
+    </comps>
+    <injuryProps>
+      <bleedRate>0.01</bleedRate>
+      <painPerSeverity>0.1</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.1</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Died off</destroyedLabel>
+      <destroyedOutLabel>Died out</destroyedOutLabel>
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.3</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.3</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.5</minSeverity>
+        <vomitMtbDays>0.3</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.000001</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.3</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.000001</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.8</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>-0.1</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>0.000001</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

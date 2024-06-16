@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<EffecterDef MayRequire="Ludeon.Rimworld.Biotech">
+    <defName>Spore_Spew</defName>
+    <children>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.15</positionRadius>
+        <fleckDef>FungiGreenSpewBig</fleckDef>
+        <chancePerTick>0.9</chancePerTick>
+        <speed>9.5</speed>
+        <scale>0.8~1.2</scale>
+        <angle>-15~15</angle>
+        <positionLerpFactor>0.85</positionLerpFactor>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.1</positionRadius>
+        <fleckDef>FungiGreenSpewBig</fleckDef>
+        <chancePerTick>0.1</chancePerTick>
+        <speed>0.6</speed>
+        <scale>0.8</scale>
+        <angle>-9~9</angle>
+        <positionLerpFactor>0.75</positionLerpFactor>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.1</positionRadius>
+        <moteDef>Mote_VomitBit</moteDef>
+        <chancePerTick>0.5</chancePerTick>
+        <speed>3.3~5</speed>
+        <scale>0.1~0.2</scale>
+        <angle>-12~12</angle>
+        <positionLerpFactor>0.8</positionLerpFactor>
+        <fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+      </li>
+      <li>
+        <subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+        <positionRadius>0.2</positionRadius>
+        <fleckDef>FungiGreenSpewBig</fleckDef>
+        <chancePerTick>0.16</chancePerTick>
+        <positionLerpFactor>0.65</positionLerpFactor>
+      </li>
+    </children>
+  </EffecterDef>
+	
+	<EffecterDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>WormSpore_Spew</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.15</positionRadius>
+				<fleckDef>FungiYellowSpewBig</fleckDef>
+				<chancePerTick>0.9</chancePerTick>
+				<speed>9.5</speed>
+				<scale>0.8~1.2</scale>
+				<angle>-15~15</angle>
+				<positionLerpFactor>0.85</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>FungiYellowSpewBig</fleckDef>
+				<chancePerTick>0.1</chancePerTick>
+				<speed>0.6</speed>
+				<scale>0.8</scale>
+				<angle>-9~9</angle>
+				<positionLerpFactor>0.75</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_VomitBit</moteDef>
+				<chancePerTick>0.5</chancePerTick>
+				<speed>3.3~5</speed>
+				<scale>0.1~0.2</scale>
+				<angle>-12~12</angle>
+				<positionLerpFactor>0.8</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<fleckDef>FungiYellowSpewBig</fleckDef>
+				<chancePerTick>0.16</chancePerTick>
+				<positionLerpFactor>0.65</positionLerpFactor>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<EffecterDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>BreederSpore_Spew</defName>
+		<children>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.15</positionRadius>
+				<fleckDef>FungiRedSpewBig</fleckDef>
+				<chancePerTick>0.9</chancePerTick>
+				<speed>9.5</speed>
+				<scale>0.8~1.2</scale>
+				<angle>-15~15</angle>
+				<positionLerpFactor>0.85</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<fleckDef>FungiRedSpewBig</fleckDef>
+				<chancePerTick>0.1</chancePerTick>
+				<speed>0.6</speed>
+				<scale>0.8</scale>
+				<angle>-9~9</angle>
+				<positionLerpFactor>0.75</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.1</positionRadius>
+				<moteDef>Mote_VomitBit</moteDef>
+				<chancePerTick>0.5</chancePerTick>
+				<speed>3.3~5</speed>
+				<scale>0.1~0.2</scale>
+				<angle>-12~12</angle>
+				<positionLerpFactor>0.8</positionLerpFactor>
+				<fleckUsesAngleForVelocity>true</fleckUsesAngleForVelocity>
+			</li>
+			<li>
+				<subEffecterClass>SubEffecter_SprayerChance</subEffecterClass>
+				<positionRadius>0.2</positionRadius>
+				<fleckDef>FungiRedSpewBig</fleckDef>
+				<chancePerTick>0.16</chancePerTick>
+				<positionLerpFactor>0.65</positionLerpFactor>
+			</li>
+		</children>
+	</EffecterDef>
+
+
+	<GeneDef>
+    <defName>SporeSpew</defName>
+    <label>spore spew</label>
+    <description>Carriers of this gene possess a formidable ability to spew spores from the lamellae of their mushroom-like body parts. Each spore carries a potent payload of dangerous flesh-eating agents that burrow into flesh with relentless efficiency. Direct contact with these spores results in immediate affliction, causing intense pain and severe internal damage. The air, tainted by the poisonous aftermath, becomes a lethal cocktail of toxic gas and rotting scent, rendering it hazardous to breathe for a brief period. This gene is a testament to the carriers' mastery of biological warfare, unleashing their deadly arsenal upon unsuspecting adversaries and leaving destruction and decay in their wake.</description>
+    <iconPath>UI/Abilities/SporeSpew</iconPath>
+    <displayCategory>Ability</displayCategory>
+    <marketValueFactor>1.5</marketValueFactor>
+    <abilities>
+      <li>SporeSpew</li>
+    </abilities>
+    <descriptionHyperlinks>
+      <AbilityDef>SporeSpew</AbilityDef>
+    </descriptionHyperlinks>
+    <biostatMet>1</biostatMet>
+    <symbolPack>
+      <wholeNameSymbols>
+        <li><symbol>spore</symbol></li>
+        <li><symbol>tox</symbol></li>
+      </wholeNameSymbols>
+      <prefixSymbols>
+        <li><symbol>flesheat</symbol></li>
+        <li><symbol>rot</symbol></li>
+      
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>spew</symbol></li>
+      
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+	<GeneDef>
+		<defName>WormSporeSpew</defName>
+		<label>worm spore spew</label>
+		<description>Carriers are able to spew virulent spores from the lamellae of their mushroom-like body parts. These spores contain microscopic worms that burrow into victims, causing intense pain and severe internal damage. The worms' consumption of flesh can sometimes form a slimy egg, which may explode and hatch a worg, continuing the cycle of torment. The air around the affected area becomes toxic, adding to the deadly effect.</description>
+		<iconPath>UI/Abilities/WormSporeSpew</iconPath>
+		<displayCategory>Ability</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<abilities>
+			<li>WormSporeSpew</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>WormSporeSpew</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>1</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>worm</symbol>
+				</li>
+				<li>
+					<symbol>egg</symbol>
+				</li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				<li>
+					<symbol>infest</symbol>
+				</li>
+				<li>
+					<symbol>slime</symbol>
+				</li>
+				
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>bite</symbol>
+				</li>
+				<li>
+					<symbol>rip</symbol>
+				</li>
+				
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>BreederSporeSpew</defName>
+		<label>breeder spore spew</label>
+		<description>The carrier of this gene releases spores that have a terrifying effect on the victim's circulatory system. Once inhaled or making contact with an open wound, the spores rapidly thin the victim's blood, leading to uncontrollable bleeding from minor cuts and abrasions. Additionally, these spores drastically increase the victim's heart rate, causing extreme stress on the cardiovascular system and leading to potential heart failure. The combined effects result in severe hemorrhaging and acute cardiovascular distress. The atmosphere around the affected area becomes heavy with the scent of iron and the sound of frenzied heartbeats, marking the presence of the gene carrier and their devastating biological weapon. The carrier's ability to induce such immediate and catastrophic effects makes them a formidable adversary.</description><iconPath>UI/Abilities/BreederSporeSpew</iconPath>
+		<displayCategory>Ability</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<abilities>
+			<li>BreederSporeSpew</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>BreederSporeSpew</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>1</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>blood</symbol>
+				</li>
+				<li>
+					<symbol>heart</symbol>
+				</li>
+			</wholeNameSymbols>
+			<prefixSymbols>
+				
+				<li>
+					<symbol>wound</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				
+				<li>
+					<symbol>spore</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>BaseFungiSpores</defName>
+		<label>spores</label>
+		<iconPath>UI/Genes/SporeShot</iconPath>
+		<description>The carrier of this gene has a sinister ability to spit flesh-eating spores at a single target. Upon contact, these spores rapidly penetrate the skin and begin to devour the flesh, causing excruciating pain and swift tissue decay. The victim's flesh deteriorates within minutes, leaving behind raw, festering wounds. This horrifying attack not only debilitates the target but also serves as a gruesome warning to others. The air around the afflicted area becomes filled with a putrid stench, signaling the presence of the gene carrier and their lethal capabilities. The carrier's precision in targeting and delivering these spores makes them a fearsome threat on the battlefield.</description>	
+		<displayCategory>Ability</displayCategory>
+		<marketValueFactor>1.5</marketValueFactor>
+		<abilities>
+			<li>BaseFungiSpores</li>
+		</abilities>
+		<descriptionHyperlinks>
+			<AbilityDef>BaseFungiSpores</AbilityDef>
+		</descriptionHyperlinks>
+		<biostatMet>1</biostatMet>
+		<symbolPack>
+			<wholeNameSymbols>
+				<li>
+					<symbol>toxic</symbol>
+				</li>
+			
+			</wholeNameSymbols>
+			<prefixSymbols>
+
+				<li>
+					<symbol>rot</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+
+				<li>
+					<symbol>flesheater</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+
+ <AbilityDef>
+    <defName MayRequire="Ludeon.Rimworld.Biotech">SporeSpew</defName>
+    <label>spore spew</label>
+	 <description>The Fungi of the spore tribe possess a formidable ability to spew spores, each carrying a potent payload of dangerous flesh-eating agents. Direct contact with these spores results in immediate affliction, as they burrow into flesh with relentless efficiency. The air, tainted by the poisonous aftermath, becomes a lethal cocktail of toxic gas and rotting scent, rendering it hazardous to breathe for a brief period. It is a testament to the Fungi's mastery of biological warfare, as they unleash their deadly arsenal upon unsuspecting adversaries, leaving destruction and decay in their wake.</description>
+	 <iconPath>UI/Abilities/SporeSpew</iconPath>
+    <cooldownTicksRange>300000</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <warmupStartSound>FireSpew_Warmup</warmupStartSound>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>6</range>
+      <warmupTime>0.5</warmupTime>
+      <soundCast>Spores</soundCast>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="Fungi.CompProperties_AbilitySporeSpew">
+        <range>6</range>
+        <lineWidthEnd>6</lineWidthEnd>
+		  <filthToAdd>Filth_DruidWorm</filthToAdd>
+		  <damageDef>FlesheatingSpores</damageDef>
+		  <gasType>ToxGas</gasType>
+		  <effecterDef>Spore_Spew</effecterDef>
+      </li>
+    </comps>
+  </AbilityDef>
+
+	<AbilityDef>
+		<defName MayRequire="Ludeon.Rimworld.Biotech">WormSporeSpew</defName>
+		<label> worm spore spew</label>
+	    <description>The Fungi of the infestation tribe spew spores containing microscopic worms. These worms burrow into the victim's body, causing intense pain and severe internal damage as they ravenously consume flesh. Though their lifespan is short, the destruction they cause is significant. In rare cases, the worms form a slimy egg that can explode and hatch a worg, a creature continuing the cycle of torment. The air, tainted with toxic gas and rotting scent, becomes hazardous to breathe. The Fungi's biological warfare leaves destruction and decay in its wake.</description>
+
+		<iconPath>UI/Abilities/WormSporeSpew</iconPath>
+		<cooldownTicksRange>300000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>6</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Spores</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Fungi.CompProperties_AbilitySporeSpew">
+				<range>6</range>
+				<lineWidthEnd>6</lineWidthEnd>
+				<filthToAdd>Filth_DruidWormYellow</filthToAdd>
+				<damageDef>DruidWormCapsuleDamage</damageDef>
+				<gasType>ToxGas</gasType>
+				<effecterDef>WormSpore_Spew</effecterDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName MayRequire="Ludeon.Rimworld.Biotech">BreederSporeSpew</defName>
+		<label> breeder spore spew</label>
+		<description>A Fungi of the breeder tribe is able to release spores that have a terrifying effect on the victim's circulatory system. Once inhaled or making contact with an open wound, the spores rapidly thin the victim's blood, leading to uncontrollable bleeding from minor cuts and abrasions. Additionally, these spores drastically increase the victim's heart rate, causing extreme stress on the cardiovascular system and leading to potential heart failure. The combined effects result in severe hemorrhaging and acute cardiovascular distress. The atmosphere around the affected area becomes heavy with the scent of iron and the sound of frenzied heartbeats, marking the presence of the gene carrier and their devastating biological weapon. The carrier's ability to induce such immediate and catastrophic effects makes them a formidable adversary.</description>
+		<iconPath>UI/Abilities/BreederSporeSpew</iconPath>
+		<cooldownTicksRange>300000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<warmupStartSound>FireSpew_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>6</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Spores</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="Fungi.CompProperties_AbilitySporeSpew">
+				<range>6</range>
+				<lineWidthEnd>6</lineWidthEnd>
+				<filthToAdd>Filth_Blood</filthToAdd>
+				<damageDef>FungiBlood</damageDef>
+				<gasType>RotStink</gasType>
+				<effecterDef>BreederSpore_Spew</effecterDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+	<AbilityDef>
+		<defName MayRequire="Ludeon.Rimworld.Biotech">BaseFungiSpores</defName>
+		<label>Spores</label>
+
+		<description>The base Fungi have a sinister ability to spit flesh-eating spores at a single target. Upon contact, these spores rapidly penetrate the skin and begin to devour the flesh, causing excruciating pain and swift tissue decay. The victim's flesh deteriorates within minutes, leaving behind raw, festering wounds. This horrifying attack not only debilitates the target but also serves as a gruesome warning to others. The air around the afflicted area becomes filled with a putrid stench, signaling the presence of the Fungi and their lethal capabilities. The base Fungi's precision in targeting and delivering these spores makes them a fearsome threat on the battlefield.</description>
+
+		<iconPath>UI/Abilities/SingleSpore</iconPath>
+		<cooldownTicksRange>120</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>6</range>
+			<warmupTime>0.5</warmupTime>
+			<soundCast>Spores</soundCast>
+		
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityLaunchProjectile">
+				<projectileDef>spores</projectileDef>
+			</li>
+		</comps>
+	</AbilityDef>
+
+</Defs>

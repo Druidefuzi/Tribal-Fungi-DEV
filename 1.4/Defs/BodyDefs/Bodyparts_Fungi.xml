@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef Name="BodyPartFungiBase" ParentName="BodyPartBase" Abstract="True">
+    <techLevel>Neolithic</techLevel>
+    <thingCategories>
+      <li>BodyPartsFungi</li>
+    </thingCategories>
+    <graphicData>
+      <texPath>Things/Item/Health/HealthItem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+      <color>(189,169,118)</color>
+    </graphicData>
+    <tradeTags>
+      <li>Fungi</li>
+    </tradeTags>
+    <techHediffsTags>
+      <li>Simple</li>
+    </techHediffsTags>
+    <statBases>
+      <WorkToMake>26000</WorkToMake>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <unfinishedThingDef>UnfinishedHealthItemBionic</unfinishedThingDef>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>AdvancedShroomwormBiology</researchPrerequisite>
+      <recipeUsers>
+        <li>Fleshforge</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiArms</defName>
+    <label>fungal arm</label>
+    <labelNoun>a fungal arm</labelNoun>
+    <description>A heavy mutated arm, it was once alive and independent.</description>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>fist</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>12</power>
+            <cooldownTime>2</cooldownTime>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <spawnThingOnRemoved>FungiArms</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiArms</defName>
+    <label>fungi arm</label>
+    <description>An heavy mutated arm, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" arm.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiArms</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiArmLiving>1</Corpse_FungiArmLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiArms</defName>
+    <label>install fungi arm</label>
+    <description>Install a fungi arm.</description>
+    <descriptionHyperlinks><ThingDef>FungiArms</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi arm.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiArms</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiArms</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Shoulder</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiArms</addsHediff>
+  </RecipeDef>
+
+
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiLeg</defName>
+    <label>fungi leg</label>
+    <labelNoun>a fungi leg</labelNoun>
+    <description>An installed fungi leg.</description>
+    <descriptionHyperlinks><ThingDef>FungiLeg</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiLeg</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiLeg</defName>
+    <label>fungi leg</label>
+    <description>An heavy mutated leg, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" leg.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiLeg</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiLegLiving>1</Corpse_FungiLegLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiLeg</defName>
+    <label>install fungi leg</label>
+    <description>Install a fungi leg.</description>
+    <descriptionHyperlinks><ThingDef>FungiLeg</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi leg.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiLeg</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiLeg</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Leg</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiLeg</addsHediff>
+  </RecipeDef>
+---------------------------Eye-------------------------------------
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiEye</defName>
+    <label>fungi Eye</label>
+    <labelNoun>a fungi Eye</labelNoun>
+    <description>An installed fungi Eye.</description>
+    <descriptionHyperlinks><ThingDef>FungiEye</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiEye</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiEye</defName>
+    <label>fungi eye</label>
+    <description>An heavy mutated eye, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" eye.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiEye</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiEyeLiving>1</Corpse_FungiEyeLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiEye</defName>
+    <label>install fungi Eye</label>
+    <description>Install a fungi Eye.</description>
+    <descriptionHyperlinks><ThingDef>FungiEye</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Eye.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiEye</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiEye</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Eye</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiEye</addsHediff>
+  </RecipeDef>
+---------------------------Finger-------------------------------------
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiFinger</defName>
+    <label>fungi Finger</label>
+    <labelNoun>a fungi Finger</labelNoun>
+    <description>An installed fungi Finger.</description>
+    <descriptionHyperlinks><ThingDef>FungiFinger</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiFinger</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiFinger</defName>
+    <label>fungi finger</label>
+    <description>An heavy mutated finger, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" finger.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiFinger</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiFingerLiving>1</Corpse_FungiFingerLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiFinger</defName>
+    <label>install fungi Finger</label>
+    <description>Install a fungi Finger.</description>
+    <descriptionHyperlinks><ThingDef>FungiFinger</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Finger.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiFinger</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiFinger</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Finger</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiFinger</addsHediff>
+  </RecipeDef>
+-------------Toes-----------------------------
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiToe</defName>
+    <label>fungi Toe</label>
+    <labelNoun>a fungi Toe</labelNoun>
+    <description>An installed fungi Toe.</description>
+    <descriptionHyperlinks><ThingDef>FungiToe</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiToe</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiToe</defName>
+    <label>fungi Toe</label>
+    <description>An heavy mutated Toe, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" Toe.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiToe</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiToeLiving>1</Corpse_FungiToeLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiToe</defName>
+    <label>install fungi Toe</label>
+    <description>Install a fungi Toe.</description>
+    <descriptionHyperlinks><ThingDef>FungiToe</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Toe.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiToe</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiToe</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Toe</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiToe</addsHediff>
+  </RecipeDef>
+-------------------Heart---------------------------
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiHeart</defName>
+    <label>fungi Heart</label>
+    <labelNoun>a fungi Heart</labelNoun>
+    <description>An installed fungi Heart.</description>
+    <descriptionHyperlinks><ThingDef>FungiHeart</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiHeart</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiHeart</defName>
+    <label>fungi Heart</label>
+    <description>An heavy mutated Heart, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" Heart.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiHeart</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiHeartLiving>1</Corpse_FungiHeartLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiHeart</defName>
+    <label>install fungi Heart</label>
+    <description>Install a fungi Heart.</description>
+    <descriptionHyperlinks><ThingDef>FungiHeart</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Heart.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiHeart</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiHeart</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiHeart</addsHediff>
+  </RecipeDef>
+----------------Stomach-------------------------
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiStomach</defName>
+    <label>fungi Stomach</label>
+    <labelNoun>a fungi Stomach</labelNoun>
+    <description>An installed fungi Stomach.</description>
+    <descriptionHyperlinks><ThingDef>FungiStomach</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiStomach</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiStomach</defName>
+    <label>fungi Stomach</label>
+    <description>An heavy mutated Stomach, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" Stomach.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiStomach</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiStomachLiving>1</Corpse_FungiStomachLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiStomach</defName>
+    <label>install fungi Stomach</label>
+    <description>Install a fungi Stomach.</description>
+    <descriptionHyperlinks><ThingDef>FungiStomach</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Stomach.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiStomach</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiStomach</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Stomach</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiStomach</addsHediff>
+  </RecipeDef>
+------------------------Nose----------------------
+<HediffDef ParentName="AddedBodyPartBase">
+    <defName>FungiNose</defName>
+    <label>fungi Nose</label>
+    <labelNoun>a fungi Nose</labelNoun>
+    <description>An installed fungi Nose.</description>
+    <descriptionHyperlinks><ThingDef>FungiNose</ThingDef></descriptionHyperlinks>
+    <spawnThingOnRemoved>FungiNose</spawnThingOnRemoved>
+    <addedPartProps>
+      <solid>true</solid>
+      <partEfficiency>1.125</partEfficiency>
+      <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <ThingDef ParentName="BodyPartFungiBase">
+    <defName>FungiNose</defName>
+    <label>fungi Nose</label>
+    <description>An heavy mutated Nose, it was once alive and independent.The former nervous system can be utilized and enhances the perfomance greatly compared to a "normal" Nose.</description>
+    <descriptionHyperlinks><RecipeDef>InstallFungiNose</RecipeDef></descriptionHyperlinks>
+    <costList>
+      <Corpse_FungiNoseLiving>1</Corpse_FungiNoseLiving>
+
+    </costList>
+    <thingSetMakerTags><li>RewardStandardMidFreq</li></thingSetMakerTags>
+    <statBases>
+      <Mass>8</Mass>
+    </statBases>
+  </ThingDef>
+
+  <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
+    <defName>InstallFungiNose</defName>
+    <label>install fungi Nose</label>
+    <description>Install a fungi Nose.</description>
+    <descriptionHyperlinks><ThingDef>FungiNose</ThingDef></descriptionHyperlinks>
+    <jobString>Installing fungi Nose.</jobString>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FungiNose</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FungiNose</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Nose</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>FungiNose</addsHediff>
+  </RecipeDef>
+</Defs>

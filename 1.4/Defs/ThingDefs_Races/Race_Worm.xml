@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<AlienRace.ThingDef_AlienRace ParentName="BasePawn">
+		<defName>Alien_FungiWormi</defName>
+		<label>Wormoid</label>
+		<description>Very primitive humanoid like beings.They are very agressive and dont care much about others.This race has not evolved in the normal way. It is said that the infested tribe captures humans and turns them somehow into this abomination.</description>
+
+		<alienRace>
+			<generalSettings>
+				<maleGenderProbability>1</maleGenderProbability>
+				<immuneToAge>false</immuneToAge>
+				<canLayDown>true</canLayDown>
+				<forcedRaceTraitEntries>
+					<li>
+						<defName>Psychopath</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Cannibal</defName>
+						<chance>100</chance>
+					</li>
+					<li>
+						<defName>Bloodlust</defName>
+						<chance>100</chance>
+					</li>
+				</forcedRaceTraitEntries>
+            <disallowedTraits>
+            </disallowedTraits>
+            <minAgeForAdulthood>1</minAgeForAdulthood>
+
+				
+           	<factionRelations>
+               <li>
+                  <factions>
+					 
+							<li>FungiPlayerTribe</li>
+                  </factions>
+                  <goodwill>
+                     <min>20</min>
+                     <max>21</max>
+                  </goodwill>
+               </li>               
+            </factionRelations>	
+				
+				<maxDamageForSocialfight>5</maxDamageForSocialfight>
+
+				<alienPartGenerator>
+					<headTypes Inherit="False">
+
+						<li>Wormi_AverageMale</li>
+						<li>Wormi_AverageFemale</li>
+
+					</headTypes>
+					<bodyTypes Inherit="False">
+						<li>Thin</li>
+
+					</bodyTypes>
+
+
+
+
+					<colorChannels>
+						<li>
+							<name>skin</name>
+							<first Class="ColorGenerator_Options">
+								<options>
+									<li>
+										<weight>15</weight>
+										<min>RGBA(227, 227, 227, 255)</min>
+										<max>RGBA(207, 207, 207, 255)</max>
+									</li>
+									<li>
+										<weight>5</weight>
+										<min>RGBA(247,171,171,255)</min>
+										<max>RGBA(209,21,21,255)</max>
+									</li>
+									<li>
+										<weight>6</weight>
+										<min>RGBA(171,247,203,255)</min>
+										<max>RGBA(65,236,136,255))</max>
+									</li>
+								</options>
+							</first>
+						</li>
+					</colorChannels>
+				</alienPartGenerator>
+			</generalSettings>
+			<graphicPaths>
+				<body>Things/Pawn/Humanlike/Wormi/Body/</body>
+				<head>Things/Pawn/Humanlike/Wormi/Head/</head>
+				<skinShader>Cutout</skinShader>
+			</graphicPaths>
+
+
+			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>TattooDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+				<li>
+					<key>BeardDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+					</value>
+				</li>
+			</styleSettings>
+
+                
+			
+	<thoughtSettings>
+			<cannotReceiveThoughts>
+				<li>ObservedLayingCorpse</li>
+				<li>EnvironmentDark</li>
+				<li>NeedOutdoors</li>
+				<li>AteCorpse</li>
+				<li>AteHumanlikeMeatDirect</li>
+				<li>AteHumanlikeMeatAsIngredient</li>
+				<li>AteHumanlikeMeatAsIngredientCannibal</li>
+				<li>SoldPrisoner</li>
+				<li>KnowGuestOrganHarvested</li>
+				<li>KnowButcheredHumanlikeCorpse</li>
+				<li>ButcheredHumanlikeCorpse</li>
+				<li>WitnessedDeathNonAlly</li>
+				<li>PrisonerBanishedToDie</li>
+				<li>Naked</li>
+				<li>ButcheredHumanlikeCorpseOpinion</li>
+                                <li>NightOwlDuringTheDay</li>
+                                <li>NightOwlDuringTheNight</li>
+                                <li>EnvironmentDark</li>
+                                
+                                <li>KnowPrisonerDiedInnocent</li>
+                                <li>PrisonerBanishedToDie</li>
+                                <li>AteRawHumanlikeMeat</li>
+                              
+			</cannotReceiveThoughts>
+
+		</thoughtSettings>
+
+
+			<relationSettings>
+				<relationChanceModifierSibling>3</relationChanceModifierSibling>
+				<renamer>
+					<li>
+					  <relation>Parent</relation>
+					  <label>Progenitor</label>
+					  <femaleLabel>Progenitor</femaleLabel>
+					</li>
+					<li>
+						<relation>Child</relation>
+						<label>Child</label>
+						<femaleLabel>Child</femaleLabel>
+					</li>
+					<li>
+						<relation>Spouse</relation>
+						<label>Spouse</label>
+						<femaleLabel>Spouse</femaleLabel>
+					</li>
+					<li>
+						<relation>ExSpouse</relation>
+						<label>ExSpouse</label>
+						<femaleLabel>ExSpouse</femaleLabel>
+					</li>
+					<li>
+						<relation>Sibling</relation>
+						<label>Sibling</label>
+						<femaleLabel>Sibling</femaleLabel>
+					</li>
+					<li>
+						<relation>Fiance</relation>
+						<label>Betrothed</label>
+						<femaleLabel>Betrothed</femaleLabel>
+					</li>
+				</renamer>
+			</relationSettings>
+			<raceRestriction>
+				<blackGeneList>
+					<li MayRequire="Ludeon.RimWorld.Biotech">Brow_Heavy</li>
+					<li MayRequire="Ludeon.RimWorld.Biotech">FacialRidges</li>
+				</blackGeneList>
+				<blackGeneTags MayRequire="Ludeon.RimWorld.Biotech">
+					<!-- <li>SkinColor</li> -->
+					<li>HairColor</li>
+					<li>EyeColor</li>
+					<li>BodyType</li>
+					<li>Ears</li>
+					<!-- <li>Nose</li> -->
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>Headbone</li>
+					<li>HairStyle</li>
+					<li>BeardStyle</li>
+					<!-- <li>SkinColorOverride</li> -->
+					<li>Fur</li>
+					<!-- <li>Tail</li> -->
+				</blackGeneTags>
+				<blackEndoCategories MayRequire="Ludeon.RimWorld.Biotech">
+					<li>Melanin</li>
+					<li>HairColor</li>
+					<li>Jaw</li>
+					<li>Head</li>
+					<li>BodyType</li>
+				</blackEndoCategories>
+
+				<onlyUseRaceRestrictedApparel>true</onlyUseRaceRestrictedApparel>
+ <onlyUseRaceRestrictedWeapons>false</onlyUseRaceRestrictedWeapons>
+<weaponList>
+<li>HeartGun</li>
+<li>SporeGun</li>
+<li>MeleeWeapon_HumanFleshsword</li>
+<li>MeleeWeapon_HumanFleshdagger</li>
+<li>MeleeWeapon_Fleshaxe</li>
+<li>MeleeWeapon_Fisthammer</li>
+<li>MeleeWeapon_HumanToothhammer</li>
+<li>MeleeWeapon_HumanPlaguesword</li>
+<li>PlagueGun</li>
+<li>MeleeWeapon_Moldaxe</li>
+<li>MeleeWeapon_MoldaxeBattle</li>
+<li>WormHeartGunTwo</li>
+<li>WormHeartGun</li>
+<li>FungiHeartripper</li>
+<li>Bow_Fungi</li>
+<li>FungiSpear</li>
+<li>MeleeWeapon_FungiParaSpear</li>
+</weaponList>
+
+<apparelList>
+
+<li>Wormsuit</li>
+<li>WormsuitHat</li>
+<li>SkinsuitWorm</li>
+
+</apparelList>
+
+            <plantList>
+            
+            </plantList>
+
+
+
+            <traitList>
+            </traitList>				
+			</raceRestriction>
+		</alienRace>		
+		<statBases>
+                        <ToxicResistance>0.1</ToxicResistance>
+			<MarketValue>750</MarketValue>
+			<MoveSpeed>3.5</MoveSpeed>
+			<Flammability>2.0</Flammability>
+			<ComfyTemperatureMin>2</ComfyTemperatureMin>
+			<ComfyTemperatureMax>30</ComfyTemperatureMax>
+			<LeatherAmount>25</LeatherAmount>
+			<PsychicSensitivity>0.2</PsychicSensitivity>
+			<PlantWorkSpeed>0.9</PlantWorkSpeed>
+			<ResearchSpeed>0.6</ResearchSpeed>
+			<Mass>50</Mass>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>			
+			<li>
+				<label>teeth</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>6</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.07</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>		
+		</tools>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+                        <deathActionWorkerClass>DeathActionWorker_ShroomWormTest</deathActionWorkerClass>
+			<makesFootprints>true</makesFootprints>	
+			<lifeExpectancy>3</lifeExpectancy>
+			<nameCategory>HumanStandard</nameCategory>
+			
+			<body>FungiBody</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<foodType>CarnivoreAnimal</foodType>
+			<gestationPeriodDays>15</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0.02)</li>
+					<li>(3.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeStageAges>
+				<li>
+					<def>FungiSporelingStage</def>
+					<minAge>0.1</minAge>
+				</li>
+				<li>
+					<def>FungiYoungStage</def>
+					<minAge>1</minAge>
+				</li>
+				<li>
+					<def>FungiAdolescentStage</def>
+					<minAge>2</minAge>
+				</li>
+				<li>
+					<def>FungiAdultStage</def>
+					<minAge>3</minAge>
+				</li>
+				<li>
+					<def>FungiElderStage</def>
+					<minAge>9</minAge>
+				</li>
+				<li>
+					<def>FungiAncientStage</def>
+					<minAge>14</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+                                        <li>(0,0)</li>
+					<li>(1,10)</li>
+					<li>(1.1,20)</li>
+					<li>(2.5,30)</li>
+					<li>(2,40)</li>
+                                        <li>(2.5,40)</li>
+					<li>(2,40)</li>
+					<li>(2,30)</li>
+					<li>(2.5,20)</li>
+                                        <li>(2.5,20)</li>
+                                        <li>(2.5,10)</li>
+                                        <li>(3,0)</li>
+				
+				</points>
+			</ageGenerationCurve>
+		    <hediffGiverSets>
+				<li>OrganicStandard</li>
+				<li>Human</li>
+			</hediffGiverSets>
+		</race>
+    <recipes>
+      <li>InstallArchotechEye</li>
+      <li>InstallArchotechArm</li>
+      <li>InstallArchotechLeg</li>
+      <li>InstallPowerClaw</li>
+      <li>InstallBionicEye</li>
+      <li>InstallBionicArm</li>
+      <li>InstallBionicLeg</li>
+      <li>InstallBionicSpine</li>
+      <li>InstallBionicHeart</li>
+      <li>InstallBionicStomach</li>
+      <li>InstallBionicEar</li>
+      <li>InstallSimpleProstheticArm</li>
+      <li>InstallSimpleProstheticLeg</li>
+      <li>InstallSimpleProstheticHeart</li>
+      <li>InstallCochlearImplant</li>
+      <li>InstallPegLeg</li>
+      <li>InstallWoodenFoot</li>
+      <li>InstallDenture</li>
+      <li>InstallJoywire</li>
+      <li>InstallPainstopper</li>
+      <li>InstallNaturalHeart</li>
+      <li>InstallNaturalLung</li>
+      <li>InstallNaturalKidney</li>
+      <li>InstallNaturalLiver</li>
+      <li>ExciseCarcinoma</li>
+      <li>AdministerMechSerumHealer</li>
+      <li>RemoveBodyPart</li>
+      <li>Euthanize</li>
+      <li>Anesthetize</li>
+    </recipes>		
+	</AlienRace.ThingDef_AlienRace>
+	
+	<AlienRace.RaceSettings>
+		<defName>WormiRaceSettings</defName>
+	
+		<pawnKindSettings>
+			<startingColonists>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>WormiPlayer</li>
+							</kindDefs>
+							<chance>7.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerTribe</li> 
+					</factionDefs>
+				</li>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>WormiPlayer</li>
+							</kindDefs>
+							<chance>7.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>FungiPlayerTribe</li>
+					</factionDefs>
+				</li>
+			</startingColonists>
+		
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerFungi</li>
+					</kindDefs>
+					<chance>12.0</chance>
+				</li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>PlayerFungi</li>
+					</kindDefs>
+					<chance>6.0</chance>
+				</li>
+			</alienrefugeekinds>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>WormiMelee</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>PlayerTribe</li>
+						<li>FungiPlayerTribe</li>
+					</factionDefs>
+				</li>
+			</alienwandererkinds>			
+		</pawnKindSettings>
+	
+	</AlienRace.RaceSettings>
+</Defs>
+
+

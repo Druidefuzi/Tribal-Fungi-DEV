@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<HediffDef>
+    <defName>Paralyzing_Spore</defName>
+    <label>&lt;color=#dceb0c&gt;Paralyzing Spores &lt;/color&gt;</label>
+    <description>The Paralyzing Spores unleash agonizing pain and relentless cramps throughout the legs of the victim. This torment induces weakness and disrupts coordination, leaving the afflicted individual incapacitated and unable to move effectively. The debilitating effects of these spores render mobility a daunting challenge, amplifying the suffering experienced by the victim.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>5</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>false</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+
+    </comps>
+           <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <restFallFactorOffset>1</restFallFactorOffset>
+        <minSeverity>0.1</minSeverity>
+        <painOffset>0.3</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+         <li>
+            <capacity>Moving</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.6</minSeverity>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>serious</label>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.5</painOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+         <li>
+            <capacity>Moving</capacity>
+            <offset>-0.6</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.9</minSeverity>
+        <painOffset>0.6</painOffset>
+        <capMods>
+         <li>
+            <capacity>Moving</capacity>
+            <offset>-0.99</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>-0.5</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>500</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Name="FungiBase" Abstract="True">
+		<defaultFactionType>FungiFactionBase</defaultFactionType>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+	
+		<xenotypeSet>
+			<xenotypeChances>
+			<FungiSporeXeno>25</FungiSporeXeno>
+			<FungiBreederXeno>25</FungiBreederXeno>
+			<FungiWormXeno>25</FungiWormXeno>
+			<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+	
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialWillRange>1~3</initialWillRange>
+		<initialResistanceRange>2~6</initialResistanceRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="FungiMelee" Parentname="FungiBase">
+		<defName>FungiMelee</defName>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+			<FungiSporeXeno>25</FungiSporeXeno>
+			<FungiBreederXeno>25</FungiBreederXeno>
+			<FungiWormXeno>25</FungiWormXeno>
+			<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		
+		<label>fighter</label>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+
+		<combatPower>35</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>1.8</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>300</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>155</min>
+			<max>450</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiFleshDagger</li>
+			<li>FungiToothHammer</li>
+			<li>FungiParaSpear</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiTraditional</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Parentname="FungiMelee">
+		<defName>FungiTrader</defName>
+		<label>keeper</label>
+		<trader>true</trader>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>25</FungiSporeXeno>
+				<FungiBreederXeno>25</FungiBreederXeno>
+				<FungiWormXeno>25</FungiWormXeno>
+				<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+
+		<invNutrition>3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>35</combatPower>
+		<minGenerationAge>3</minGenerationAge>
+		<maxGenerationAge>13</maxGenerationAge>
+		<gearHealthRange>
+			<min>1</min>
+			<max>2.5</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>450</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>500</min>
+			<max>1200</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiFleshDagger</li>
+			<li>FungiToothHammer</li>
+			<li>FungiParaSpear</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiTraditional</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="FungiRanged" Parentname="FungiBase">
+		<defName>FungiRanged</defName>
+		<label>Sporler</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>25</FungiSporeXeno>
+				<FungiBreederXeno>25</FungiBreederXeno>
+				<FungiWormXeno>25</FungiWormXeno>
+				<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+
+
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<combatPower>35</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>350</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiFleshBow</li>
+			<li>FungiArmSpear</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiTraditional</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	
+	
+
+
+
+
+	<PawnKindDef Parentname="FungiBase">
+		<defName>FungiChief</defName>
+		<label>primogenitor</label>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>25</FungiSporeXeno>
+				<FungiBreederXeno>25</FungiBreederXeno>
+				<FungiWormXeno>25</FungiWormXeno>
+				<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<race>Alien_Fungi</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>15</minGenerationAge>
+		<combatPower>50</combatPower>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<itemQuality>Good</itemQuality>
+		<factionLeader>true</factionLeader>
+		<gearHealthRange>
+			<min>0.75</min>
+			<max>3.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>500</min>
+			<max>1500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>750</min>
+			<max>950</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiHeartGun</li>
+			<li>FungiHeartRipper</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+
+		</apparelTags>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+
+
+
+	<ScenarioDef>
+		<defName>Infestationbegins</defName>
+		<label>The Infestation.</label>
+		<description>In a bid to expand their influence and assert their power, the infested Fungi tribes have embarked on a strategic campaign to colonize new territories. To facilitate this endeavor, they have dispatched settlers armed with a potent tool: the infestator.With the infestator in hand, these settlers possess the ability to transform any unsuspecting humans they encounter into compliant slaves, ripe for exploitation to serve the needs of the infested tribes. This insidious device, infused with the power of the fungi's sinister biology, ensures the rapid subjugation of any obstacles standing in the way of their expansion.
+
+			As the settlers venture forth into uncharted lands, armed with the infestator and guided by the will of their tribes, they pave the way for the infested Fungi to extend their dominion over new territories and establish their authority with ruthless efficiency.</description><scenario>
+			<summary>A group of Fungi claims this territory.</summary>
+			<playerFaction>
+				<def>PlayerFaction</def>
+				<factionDef>FungiPlayerTribe</factionDef>
+			</playerFaction>
+			<parts>
+				<li Class="ScenPart_StatFactor">
+					<def>StatFactor</def>
+					<stat>PlantWorkSpeed</stat>
+					<factor>1.2</factor>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>WildManWandersIn</incident>
+					<intervalDays>10</intervalDays>
+					<repeat>True</repeat>
+				</li>
+
+
+
+			
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>FungiInfestTribe</project>
+				</li>
+
+			
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Turret_WormiTurret</thingDef>
+				</li>
+
+				<!-- Config pages -->
+				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+					<def>ConfigPage_ConfigureStartingPawns</def>
+					<pawnCount>5</pawnCount>
+					<pawnChoiceCount>8</pawnChoiceCount>
+				</li>
+
+				<!-- Player starting stuff spawn method-->
+				<li Class="ScenPart_PlayerPawnsArriveMethod">
+					<def>PlayerPawnsArriveMethod</def>
+					<method>Standing</method>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>HumigiantPasses</incident>
+					<intervalDays>25</intervalDays>
+					<minDays>20</minDays>
+					<maxDays>50</maxDays>
+					<repeat>True</repeat>
+				</li>
+				<li Class="ScenPart_CreateIncident">
+					<def>CreateIncident</def>
+					<incident>FungiAbominations</incident>
+					<intervalDays>50</intervalDays>
+					<minDays>20</minDays>
+					<maxDays>50</maxDays>
+					<repeat>True</repeat>
+				</li>
+				<li Class="ScenPart_StartingResearch">
+					<def>StartingResearch</def>
+					<project>AdvancedShroomwormBiology</project>
+				</li>
+	
+		
+				<li Class="ScenPart_StatFactor">
+					<def>StatFactor</def>
+					<stat>PlantHarvestYield</stat>
+					<factor>1.2</factor>
+				</li>
+		
+			
+			
+
+		
+
+			
+
+				<!-- Player pawns modifiers -->
+				<li Class="ScenPart_ForcedHediff">
+					<def>ForcedHediff</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>0.5</chance>
+					<hediff>Malnutrition</hediff>
+					<severityRange>0.2~0.4</severityRange>
+				</li>
+				
+				<li Class="ScenPart_SetNeedLevel">
+					<def>SetNeedLevel</def>
+					<visible>false</visible>
+					<context>PlayerStarter</context>
+					<chance>1.0</chance>
+					<need>Food</need>
+					<levelRange>0~0.1</levelRange>
+				</li>
+
+				<!-- Player starting things -->
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>200</count>
+				</li>
+
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Meat_Human</thingDef>
+					<count>500</count>
+				</li>
+				
+	
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineHerbal</thingDef>
+					<count>20</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Club</thingDef>
+					<stuff>WoodLog</stuff>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>WormGun</thingDef>
+					<stuff>DruidShroomans</stuff>
+			
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MeleeWeapon_Knife</thingDef>
+					<stuff>Jade</stuff>
+				</li>
+				
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Silver</thingDef>
+					<count>200</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>MedicineHerbal</thingDef>
+					<count>24</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>Traditional</thingDef>
+					<count>4</count>
+				</li>
+				<li Class="ScenPart_StartingAnimal">
+					<def>StartingAnimal</def>
+					<animalKind>Wormigiant</animalKind>
+					<count>2</count>
+					<bondToRandomPlayerPawnChance>1</bondToRandomPlayerPawnChance>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>400</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>ShipChunk</thingDef>
+					<count>6</count>
+				</li>
+				<li Class="ScenPart_ScatterThingsAnywhere">
+					<def>ScatterThingsAnywhere</def>
+					<thingDef>Steel</thingDef>
+					<count>250</count>
+				</li>
+				<li Class="ScenPart_StartingThing_Defined">
+					<def>StartingThing_Defined</def>
+					<thingDef>DruidShroomans</thingDef>
+					<count>400</count>
+				</li>
+				<li MayRequire="Ludeon.RimWorld.Anomaly" Class="ScenPart_MonolithGeneration">
+					<def>ScenPart_MonolithGeneration</def>
+					<method>NearColonists</method>
+				</li>
+		
+
+				<!-- Scatter some things near player start -->
+				<li Class="ScenPart_ScatterThingsNearPlayerStart">
+					<def>ScatterThingsNearPlayerStart</def>
+					<thingDef>WoodLog</thingDef>
+					<count>500</count>
+				</li>
+
+				<!-- Game start dialog -->
+				<li Class="ScenPart_GameStartDialog">
+					<def>GameStartDialog</def>
+					<text>We are blessed with the Infestator. Make it count.</text>
+					<closeSound>GameStartSting</closeSound>
+				</li>
+
+			</parts>
+		</scenario>
+	</ScenarioDef>
+</Defs>
+

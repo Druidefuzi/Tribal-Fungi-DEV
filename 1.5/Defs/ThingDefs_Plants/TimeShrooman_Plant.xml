@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>TIMESHROOMAN_PLANT_DEF</defName>
+    <label>Time Shrooman</label>
+    <description>Ancient Shroomans. Kind of holy to the Fungi.Once used to enhance the aging of the Fungi slaves.Have the capability to bend time itself.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>TimeShroomanPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+
+
+
+    <ingestible />
+    <plant>
+             <sowResearchPrerequisites>
+	 	<li>Fleshforging</li>
+             </sowResearchPrerequisites>
+			<growDays>10</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>DruidTimeShroomans</harvestedThingDef>
+			<harvestYield>5</harvestYield>
+			<sowMinSkill>10</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>TimeShroomanPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~1.36</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+</Defs>

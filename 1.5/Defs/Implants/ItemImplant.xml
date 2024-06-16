@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Brain_Worms</defName>
+    <label>Brain Worms</label>
+    <description>Brain worms, let the target go insane while under high pain until it breaks down into a coma.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Brain_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Limb_Worms</defName>
+    <label>Limb Worms</label>
+    <description>Limb worms, infest the limbs of the target, the limbs start developing independence until they leave the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Limb_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Eye_Worms</defName>
+    <label>Eye Worms</label>
+    <description>Eye worms, infest the eyes of the target, the eyes start developing independence until they leave the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Eye_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+-------------------Finger--------------------
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Finger_Worms</defName>
+    <label>Finger Worms</label>
+    <description>Finger worms, infest the fingers of the target, the fingers start developing independence until they leave the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Finger_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+-----------------Toe---------------
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Toe_Worms</defName>
+    <label>Toe Worms</label>
+    <description>Toe worms, infest the toes of the target, the toes start developing independence until they leave the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Toe_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+---------------Nose------------------
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Nose_Worms</defName>
+    <label>Nose Worms</label>
+    <description>Nose worms, infest the nose of the target, the nose starts developing independence until it leaves the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Nose_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+-------------Stomach-----------------------------
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Stomach_Worms</defName>
+    <label>Stomach Worms</label>
+    <description>Stomach worms, infest the stomach of the target, the stomach starts developing independence until it leaves the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Stomach_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+-----------Growth-------------
+
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>ShroomanGrowth</defName>
+    <label>Shrooman growth</label>
+    <description>This implant lets the pawn grow shroomans on the torso.This causes huge pain!</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>ShroomanGrowth</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>ShroomwormGrowth</defName>
+    <label>Shroomworm growth</label>
+    <description>This implant lets the pawn grow shroomworms on the torso.This causes huge pain!</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>ShroomanGrowth</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>FungiTimeGrowth</defName>
+    <label>Time shrooman growth</label>
+    <description>This implant lets the pawn grow time shroomans on the torso.This causes huge pain!</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <Meat_Human>30</Meat_Human>
+ <DruidShroomworms>30</DruidShroomworms>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>FungiTimeGrowth</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+</Defs>

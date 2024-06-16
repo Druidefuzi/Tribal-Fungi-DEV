@@ -1,0 +1,16 @@
+<Defs>  
+
+<ResearchProjectDef>
+    <defName>Fleshforging</defName>
+    <label>Fleshforging</label>
+    <tab>Fleshforging</tab>
+    <description>Allows the creating of biological tribal weapons</description>
+    <baseCost>300</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    </prerequisites>
+	<researchViewX>1</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+ </Defs>
+

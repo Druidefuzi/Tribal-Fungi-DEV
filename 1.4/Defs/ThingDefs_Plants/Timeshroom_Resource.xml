@@ -1,0 +1,36 @@
+<Defs>
+<ThingDef ParentName="PlantFoodRawBase">
+  <defName>RAW_TIMESHROOM_RESOURCE_DEF</defName>
+  <label>Time Shroomans</label>
+  <description>Ancient Shroomans. Kind of holy to the Fungi.Once used to enhance the aging of the Fungi slaves. It is nearly impossible for Fungi to research how to use these.They normally die before they make enough progress.</description>
+		<graphicData>
+			<texPath>ShroomanPlant/Resource/RawShrooman</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+  <statBases>
+    <MarketValue>2</MarketValue>
+    <Mass>0.3</Mass>
+  </statBases>
+  <comps>
+    <li Class="CompProperties_Rottable">
+      <daysToRotStart>50</daysToRotStart>
+      <rotDestroys>true</rotDestroys>
+    </li>
+  </comps>
+  <ingestible>
+    <preferability>RawTasty</preferability>
+    <tasteThought></tasteThought>
+    <foodType>Meat</foodType>
+  </ingestible>
+    <stuffProps>
+      <commonality>0.05</commonality>
+      <statFactors>
+        <Beauty>1.0</Beauty>
+      </statFactors>
+		<categories>
+			<li>Fungiflesh</li>
+		</categories>
+    </stuffProps>
+
+</ThingDef>
+</Defs>

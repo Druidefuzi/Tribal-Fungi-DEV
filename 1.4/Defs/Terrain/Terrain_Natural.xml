@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TerrainDef Name="NaturalTerrainBase" Abstract="True">
+    <filthAcceptanceMask>
+      <li>Unnatural</li>
+    </filthAcceptanceMask>
+  </TerrainDef>
+
+  <!-- Standard soils -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>FungiSoil</defName>
+    <label>soil</label>
+    <texturePath>Things/Terrain/Fungisoil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <scatterType>Rocky</scatterType>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.0</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+  
+  <!-- Rich soils -->
+
+  <TerrainDef ParentName="NaturalTerrainBase">
+    <defName>FungiSoilRich</defName>
+    <label>rich soil</label>
+    <texturePath>Things/Terrain/Fungisoilrich</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>335</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>-1</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <generatedFilth>Filth_Dirt</generatedFilth>
+    <fertility>1.4</fertility>
+    <takeFootprints>True</takeFootprints>
+    <tools>
+      <li>
+        <label>dirt</label>
+        <capacities>
+          <li>KickMaterialInEyes</li>
+        </capacities>
+        <hediff>DirtInEyes</hediff>
+        <cooldownTime>1.5</cooldownTime>
+      </li>
+    </tools>
+  </TerrainDef>
+
+  
+
+</Defs>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="FungiFactionBaseHostile" Name="FungiFactionBaseAIHostileFungari" Abstract="True">
+		<defName>FungariHostileUnited</defName>
+		<label>The Fungari alliance</label>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>25</FungiSporeXeno>
+				<FungiBreederXeno>25</FungiBreederXeno>
+				<FungiWormXeno>25</FungiWormXeno>
+				<FungiBaseXeno>25</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<permanentEnemy>false</permanentEnemy>
+		<naturalEnemy>true</naturalEnemy>
+		<basicMemberKind>FungiMelee</basicMemberKind>
+		<description>In the desolate wastelands, a fortress rises—an ominous bastion shrouded in shadows and seething with unrelenting hatred. Among them are once-noble Agari, twisted by ancient torment into a crucible of seething fury after discovering their origins.They found an ally in the Fungi—a tribe steeped in hatred, fueled by primal loathing. Within their fortress, they wield biological warfare with precision, unleashing terror upon any humans foolish enough to trespass. Their vision: the annihilation of humanity. Their eyes burn with hatred defying comprehension, their hearts fueled by an all-consuming desire for retribution. They are the architects of humanity's downfall, harbingers of a purging fire that will cleanse the world.</description>
+		<pawnSingular>Fungari</pawnSingular>
+		<pawnsPlural>Fungaris</pawnsPlural>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>false</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<factionIconPath>World/FungariVillage</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+
+		<techLevel>Neolithic</techLevel>
+		<backstoryCategories>
+			<li>Tribal</li>
+		</backstoryCategories>
+		<allowedCultures>
+			<li>Corunan</li>
+		</allowedCultures>
+		<leaderTitle>Fungari lord</leaderTitle>
+		<caravanTraderKinds>
+			<li>Caravan_Fungi_Breeder</li>
+			<li>Caravan_Fungi_Spore</li>
+			<li>Caravan_Fungi_Infested</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Caravan_Fungi_Breeder</li>
+			<li>Caravan_Fungi_Spore</li>
+			<li>Caravan_Fungi_Infested</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Fungi_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-40</min>
+			<max>50</max>
+		</allowedArrivalTemperatureRange>
+
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(800, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>0.25</commonality>
+				<options>
+					<Shroomoid_humigiant>0.25</Shroomoid_humigiant>
+					<FungiWorm>0.75</FungiWorm>
+					<MushroomWorm>5</MushroomWorm>
+					<WormiMelee>6</WormiMelee>
+					<WormiHatched>4</WormiHatched>
+					<Wormigiant>5</Wormigiant>
+					<Wormimal>6</Wormimal>
+					<FungiPlague>5</FungiPlague>
+					<MoldForce>5</MoldForce>
+					<SporeForce>5</SporeForce>
+					<Shroomimal>12</Shroomimal>
+					<Shroomigiant>5</Shroomigiant>
+					<FungiMelee>12</FungiMelee>
+					<Heartlord>12</Heartlord>
+					<FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+					<Humimals>20</Humimals>
+					<Humigiants>6</Humigiants>
+					<Humike>1</Humike>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>0.25</commonality>
+				<options>
+					
+					<FungiWorm>0.75</FungiWorm>
+			
+					<WormiMelee>6</WormiMelee>
+					<WormiHatched>4</WormiHatched>
+			
+					<Wormimal>6</Wormimal>
+					<FungiPlague>5</FungiPlague>
+					<MoldForce>5</MoldForce>
+					<SporeForce>5</SporeForce>
+					<Shroomimal>12</Shroomimal>
+					<FungiMelee>12</FungiMelee>
+					<Heartlord>12</Heartlord>
+					<FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+					<Humimals>20</Humimals>
+			
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>0.25</commonality>
+				<options>
+					<MushroomWorm>5</MushroomWorm>
+					<WormiMelee>6</WormiMelee>
+					<WormiHatched>4</WormiHatched>
+					<FungiPlague>5</FungiPlague>
+					<MoldForce>5</MoldForce>
+					<SporeForce>5</SporeForce>
+					<FungiMelee>12</FungiMelee>
+					<Heartlord>12</Heartlord>
+					<FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+			
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>0.25</commonality>
+				<options>
+					<Shroomoid_humigiant>0.25</Shroomoid_humigiant>
+					<FungiWorm>0.75</FungiWorm>
+					<MushroomWorm>5</MushroomWorm>
+					<WormiMelee>6</WormiMelee>
+					<WormiHatched>4</WormiHatched>
+					<Wormigiant>5</Wormigiant>
+					<Wormimal>6</Wormimal>
+					<Shroomimal>12</Shroomimal>
+					<Shroomigiant>5</Shroomigiant>
+					<FungiMelee>12</FungiMelee>
+					<FungiChief>5</FungiChief>
+					<Humimals>20</Humimals>
+					<Humigiants>6</Humigiants>
+					<Humike>1</Humike>
+				</options>
+			</li>
+			
+			
+			
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<FungiMelee>12</FungiMelee>
+
+					<Heartlord>12</Heartlord>
+					<FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+					<Humimals>20</Humimals>
+					<Humigiants>4</Humigiants>
+					<Humike>1</Humike>
+				</options>
+			</li>
+
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<FungiTrader>1</FungiTrader>
+				</traders>
+				<carriers>
+					<Humigiants>5</Humigiants>
+
+				</carriers>
+				<guards>
+					<FungiMelee>2</FungiMelee>
+					<Humimals>2</Humimals>
+					<Humigiants>1</Humigiants>
+				</guards>
+			</li>
+
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<FungiMelee>12</FungiMelee>
+					<FungiRanged>12</FungiRanged>
+					<Heartlord>12</Heartlord>
+					<FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+					<Humimals>20</Humimals>
+					<Humigiants>4</Humigiants>
+					<Humike>1</Humike>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<raidLootValueFromPointsCurve>
+			<points>
+				<li>(35,     30)</li>
+				<li>(100,   200)</li>
+				<li>(1000,  500)</li>
+				<li>(2000,  800)</li>
+				<li>(4000, 1000)</li>
+			</points>
+		</raidLootValueFromPointsCurve>
+	</FactionDef>
+
+</Defs>

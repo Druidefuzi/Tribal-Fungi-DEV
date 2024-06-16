@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Humimals</defName>
+    <label>humimal</label>
+    <description>Once upon a time, after their escape, the Fungi captured a human tribe. Treated as mere beasts, subjected to relentless torture for every human behavior they exhibited, the captives gradually lost all semblance of their humanity. Over countless generations, they were bred and conditioned to conform to the whims of their fungal captors, their innate human characteristics systematically erased. Now, stripped of their identity and enslaved within the confines of the fungal domain, they can only wonder in bewildered silence at the strange creatures with similar skin but vastly different behaviors, forever robbed of the understanding of their own kind.</description>
+    <statBases>
+      <MoveSpeed>3</MoveSpeed>
+      <ComfyTemperatureMin>5</ComfyTemperatureMin>
+      <MarketValue>550</MarketValue>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+      <li>
+        <label>left hand</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right hand</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>11</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+    </comps>
+    <race>
+      <body>Human</body>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.5</baseBodySize>
+      <baseHungerRate>0.9</baseHungerRate>
+      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.2</manhunterOnDamageChance>
+      <baseHealthScale>1.25</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <canBePredatorPrey>True</canBePredatorPrey>
+      <leatherDef>Leather_Shroom</leatherDef>
+      <wildness>0.4</wildness>
+      <trainability>Advanced</trainability>
+      <useMeatFrom>Human</useMeatFrom>
+	  <nuzzleMtbHours>12</nuzzleMtbHours>
+	  <packAnimal>false</packAnimal>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <lifeExpectancy>17</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.35</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.8</minAge>
+          <soundWounded>HumimalSound</soundWounded>
+          <soundDeath>HumimalSound2</soundDeath>
+          <soundCall>HumimalSound</soundCall>
+          <soundAngry>HumimalSound2</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <wildBiomes>
+    	<Tundra>0.01</Tundra>
+    	<BorealForest>0.01</BorealForest>
+    	<TemperateForest>0.05</TemperateForest>
+		<AridShrubland>0.1</AridShrubland>
+		<TropicalSwamp>0.1</TropicalSwamp>
+		<TemperateSwamp>0.1</TemperateSwamp>
+		<ColdBog>0.05</ColdBog>
+      </wildBiomes>
+    </race>
+    <recipes>
+      <li>Fungi_Surgery_Pregnancy_Worms</li>
+      <li>RemoveBodyPart</li>
+    </recipes>		
+    <tradeTags>
+      <li>FungiTrade_Breeder</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Humimals</defName>
+    <label>Humimal</label>
+    <race>Humimals</race>
+    <combatPower>95</combatPower>
+     <ecoSystemWeight>0.1</ecoSystemWeight>
+    <wildGroupSize>
+      <min>1</min>
+      <max>3</max>
+    </wildGroupSize>
+    <alternateGraphicChance>0.666</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Humimal/Humimal2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Humimal/Humimal3</texPath></li>
+
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Humimals</texPath>
+          <drawSize>1.3</drawSize>
+		   <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Dessicated_Humimals</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Humimals</texPath>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Dessicated_Humimals</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Humimals</texPath>
+          <drawSize>2.4</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Humimal/Dessicated_Humimals</texPath>
+          <drawSize>2.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

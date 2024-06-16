@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <PawnKindDef>
+    <defName>WildFungi</defName>
+    <label>wild fungi</label>
+    <labelPlural>wild fungi</labelPlural>
+    <labelFemale>wild fungi</labelFemale>
+    <labelFemalePlural>wild fungi</labelFemalePlural>
+    <combatPower>70</combatPower>
+    <race>Alien_Fungi</race>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Pirate</li>
+          <li>Tribal</li>
+          <li>Animal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <backstoryCryptosleepCommonality>0.1</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.02</chemicalAddictionChance>
+    <initialWillRange>1~3</initialWillRange>
+    <initialResistanceRange>2~6</initialResistanceRange>
+    <itemQuality>Poor</itemQuality>
+    
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>50~50</techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+  </PawnKindDef>
+
+
+
+</Defs>

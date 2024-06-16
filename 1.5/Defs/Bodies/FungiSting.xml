@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ToolCapacityDef>
+    <defName>FungiSting</defName>
+    <label>stinging</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>FungiPlagueSpores</defName>
+    <label>infesting</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>FungiMoldSpores</defName>
+    <label>infesting</label>
+  </ToolCapacityDef>
+
+  <ToolCapacityDef>
+    <defName>Paralyzing_Spore</defName>
+    <label>Paralyzing</label>
+  </ToolCapacityDef>
+  <ToolCapacityDef>
+    <defName>FungiBlood</defName>
+    <label>bleeding</label>
+  </ToolCapacityDef>
+  <ToolCapacityDef>
+    <defName>WormInfection</defName>
+    <label>Worm infection</label>
+  </ToolCapacityDef>
+
+
+</Defs>

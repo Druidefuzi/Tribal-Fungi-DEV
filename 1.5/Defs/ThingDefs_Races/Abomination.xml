@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef Name="ShroomoidPawnExp" Abstract="True">
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<hasTooltip>true</hasTooltip>
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<Mass>70</Mass>
+		</statBases>
+		<inspectorTabs>
+			<li>ITab_Pawn_Health</li>
+			<!--
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+	  -->
+			<li>ITab_Pawn_Gear</li>
+			<li>ITab_Pawn_Log</li>
+		</inspectorTabs>
+		<receivesSignals>true</receivesSignals>
+		<race>
+		  <renderTree>Misc</renderTree>
+			<deathAction>
+				<workerClass>DeathActionWorker_HumigiantEvent</workerClass>
+			</deathAction>
+			<fleshType>Normal</fleshType>
+			<needsRest>true</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>CarnivoreAnimal</foodType>
+			<lifeExpectancy>300</lifeExpectancy>
+			<bloodDef>Filth_Slime</bloodDef>
+		
+	</race>
+
+	</ThingDef>
+
+	<ThingDef Name="TestFungiPawn" Abstract="True">
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<hasTooltip>true</hasTooltip>
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+		<statBases>
+			<ToxicResistance>1</ToxicResistance>
+			<Mass>70</Mass>
+		</statBases>
+		<inspectorTabs>
+			<li>ITab_Pawn_Health</li>
+			<li>ITab_Pawn_Needs</li>
+			<li>ITab_Pawn_Character</li>
+			<li>ITab_Pawn_Training</li>
+			<li>ITab_Pawn_Social</li>
+			<li>ITab_Pawn_Guest</li>
+			<li>ITab_Pawn_Prisoner</li>
+			<li>ITab_Pawn_FormingCaravan</li>
+			<li>ITab_Pawn_Gear</li>
+			<li>ITab_Pawn_Log</li>
+		</inspectorTabs>
+		<receivesSignals>true</receivesSignals>
+		<race>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<renderTree>Misc</renderTree>
+			<fleshType>Normal</fleshType>
+			<needsRest>true</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>CarnivoreAnimal</foodType>
+			<lifeExpectancy>300</lifeExpectancy>
+			<bloodDef>Filth_Slime</bloodDef>
+		</race>
+
+	</ThingDef>
+
+
+
+	<!-- SnakeHumigiant -->
+	<ThingDef ParentName="ShroomoidPawnExp">
+		<defName>FungiExperiment</defName>
+		<label>Failed abomination</label>
+		<description>It is said that the infested tribe turns humans into aggressive abominations. Some experiments fail and it is surely imaginable that the possibility of an escape from a tribal ,wooden cage is given</description>
+		<statBases>
+			<LeatherAmount>30</LeatherAmount>
+			<MoveSpeed>1.9</MoveSpeed>
+			<PsychicSensitivity>0.2</PsychicSensitivity>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+			<li>
+				<label>Shroomworm</label>
+				<capacities>
+					<li>ToxicBite</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>3</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+
+			</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+		</tools>
+		<race>
+			<gestationPeriodDays>100</gestationPeriodDays>
+			<leatherDef>DruidShroomworms</leatherDef>
+			<deathAction>
+				<workerClass>DeathActionWorker_WormsAttack</workerClass>
+			</deathAction>
+			<intelligence>ToolUser</intelligence>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<renderTree>Misc</renderTree>
+			<body>Human</body>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHealthScale>0.7</baseHealthScale>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>HumiGiant1</soundWounded>
+					<soundDeath>HumiGiant2</soundDeath>
+					<soundCall>HumiGiant1</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+			<soundMeleeHitPawn>BulletImpact_Flesh</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>BulletImpact_Flesh</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		</race>
+
+	</ThingDef>
+	
+
+	<PawnKindDef ParentName="BaseShroomoidKind">
+		<defName>FungiExperiment</defName>
+		<label>Failed abomination</label>
+		<race>FungiExperiment</race>
+		<combatPower>70</combatPower>
+		<alternateGraphicChance>0.75</alternateGraphicChance>
+		<alternateGraphics>
+			<li>
+				<texPath>Things/Pawn/Animal/Abomination/FungiExperiment2</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Abomination/FungiExperiment3</texPath>
+			</li>
+			<li>
+				<texPath>Things/Pawn/Animal/Abomination/FungiExperiment4</texPath>
+			</li>
+
+		</alternateGraphics>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/Abomination/FungiExperiment</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

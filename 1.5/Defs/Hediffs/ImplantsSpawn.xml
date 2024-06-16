@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <HediffDef ParentName="ImplantHediffBase">
+    <defName>ShroomanGrowth</defName>
+    <label>Shrooman injection</label>
+    <labelNoun>Shrooman</labelNoun>
+    <description>The implant enables the pawn to cultivate shroomans directly on their torso, a feat that inflicts intense and excruciating pain upon the host. Despite the potential benefits of such cultivation, the relentless agony endured by the pawn serves as a stark reminder of the high cost associated with this unnatural process.</description>
+    <descriptionHyperlinks><ThingDef>ShroomanGrowth</ThingDef></descriptionHyperlinks>
+ 	<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<painFactor>1.2</painFactor>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.2</offset>
+				</li>
+			</capMods>
+			</li>
+	</stages>
+	<comps>
+		<li Class="NewHatcher.HediffCompProperties_GenericHatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			<thingToHatch>DruidShroomans</thingToHatch>
+			<amount>20</amount>
+		</li>
+	</comps>
+    <spawnThingOnRemoved>ShroomanGrowth</spawnThingOnRemoved>
+  </HediffDef>
+ <HediffDef ParentName="ImplantHediffBase">
+    <defName>ShroomwormGrowth</defName>
+    <label>Shroomworm injection</label>
+    <labelNoun>Shroomworm</labelNoun>
+    <description>The implant facilitates the growth of shroomworms within the pawn's torso, an excruciating process that subjects the host to intense and unrelenting pain. Despite the potential utility of cultivating these creatures, the agonizing ordeal endured by the pawn serves as a grim reminder of the severe consequences associated with this invasive implantation.</description>
+    <descriptionHyperlinks><ThingDef>ShroomwormGrowth</ThingDef></descriptionHyperlinks>
+ 	<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<painFactor>1.2</painFactor>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.2</offset>
+				</li>
+			</capMods>
+			</li>
+	</stages>
+	<comps>
+		<li Class="NewHatcher.HediffCompProperties_GenericHatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			<thingToHatch>DruidShroomworms</thingToHatch>
+			<amount>10</amount>
+		</li>
+	</comps>
+    <spawnThingOnRemoved>ShroomwormGrowth</spawnThingOnRemoved>
+  </HediffDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveShroomanGrowth</defName>
+    <label>remove shrooman growth</label>
+    <description>Remove the growth.</description>
+    <jobString>Removing Shrooman Growth.</jobString>
+    <removesHediff>ShroomanGrowth</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveTimeShroomanGrowth</defName>
+    <label>remove time shrooman growth</label>
+    <description>Remove the growth.</description>
+    <jobString>Removing Shrooman Growth.</jobString>
+    <removesHediff>FungiTimeGrowth</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveShroomwormGrowth</defName>
+    <label>remove time shroomworm growth</label>
+    <description>Remove the worm.</description>
+    <jobString>Removing Shroomworm Growth.</jobString>
+    <removesHediff>ShroomwormGrowth</removesHediff>
+  </RecipeDef>
+ <HediffDef ParentName="ImplantHediffBase">
+    <defName>FungiTimeGrowth</defName>
+    <label>Time shrooman growth</label>
+    <labelNoun>Time shrooman</labelNoun>
+    <description>The implant allows the pawn to cultivate time shroomans on their torso, a process accompanied by agonizing pain of monumental proportions. Despite the potential benefits of manipulating time, the excruciating suffering endured by the pawn serves as a stark reminder of the high cost associated with tampering with the fabric of reality.</description>
+    <descriptionHyperlinks><ThingDef>FungiTimeGrowth</ThingDef></descriptionHyperlinks>
+ 	<stages>
+			<li>
+				<painOffset>0.2</painOffset>
+				<painFactor>1.2</painFactor>
+			<capMods>
+				<li>
+					<capacity>Manipulation</capacity>
+					<offset>-0.2</offset>
+				</li>
+			</capMods>
+			</li>
+	</stages>
+	<comps>
+		<li Class="NewHatcher.HediffCompProperties_GenericHatcher">
+			<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+			<thingToHatch>DruidTimeShroomans</thingToHatch>
+			<amount>10</amount>
+		</li>
+	</comps>
+    <spawnThingOnRemoved>FungiTimeGrowth</spawnThingOnRemoved>
+  </HediffDef>
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Pregnancy_Worms</defName>
+		<label>Pregnancy Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Pregnancy worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Pregnancy_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Duplicationpregnant</hediff>
+            <mtbDays>0.1</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>The pregnancy worms insidiously coerce the host into producing offspring on their skin, manipulating them into believing that this aberrant process is perfectly acceptable. However, the conflicting sensations and overwhelming nausea induced by the worms inflict tremendous pain upon the victim. Despite the facade of acceptance, the internal turmoil and physical discomfort endured by the host serve as a constant reminder of the parasitic invasion.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Pregnancy_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Pregnancy_Worms</defName>
+    <label>remove pregnancy worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Pregnancy_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing pregnancy worms.</jobString>
+    <removesHediff>Fungi_Hediff_Pregnancy_Worms</removesHediff>
+  </RecipeDef>
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Wormoid_Worms</defName>
+		<label>Wormoid injection</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Wormoid injection</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Wormoid_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Wormoidpregnant</hediff>
+           <partsToAffect><li>Torso</li></partsToAffect>
+            <mtbDays>0.1</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>The insidious wormoid worms gradually transform the target into a wormoid, a horrifying process that unfolds over time. As these parasitic creatures infest the host's body, their relentless influence reshapes the victim's form, eroding their humanity and replacing it with the traits of a wormoid. With each passing moment, the victim's identity slips further into oblivion, consumed by the inexorable march toward becoming a twisted reflection of their former self.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Wormoid_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Wormoid_Worms</defName>
+    <label>remove wormoid worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Wormoid_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing wormoid worms.</jobString>
+    <removesHediff>Fungi_Hediff_Wormoid_Worms</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Limb_Worms</defName>
+    <label>remove limb worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Limb_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing limb worms.</jobString>
+    <removesHediff>Fungi_Hediff_Limb_Worms</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Eye_Worms</defName>
+    <label>remove eye worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Eye_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing eye worms.</jobString>
+    <removesHediff>Fungi_Hediff_Eye_Worms</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Finger_Worms</defName>
+    <label>remove finger worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Finger_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing finger worms.</jobString>
+    <removesHediff>Fungi_Hediff_Finger_Worms</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Toe_Worms</defName>
+    <label>remove toe worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Toe_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing toe worms.</jobString>
+    <removesHediff>Fungi_Hediff_Toe_Worms</removesHediff>
+  </RecipeDef>
+
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Stomach_Worms</defName>
+    <label>remove stomach worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Stomach_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing stomach worms.</jobString>
+    <removesHediff>Fungi_Hediff_Stomach_Worms</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Nose_Worms</defName>
+    <label>remove nose worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Nose_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing nose worms.</jobString>
+    <removesHediff>Fungi_Hediff_Nose_Worms</removesHediff>
+  </RecipeDef>
+
+
+
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Limb_Worms</defName>
+		<label>Limb Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Limb worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Limb_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingLeg</hediff>
+           <partsToAffect>
+            <li>Leg</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingArm</hediff>
+           <partsToAffect>
+            <li>Arm</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This advanced fungal implant represents a pinnacle of development, transforming the limbs of the host into living organisms endowed with consciousness. Over time, these once-inanimate appendages evolve into autonomous beings, gradually developing their own sense of self-awareness. Eventually, they may choose to break free from their host and seek independence, opting to join your colony as valued members.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Limb_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+----------------------Eye----------------------------
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Eye_Worms</defName>
+		<label>Eye Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Eye worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Eye_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingEye</hediff>
+           <partsToAffect>
+            <li>Eye</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This sophisticated fungal implant stands as a testament to advanced development, imbuing the eyes of the host with life and consciousness. Over time, these once-static organs evolve into sentient entities, gradually gaining self-awareness and autonomy. Eventually, they may choose to detach from their host and seek independence, electing to join your colony as esteemed members.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Eye_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+----------------------Finger-----------------------------
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Finger_Worms</defName>
+		<label>Finger Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Finger worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Finger_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingFinger</hediff>
+           <partsToAffect>
+            <li>Finger</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This remarkable fungal implant represents the pinnacle of development, bestowing life and consciousness upon the fingers of the host. Over time, these once-inanimate digits evolve into sentient organisms, gradually acquiring self-awareness and independence. Ultimately, they may choose to separate from their host and seek their own path, opting to join your colony as valued members.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Finger_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+-------------Toe------------
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Toe_Worms</defName>
+		<label>Toe Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Toe worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Toe_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingToe</hediff>
+           <partsToAffect>
+            <li>Toe</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This remarkable fungal implant represents the pinnacle of development, bestowing life and consciousness upon the toes of the host. Over time, these once-inanimate digits evolve into sentient organisms, gradually acquiring self-awareness and independence. Ultimately, they may choose to separate from their host and seek their own path, opting to join your colony as valued members.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Toe_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+-----------Stomach-------------------
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Stomach_Worms</defName>
+		<label>Stomach Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Stomach worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Stomach_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingStomach</hediff>
+           <partsToAffect>
+            <li>Stomach</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This extraordinary fungal implant epitomizes advanced development, endowing the stomach of the host with life and consciousness. Over time, the once-internal organ evolves into a sentient entity, gradually gaining self-awareness and autonomy. Eventually, it may choose to detach from its host and seek independence, electing to join your colony as an esteemed member.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Stomach_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+------------------
+Nose
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Nose_Worms</defName>
+		<label>Nose Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Nose worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Nose_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingNose</hediff>
+           <partsToAffect>
+            <li>Nose</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This exceptional fungal implant represents a pinnacle of development, granting life and consciousness to the nose of the host. Over time, this once-static sensory organ evolves into a sentient entity, gradually acquiring self-awareness and independence. Eventually, it may choose to detach from its host and seek its own path, opting to join your colony as a valued member.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Nose_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+-------------Dissassembly-------------------
+
+
+
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Dissassembly_Worms</defName>
+		<label>Dissassembly Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Dissassembly worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Dissassembly_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingLeg</hediff>
+           <partsToAffect>
+            <li>Leg</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingArm</hediff>
+           <partsToAffect>
+            <li>Arm</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingHead</hediff>
+           <partsToAffect>
+            <li>Head</li>
+           </partsToAffect>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingHeart</hediff>
+           <partsToAffect>
+            <li>Heart</li>
+           </partsToAffect>
+            <mtbDays>5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingNose</hediff>
+           <partsToAffect>
+            <li>Nose</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingToe</hediff>
+           <partsToAffect>
+            <li>Toe</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingFinger</hediff>
+           <partsToAffect>
+            <li>Finger</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingEye</hediff>
+           <partsToAffect>
+            <li>Eye</li>
+           </partsToAffect>
+            <mtbDays>0.5</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingStomach</hediff>
+           <partsToAffect>
+            <li>Stomach</li>
+           </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This groundbreaking fungal implant epitomizes advanced development, imbuing the limbs, head, and heart of the host with life and consciousness. Over time, these vital body parts evolve into sentient entities, gradually gaining self-awareness and autonomy. Eventually, they may choose to separate from their host and seek independence, electing to join your colony as esteemed members.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Dissassembly_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Dissassembly_Worms</defName>
+    <label>remove Dissassembly worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Dissassembly_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing Dissassembly worms.</jobString>
+    <removesHediff>Fungi_Hediff_Dissassembly_Worms</removesHediff>
+  </RecipeDef>
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Absolute_Infestation</defName>
+		<label>Absolute Infestation</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Dissassembly worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Dissassembly_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiAbsoluteInfestationHediff</hediff>
+           <canAffectAnyLivePart>true</canAffectAnyLivePart>
+       <partsToAffect>       
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+         </partsToAffect>
+            <mtbDays>1</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This sinister implant infests the targeted pawn with shroomworms, initiating a gradual process of consumption that devours the human body part by part until the pawn succumbs to death. With each part consumed, a shroomworm emerges from the remains, ready to join your colony as a new member. This parasitic cycle perpetuates the symbiotic relationship between the fungal colony and its host, as the shroomworms continue to multiply and thrive within your ranks.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Dissassembly_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Absolute_Infestation</defName>
+    <label>remove absolute infestation</label>
+    <description>Remove the infestation.</description>
+    <jobString>Removing absolute infestation.</jobString>
+    <removesHediff>Fungi_Hediff_Absolute_Infestation</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Heart_Worms</defName>
+    <label>remove Heart worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Heart_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing Heart worms.</jobString>
+    <removesHediff>Fungi_Hediff_Heart_Worms</removesHediff>
+  </RecipeDef>
+  <RecipeDef ParentName="SurgeryRemoveImplantBase">
+    <defName>RemoveFungi_Hediff_Head_Worms</defName>
+    <label>remove Head worms</label>
+    <description>Remove the worms.</description>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Head_Worms</ThingDef></descriptionHyperlinks>
+    <jobString>Removing Head worms.</jobString>
+    <removesHediff>Fungi_Hediff_Head_Worms</removesHediff>
+  </RecipeDef>
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Heart_Worms</defName>
+		<label>Heart Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Heart worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Heart_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingHeart</hediff>
+           <partsToAffect>
+            <li>Heart</li>
+           </partsToAffect>
+            <mtbDays>5</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This remarkable fungal implant represents the pinnacle of development, endowing the heart of the host with life and consciousness. Over time, the once-static organ evolves into a sentient entity, gradually acquiring self-awareness and autonomy. Eventually, it may choose to detach from its host and seek independence, electing to join your colony as an esteemed member.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Heart_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+<HediffDef ParentName="ImplantHediffBase">
+		<defName>Fungi_Hediff_Head_Worms</defName>
+		<label>Head Worms</label>
+		<defaultLabelColor>(.2,1,.9)</defaultLabelColor>
+		<labelNoun>Head worms</labelNoun>
+		<spawnThingOnRemoved>Fungi_Item_Head_Worms</spawnThingOnRemoved>
+		<addedPartProps>
+			<solid>true</solid>
+			<partEfficiency>1.0</partEfficiency>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+		<stages>
+			<li>
+				<socialFightChanceFactor>10</socialFightChanceFactor>
+				<mentalStateGivers>
+                                         <li>
+						<mentalState>Wander_Psychotic</mentalState>
+						<mtbDays>0.5</mtbDays>
+					</li>
+				</mentalStateGivers>
+				<painFactor>0.6</painFactor>
+                                <vomitMtbDays>0.1</vomitMtbDays>
+                                <hungerRateFactorOffset>5</hungerRateFactorOffset>
+                                  <capMods>
+                                   <li>
+                          <capacity>Manipulation</capacity>
+                         <offset>-0.3</offset>
+                           </li>
+                        <li>
+                   <capacity>Moving</capacity>
+                        <offset>-0.3</offset>
+                       </li>
+                       </capMods>
+         <hediffGivers>
+
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingHead</hediff>
+           <partsToAffect>
+            <li>Head</li>
+           </partsToAffect>
+            <mtbDays>5</mtbDays>
+          </li>
+
+        </hediffGivers>
+                </li>
+		</stages>
+		<description>This cutting-edge fungal implant signifies the apex of development, imbuing the head of the host with life and consciousness. Over time, the once-inert cranium transforms into a sentient entity, gradually acquiring self-awareness and autonomy. Ultimately, it may choose to detach from its host and seek independence, opting to join your colony as a valued member.</description>
+		<descriptionHyperlinks><ThingDef>Fungi_Item_Head_Worms</ThingDef></descriptionHyperlinks>
+	</HediffDef>
+
+</Defs>

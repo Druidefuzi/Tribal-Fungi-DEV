@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>Fungi_Surgery_Pregnancy_Worms</defName>
+    <label>&lt;color=#00FFF7&gt;implant Pregnancy Worms&lt;/color&gt;</label>
+    <description>Implant Pregnancy Worms.</description>
+    <jobString>Implanting Pregnancy Worms.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Fungi_Item_Pregnancy_Worms</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>Fungi_Item_Pregnancy_Worms</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Brain</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Fungi_Hediff_Pregnancy_Worms</addsHediff>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Pregnancy_Worms</ThingDef></descriptionHyperlinks>
+  </RecipeDef>
+
+<RecipeDef ParentName="SurgeryInstallImplantBase">
+    <defName>Fungi_Surgery_Wormoid_Worms</defName>
+    <label>&lt;color=#00FFF7&gt;implant Wormoid Worms&lt;/color&gt;</label>
+    <description>Implant Wormoid Worms.</description>
+    <jobString>Implanting Wormoid Worms.</jobString>
+    <workAmount>3000</workAmount>
+    <skillRequirements>
+      <Medicine>4</Medicine>
+    </skillRequirements>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>Medicine</li>
+          </categories>
+        </filter>
+        <count>1</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Fungi_Item_Wormoid_Worms</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+      <thingDefs>
+        <li>Fungi_Item_Wormoid_Worms</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Heart</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Fungi_Hediff_Wormoid_Worms</addsHediff>
+    <descriptionHyperlinks><ThingDef>Fungi_Item_Wormoid_Worms</ThingDef></descriptionHyperlinks>
+  </RecipeDef>
+
+  
+</Defs>

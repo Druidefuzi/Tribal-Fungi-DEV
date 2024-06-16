@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TraitDef>
+		<defName>SunHater</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Sun Hater</label>
+				<description>{PAWN_nameDef} absolutely hates the disgusting sun.For {PAWN_nameDef} the sun is the corrupted source of life for the humans. \n\n{PAWN_pronoun} gets a mood bonus if awake at night (23h-6h) and mood loss if awake during the day (11h-18h).\n\n The night is holy for {PAWN_nameDef}</description>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+	<TraitDef>
+		<defName>FungiGenetics</defName>
+		<commonality>0.001</commonality>
+		<degreeDatas>
+			<li>
+				<label>Genetic Memory</label>
+				<description>{PAWN_nameDef} may be cursed with a very short life due to {PAWN_possessive} genetics, but {PAWN_pronoun} has the advantage of sharing genetic memories with {PAWN_possessive} ancestors. Therefore, {PAWN_pronoun} gains early experience in all sorts of tasks. Since {PAWN_nameDef} is basically in the age of human children, the effects aren´t that strong.</description>
+				<skillGains>
+					<Cooking>3</Cooking>
+					<Crafting>6</Crafting>
+					<Construction>5</Construction>
+					<Animals>5</Animals>
+					<Plants>5</Plants>
+					<Mining>3</Mining>
+
+					<Melee>3</Melee>
+					<Shooting>3</Shooting>
+					<Intellectual>3</Intellectual>
+					<Medicine>6</Medicine>
+
+				</skillGains>
+			</li>
+		</degreeDatas>
+	</TraitDef>
+
+
+
+
+	<ThoughtDef>
+		<defName>FungiHateLight</defName>
+		<workerClass>Fungi.ThoughtWorker_IsDayInLight</workerClass>
+		<requiredTraits>
+			<li>SunHater</li>
+		</requiredTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Withering</label>
+				<description>I understand why humans like the sun. It is disgusting and dangerous. Just like them. My head aches!</description>
+				<baseMoodEffect>-30</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>FungiLoveNight</defName>
+		<workerClass>Fungi.ThoughtWorker_IsNightAndDark</workerClass>
+		<requiredTraits>
+			<li>SunHater</li>
+		</requiredTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Thriving</label>
+				<description>I feel so energized! I love the Night!</description>
+				<baseMoodEffect>+20</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+	<ThoughtDef>
+		<defName>FungiLoveTox</defName>
+		<workerClass>Fungi.ThoughtWorker_inTox</workerClass>
+		<requiredTraits>
+			<li>SunHater</li>
+		</requiredTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>healthy toxgas</label>
+				<description>I feel so young! I love how this feels!</description>
+				<baseMoodEffect>+5</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>FungiLoveRot</defName>
+		<workerClass>Fungi.ThoughtWorker_InRot</workerClass>
+		<requiredTraits>
+			<li>FungiGenetics</li>
+		</requiredTraits>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>healthy rotstink</label>
+				<description>I feel refreshed , the smell of rot is incredible!</description>
+				<baseMoodEffect>+5</baseMoodEffect>
+			</li>
+
+		</stages>
+	</ThoughtDef>
+
+
+
+
+
+
+	<ThoughtDef>
+		<defName>DissassemblyWorms</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Fungi_Hediff_Dissassembly_Worms</hediff>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Loosing control</label>
+				<description>What´s happening to me? I can´t fully control my arms and legs anymore, they move themself. It hurts. I want it to stop , please , PLEASE!</description>
+				<baseMoodEffect>-40</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

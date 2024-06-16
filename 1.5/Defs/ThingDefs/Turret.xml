@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+
+
+
+
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Blood</defName>
+    <label>Bloodburst</label>
+    <graphicData>
+      <texPath>Things/Projectile/Blood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>FungiBlood</damageDef>
+      <damageAmountBase>3</damageAmountBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  
+
+  
+<ThingDef ParentName="BuildingBase">
+    <defName>Turret_HeartTurret</defName>
+    <label>heart-turret</label>
+    <description>A marvel of genetic modification, the enhanced heart atop fused armlings is a fearsome creation designed for relentless assault. With each beat, it propels high-pressure drops of blood with deadly accuracy, its purpose not to deliver crushing blows but to inflict countless lacerations upon its foes. Known for its methodical and relentless nature, this weapon is a harbinger of death by a thousand cuts, its relentless barrage wearing down even the most resilient adversaries through sheer attrition. Beware its relentless onslaught, for its lethal efficiency knows no bounds.</description>
+    <thingClass>Building_TurretGun</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurret</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(3,3)</drawSize>
+      <damageData>
+        <rect>(0.3,0.25,0.5,0.7)</rect>
+      </damageData>
+      <shadowData>
+        <volume>(0.20,0.20,0.20)</volume>
+        <offset>(0,0,0)</offset>
+      </shadowData>
+    </graphicData>
+    <uiIconPath>Things/Building/ShroomanTurret/HeartTurretIcon</uiIconPath>
+    <uiIconScale>0.90</uiIconScale>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <altitudeLayer>Building</altitudeLayer>
+    <stealable>false</stealable>
+    
+    <thingCategories>
+      <li>BuildingsSecurity</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>350</MaxHitPoints>
+      <Flammability>0.5</Flammability>
+      <WorkToBuild>5000</WorkToBuild>
+      <Mass>15</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+
+      <li Class="CompProperties_Forbiddable"/>
+      <li Class="CompProperties_Flickable"/>
+      <li Class="CompProperties_Breakdownable"/>
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>Blood Storage</fuelLabel>
+        <fuelGizmoLabel>Blood Storage</fuelGizmoLabel>
+        <fuelFilter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </fuelFilter>
+  
+       
+        <fuelCapacity>20</fuelCapacity>
+        <initialFuelPercent>1</initialFuelPercent>
+        <autoRefuelPercent>0.99</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <fuelMultiplier>10</fuelMultiplier>
+        <factorByDifficulty>false</factorByDifficulty>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <outOfFuelMessage>Out of blood</outOfFuelMessage>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+      </li>
+    </comps>
+    <passability>PassThroughOnly</passability>
+    <pathCost>50</pathCost>
+    <fillPercent>0.4</fillPercent>
+    <hasTooltip>true</hasTooltip>
+    <stuffCategories>
+    </stuffCategories>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+      <Meat_Human>80</Meat_Human>
+      <DruidShroomans>10</DruidShroomans>
+      <Heart>1</Heart>
+    </costList>
+    
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <designationCategory>FungiBuildings</designationCategory>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>
+      <combatPower>45</combatPower>   <!-- same as a scavenger -->
+      <ai_combatDangerous>true</ai_combatDangerous>
+      <turretGunDef>Gun_HeartTurret</turretGunDef>
+      <turretBurstCooldownTime>1.5</turretBurstCooldownTime>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+      <li>PlaceWorker_ShowTurretRadius</li>
+    </placeWorkers>
+    <designationHotKey>Misc2</designationHotKey>
+        <researchPrerequisites>
+      <li>FungiBreederSecond</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>Gun_HeartTurret</defName>
+	  <soundInteract>BloodSound</soundInteract>
+    <label>Heart Turret</label>
+    <description>A marvel of genetic modification, the enhanced heart atop fused armlings is a fearsome creation designed for relentless assault. With each beat, it propels high-pressure drops of blood with deadly accuracy, its purpose not to deliver crushing blows but to inflict countless lacerations upon its foes. Known for its methodical and relentless nature, this weapon is a harbinger of death by a thousand cuts, its relentless barrage wearing down even the most resilient adversaries through sheer attrition. Beware its relentless onslaught, for its lethal efficiency knows no bounds.</description>
+    <graphicData>
+      <texPath>Things/Building/ShroomanTurret/HeartTurret_Gun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+
+    <statBases>
+      <AccuracyTouch>0.77</AccuracyTouch>
+      <AccuracyShort>0.70</AccuracyShort>
+      <AccuracyMedium>0.45</AccuracyMedium>
+      <AccuracyLong>0.24</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>5</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Blood</defaultProjectile>
+        <warmupTime>0</warmupTime>
+        <range>29.9</range>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>20</burstShotCount>
+        <soundCast>BloodSound</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>0.1</consumeFuelPerShot>
+      </li>
+
+    </verbs>
+  </ThingDef>
+
+
+ 
+
+  
+
+
+  
+
+
+</Defs>
+

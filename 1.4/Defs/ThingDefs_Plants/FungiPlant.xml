@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="FungiCavePlantBase" ParentName="PlantBase" Abstract="True">
+    <plant>
+      <neverBlightable>true</neverBlightable>
+      <growMinGlow>0</growMinGlow>
+      <growOptimalGlow>0</growOptimalGlow>
+      <cavePlant>true</cavePlant>
+      <wildOrder>0</wildOrder>
+      <wildClusterWeight>0</wildClusterWeight>
+      <wildClusterRadius>0</wildClusterRadius>
+      <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+    </plant>
+  </ThingDef>
+  <ThingDef ParentName="FungiCavePlantBase">
+    <defName>FUNGI_PLANT_DEF</defName>
+    <label>Fungi Shroom</label>
+    <description>Due to their genetics, Fungi can also reproduce asexually. A Full grown Fungi will step out of his birthshroom</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>FungiPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+    <ingestible />
+
+
+    <plant>
+
+
+             <sowResearchPrerequisites>
+	 	<li>LifeformManipulation</li>
+             </sowResearchPrerequisites>
+			<growDays>10</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>Meat_Human</harvestedThingDef>
+			<harvestYield>25</harvestYield>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>FungiPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~2</visualSizeRange>
+      <purpose>Food</purpose>
+    </plant>
+
+<comps>
+<li Class="Fungi.CompProperties_PawnGrower">
+        <canspawn>true</canspawn>
+        <spawnwild>true</spawnwild>
+        <spawnChance>0.9</spawnChance>
+        <Races>
+                        <Alien_Fungi>8</Alien_Fungi>
+        </Races>
+      </li>
+  </comps>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<AlienRace.AlienBackstoryDef Name="Fungi_Backstory_Base" Abstract="true">
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef Name="Fungi_Backstory_BaseThin" Abstract="true">
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Thin</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef Name="Fungi_Backstory_BaseFat" Abstract="true">
+    <bodyTypeMale>Fat</bodyTypeMale>
+    <bodyTypeFemale>Fat</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef Name="Fungi_Backstory_BaseHulk" Abstract="true">
+    <bodyTypeMale>Hulk</bodyTypeMale>
+    <bodyTypeFemale>Hulk</bodyTypeFemale>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>Fungi1</defName>
+	<title>Shrooman connoisseur</title>
+	<titleShort>Connoisseur</titleShort>
+	<baseDesc>[PAWN_nameDef] absolutely loves to grow Shroomans![PAWN_nameDef] loves the taste of them and thinks the screaming while chewing them raw sounds cute! </baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Plants</key>
+        <value>5</value>
+      </li>
+      <li>
+        <key>Cooking</key>
+        <value>5</value>
+      </li>
+
+
+
+    </skillGains>
+    <forcedTraitsChance>
+      <li>
+        <defName>Gourmand</defName>
+		
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>WormiFungi</defName>
+	<title>Former human</title>
+	<titleShort>former human</titleShort>
+	<baseDesc>[PAWN_nameDef], once human, now inhabits a wormoid form, where only anger and hunger pulse through [PAWN_possessive] being.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>WormiBackstory</li>
+	</spawnCategories>
+    <workDisables>
+        <li>Caring</li>
+        <li>Animals</li>
+        <li>Intellectual</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>WormiFungi2</defName>
+	<title>Former human</title>
+	<titleShort>former human</titleShort>
+	<baseDesc>[PAWN_nameDef], once human, now inhabits a wormoid form, where only anger and hunger pulse through [PAWN_possessive] being.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>WormiBackstory</li>
+	</spawnCategories>
+    <workDisables>
+        <li>Caring</li>
+        <li>Animals</li>
+        <li>Intellectual</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>WormiFungi3</defName>
+	<title>Hatched</title>
+	<titleShort>Hatched</titleShort>
+	<baseDesc>[PAWN_nameDef] emerged from the unfortunate host that was infested, viewing it as a parental figure, now deceased. Tragically, all that remains for [PAWN_pronoun] is an overwhelming sense of anger and insatiable hunger.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>WormiBackstoryHatched</li>
+	</spawnCategories>
+    <workDisables>
+        <li>Caring</li>
+        <li>Animals</li>
+        <li>Intellectual</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>WormiFungi4</defName>
+	<title>Hatched</title>
+	<titleShort>Hatched</titleShort>
+	<baseDesc>[PAWN_nameDef] emerged from the unfortunate host that was infested, viewing it as a parental figure, now deceased. Tragically, all that remains for [PAWN_pronoun] is an overwhelming sense of anger and insatiable hunger.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>WormiBackstoryHatched</li>
+	</spawnCategories>
+    <workDisables>
+        <li>Caring</li>
+        <li>Animals</li>
+        <li>Intellectual</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi2</defName>
+	<title>Fleshforger</title>
+	<titleShort>Fleshforger</titleShort>
+	<baseDesc>[PAWN_nameDef] is adept at merging Shroomans and human flesh to forge a variety of weapons, showcasing exceptional prowess in close-quarters combat.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Melee</key>
+        <value>3</value>
+      </li>
+      <li>
+        <key>Crafting</key>
+        <value>6</value>
+      </li>
+      <li>
+        <key>Construction</key>
+        <value>3</value>
+      </li>
+    </skillGains>
+
+    <forcedTraitsChance>
+      <li>
+        <defName>Industriousness</defName>
+		  <degree>1</degree>
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseHulk">
+	<defName>Fungi12</defName>
+	<title>Big One</title>
+	<titleShort>Big One</titleShort>
+	<baseDesc>As an exceptionally large child, [PAWN_nameDef] possessed immense strength and brutality from a young age, evidenced by the incident of killing a human as a toddler. However, intelligence may not be [PAWN_possessive] strongest suit.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+
+	<skillGains>
+
+      <li>
+        <key>Mining</key>
+        <value>5</value>
+      </li>
+      <li>
+        <key>Melee</key>
+        <value>6</value>
+      </li>
+      <li>
+        <key>Construction</key>
+        <value>3</value>
+      </li>
+
+
+    </skillGains>
+    <forcedTraitsChance>
+      <li>
+        <defName>SlowLearner</defName>
+		
+		  <chance>80</chance>
+      </li>
+    </forcedTraitsChance>
+    <workDisables>
+        <li>Intellectual</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi3</defName>
+	<title>Headhunter</title>
+	<titleShort>Headhunter</titleShort>
+	<baseDesc>[PAWN_nameDef] harbors a relentless desire to witness the severed head of a human displayed on a pike, alongside consuming their flesh. [PAWN_nameDef] exhibits an unparalleled level of brutality, even among the typically ferocious Fungi species. </baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Melee</key>
+        <value>3</value>
+      </li>
+    </skillGains>
+    <forcedTraitsChance>
+      <li>
+        <defName>Bloodlust</defName>
+		  
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+    <workDisables>
+        <li>Cleaning</li>
+        <li>Crafting</li>
+    </workDisables>
+</AlienRace.AlienBackstoryDef>
+
+
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>Fungi4</defName>
+	<title>Flesh Fanatic</title>
+	<titleShort>Flesh Fanatic</titleShort>
+	<baseDesc>[PAWN_nameDef] fervently indulges in the consumption of human flesh, convinced that with each bite, [PAWN_pronoun] gains greater strength and vitality.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+
+	</spawnCategories>
+
+	<skillGains>
+<li><key>Cooking</key>
+        <value>3</value>
+</li>
+    </skillGains>
+	<forcedTraitsChance>
+      <li>
+        <defName>Cannibal</defName>
+		 
+		  <chance>95</chance>
+      </li>
+      <li>
+        <defName>Gourmand</defName>
+	
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseThin">
+	<defName>Fungi5</defName>
+	<title>Traumatized Fungi</title>
+	<titleShort>Traumatized Fungi</titleShort>
+	<baseDesc>[PAWN_nameDef] wandered through the forest bordering the village of [PAWN_possessive] tribe when [PAWN_pronoun] stumbled upon a human child at play. Having only heard tales of humans, [PAWN_nameDef] was intrigued and secretly befriended the child. Touched by the innocence of this encounter, [PAWN_nameDef] resolved to forsake violence against humans. However, [PAWN_possessive] newfound peace was shattered when a member of [PAWN_possessive] tribe discovered their secret liaison. In a horrifying display of tribal justice, [PAWN_nameDef] was compelled to witness the barbaric skinning of the innocent child. From that moment onward, [PAWN_nameDef] swore off causing harm to any living being, though [PAWN_pronoun] remains vulnerable to coercion in such matters.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+
+	</spawnCategories>
+       <linkedBackstory>Fungi9</linkedBackstory>
+
+		<skillGains>
+		
+		</skillGains>
+ 
+	<forcedTraitsChance>
+      <li>
+        <defName>Wimp</defName>
+		 
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+    <workDisables>
+        <li>Violent</li>
+        <li>Crafting</li>
+    </workDisables>
+
+</AlienRace.AlienBackstoryDef>
+
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi6</defName>
+	<title>Shroomimal trainer</title>
+	<titleShort>Shroomimal trainer</titleShort>
+	<baseDesc>[PAWN_nameDef] finds pure delight in the company of [PAWN_possessive] cherished shroomimals, relishing every moment as they relentlessly pursue and hunt down pesky humans. The sight of these creatures in action brings [PAWN_nameDef] immense satisfaction, reaffirming [PAWN_possessive] bond with them. Never straying far from [PAWN_possessive] side, [PAWN_nameDef] always ensures to have at least one shroomimal companion ready for any encounter.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>5</value>
+      </li>
+    </skillGains>
+	<forcedTraitsChance>
+
+    </forcedTraitsChance>
+    <forcedItems>
+      <Shroomimal_ShroomimalEgg>1~3</Shroomimal_ShroomimalEgg>
+    </forcedItems>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi7</defName>
+	<title>Humimal Breeder</title>
+	<titleShort>Humimal Breeder</titleShort>
+	<baseDesc>Fascinated from the moment [PAWN_nameDef] entered this world, [PAWN_nameDef] eagerly chased after humimals even as a mere toddler. Despite their resemblance to humans in repulsiveness, [PAWN_nameDef] holds a deep affection for these creatures. Growing up, [PAWN_nameDef] honed the skill of training humimals for hauling and combat, a task [PAWN_pronoun] found both challenging and rewarding. The joy [PAWN_nameDef] experiences is palpable when witnessing the horror-stricken expressions of villagers during tribe raids, especially as they witness the humimals in action. The sight of people being hunted down by a pack of humans on all fours is utterly captivating to [PAWN_nameDef], although [PAWN_possessive] fellow tribespeople find [PAWN_nameDef] a tad peculiar.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>8</value>
+      </li>
+      <li>
+        <key>Social</key>
+        <value>-7</value>
+      </li>
+    </skillGains>
+	<forcedTraitsChance>
+
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi8</defName>
+	<title>Chickman farmer</title>
+	<titleShort>Humimal Breeder</titleShort>
+	<baseDesc>[PAWN_nameDef] spent [PAWN_possessive] formative years on a farm, where [PAWN_pronoun] mastered the art of breeding chickman and cultivating fungal objects. Despite [PAWN_possessive] proficiency in these tasks, [PAWN_nameDef] struggles with more complex endeavors.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+
+	</spawnCategories>
+
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>3</value>
+      </li>
+      <li>
+        <key>Plants</key>
+        <value>5</value>
+      </li>
+    </skillGains>
+	<forcedTraitsChance>
+
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseThin">
+	<defName>Fungi9</defName>
+	<title>Alienated</title>
+	<titleShort>Alienated</titleShort>
+	<baseDesc>Repulsed by the cruel acts committed by [PAWN_possessive] tribespeople against humans and deeply scarred by [PAWN_possessive] own childhood experiences, [PAWN_nameDef] now exclusively engages in tasks that do not inflict harm upon others.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+<linkedBackstory>Fungi5</linkedBackstory>
+	<skillGains>
+
+      <li>
+        <key>Intellectual</key>
+        <value>8</value>
+      </li>
+
+
+    </skillGains>
+	<forcedTraitsChance>
+
+    </forcedTraitsChance>
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseThin">
+	<defName>Fungi10</defName>
+	<title>Caged</title>
+	<titleShort>Caged</titleShort>
+	<baseDesc>Captured as a child by humans who mistook [PAWN_nameDef] for a monstrous creature, [PAWN_nameDef] endured a life of deprivation, receiving only enough sustenance to barely eke out survival. Fortunately, during a raid by another faction on the village, [PAWN_nameDef] somehow managed to escape. However, the ordeal left [PAWN_pronoun] with permanently underdeveloped muscles, a physical reminder of the trauma [PAWN_pronoun] endured, from which [PAWN_pronoun] will never fully recover.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+
+      <li>
+        <key>Social</key>
+        <value>8</value>
+      </li>
+
+    </skillGains>
+	<forcedTraitsChance>
+
+    </forcedTraitsChance>
+    <forcedHediffs>
+      <li>Frail</li>
+    </forcedHediffs>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseThin">
+	<defName>Fungi11</defName>
+	<title>Sun scorched</title>
+	<titleShort>scorched</titleShort>
+	<baseDesc>Captured by humans after a spree of abducting and killing many farmers, [PAWN_nameDef] endured relentless torture in the form of daily exposure to the scorching sunlight. While any ordinary fungi would have perished under such conditions, [PAWN_nameDef] miraculously endured, albeit not without consequences. The intense sunlight left [PAWN_pronoun] blinded and inflicted severe damage to [PAWN_possessive] brain. Despite [PAWN_pronoun] suffering, [PAWN_nameDef] managed to find several timeshroomans while desperately fleeing from [PAWN_possessive] tormentors.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+      <li>FungiScorcheHediff</li>
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+		
+			<li>
+				<key>Shooting</key>
+				<value>-3</value>
+			</li>
+		
+    </skillGains>
+    <forcedItems>
+      <ShroomofWithering>1~5</ShroomofWithering>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi28</defName>
+	<title>Peaceful tribe</title>
+	<titleShort>Peaceful tribe</titleShort>
+	<baseDesc>[PAWN_nameDef] previously specialized in breeding mushroom-based animals within a tranquil tribe, fostering a harmonious existence until merciless pirates raided [PAWN_possessive] village, ruthlessly slaughtering all [PAWN_possessive] animals and kin. The devastating loss prompted a profound transformation in [PAWN_pronoun], altering [PAWN_possessive] approach to breeding methods upon encountering other Fungi tribes.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>5</value>
+      </li>
+      <li>
+        <key>Construction</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+    <forcedItems>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseFat">
+	<defName>Fungi13</defName>
+	<title>Infested</title>
+	<titleShort>Infested</titleShort>
+	<baseDesc>Amidst a failed attempt to perform surgery, [PAWN_nameDef], never skilled in the medical arts, endeavored to implant impregnation worms into a captured human. However, a mishap occurred as [PAWN_pronoun] inadvertently slipped, causing [PAWN_pronoun] to lose consciousness. In the aftermath, the impregnation worms found their way into [PAWN_possessive] own body, leading to an unexpected consequence. Now, [PAWN_nameDef] finds [PAWN_pronoun]self bearing offspring every few days and plagued by insatiable hunger.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+      <li>Fungi_Hediff_Pregnancy_Worms</li>
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>5</value>
+      </li>
+
+    </skillGains>
+
+
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseHulk">
+	<defName>Fungi14</defName>
+	<title>Sun scorched</title>
+	<titleShort>scorched</titleShort>
+	<baseDesc>Captured by humans after a spree of abducting and killing many farmers, [PAWN_nameDef] endured relentless torture in the form of daily exposure to the scorching sunlight. While any ordinary fungi would have perished under such conditions, [PAWN_nameDef] miraculously endured, albeit not without consequences. The intense sunlight left [PAWN_objective] blinded and inflicted severe damage to [PAWN_possessive] brain. Despite [PAWN_possessive] suffering, [PAWN_nameDef] managed to find several Timeshroomans while desperately fleeing from [PAWN_possessive] tormentors.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+<li>FungiScorcheHediff</li>
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Animals</key>
+        <value>5</value>
+      </li>
+
+    </skillGains>
+    <forcedItems>
+      <ShroomofWithering>1~5</ShroomofWithering>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi15</defName>
+	<title>War orphan </title>
+	<titleShort>War orphan </titleShort>
+	<baseDesc>From [PAWN_possessive] earliest memories, all [PAWN_nameDef] has known is a life entrenched in war, hunger, and unrelenting suffering. [PAWN_nameDef] remains perplexed as to why their tribe was targeted; all they ever did was cultivate mushrooms, yet they were still perceived as monstrous by their attackers. Despite [PAWN_possessive] tribe never inflicting harm upon others, the day they were torn apart, with some of [PAWN_possessive] family disappearing forever, marked the breaking point for [PAWN_nameDef]. Now, [PAWN_nameDef] is evolving into the embodiment of warfare itself, a force to be reckoned with. Throughout [PAWN_possessive] life, [PAWN_nameDef] never learned the concept of mercy, and [PAWN_pronoun] intends to show none.</baseDesc>
+	<slot>Childhood</slot>
+<linkedBackstory>Fungi16</linkedBackstory>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<forcedTraitsChance>
+      <li>
+        <defName>Psychopath</defName>
+		 
+		  <chance>96</chance>
+      </li>
+    </forcedTraitsChance>
+
+
+
+
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseHulk">
+	<defName>Fungi16</defName>
+	<title>War hardened</title>
+	<titleShort>War hardened</titleShort>
+	<baseDesc>[PAWN_nameDef] has been a participant in countless battles, claiming numerous lives in the process. [PAWN_nameDef] acknowledges that this endless cycle of violence will never undo the traumas [PAWN_pronoun] has endured, but [PAWN_pronoun] ceased to dwell on such thoughts long ago. Indifference has consumed [PAWN_nameDef], numbing [PAWN_possessive] emotions and rendering [PAWN_pronoun] apathetic to all else. War has been the crucible of [PAWN_possessive] existence, and it is destined to be the harbinger of [PAWN_possessive] demise.</baseDesc>
+	<slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+<linkedBackstory>Fungi15</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Melee</key>
+        <value>8</value>
+      </li>
+
+    </skillGains>
+	<forcedTraitsChance>
+      <li>
+        <defName>Tough</defName>
+		 
+		  <chance>50</chance>
+      </li>
+    </forcedTraitsChance>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi17</defName>
+	<title>Spore Chief</title>
+	<titleShort>Spore Chief</titleShort>
+	<baseDesc>[PAWN_nameDef], once the esteemed chief of a tribe renowned for their mastery of spore utilization, led with unparalleled skill in crafting superior spore throwers. However, circumstances forced the tribe to abandon their homeland in the face of an impending invasion, seeking refuge elsewhere. Tragically, their new settlement was marred by radioactive contamination, plunging the once-thriving community into madness. As insanity gripped the majority of the tribe's members, chaos ensued, with violence erupting as they turned on one another. [PAWN_nameDef] stands as one of the few remaining survivors amidst the devastation, bearing witness to the tragic demise of [PAWN_possessive] people.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+ 
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Shooting</key>
+        <value>4</value>
+      </li>
+
+    </skillGains>
+    <forcedItems>
+      <MeleeWeapon_Moldaxe>1</MeleeWeapon_Moldaxe>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi18</defName>
+	<title>Screambringer</title>
+	<titleShort>Screambringer</titleShort>
+	<baseDesc>[PAWN_nameDef] possesses a fervent passion for experimentation and surgical procedures, particularly when it comes to operating on humans. Remarkably, [PAWN_nameDef] adeptly employs [PAWN_possessive] skills to save the lives of fellow Fungi with remarkable success.</baseDesc>
+	<slot>Adulthood</slot>
+    <forcedHediffs>
+
+    </forcedHediffs>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+
+      <li>
+        <key>Medicine</key>
+        <value>5</value>
+      </li>
+
+      <li>
+        <key>Intellectual</key>
+        <value>3</value>
+      </li>
+
+      <li>
+        <key>Crafting</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+    <forcedItems>
+      <MeleeWeapon_HumanFleshdagger>1</MeleeWeapon_HumanFleshdagger>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi19</defName>
+	<title>Worm Tribe</title>
+	<titleShort>Surviver</titleShort>
+	<baseDesc>[PAWN_nameDef], hailing from a tribe decimated by human aggressors, was raised amidst a society that wielded worms as weapons and bred giant specimens for labor. However, it was the merciless brutality of the human tribes that ultimately led to the downfall of [PAWN_nameDef]'s people. Rather than succumb to despair, this tragedy fueled [PAWN_nameDef]'s determination for retribution. Swearing vengeance upon the human invaders, [PAWN_nameDef] is resolute in making them pay for their atrocities. Now, only [PAWN_nameDef] and [PAWN_possessive] trusted worm thrower remain, representing the last remnants of [PAWN_possessive] once-thriving tribe.</baseDesc>
+	<slot>Childhood</slot>
+
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Medicine</key>
+        <value>4</value>
+      </li>
+
+    </skillGains>
+    <forcedItems>
+      <WormGun>1</WormGun>
+    </forcedItems>
+
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi20</defName>
+	<title>Limbforger</title>
+	<titleShort>Limbforger</titleShort>
+	<baseDesc>[PAWN_nameDef], the Limbforger, is a master craftsman renowned for fashioning creations from human flesh and bone.</baseDesc>
+	<slot>Adulthood</slot>
+
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Crafting</key>
+        <value>6</value>
+      </li>
+      <li>
+        <key>Construction</key>
+        <value>6</value>
+      </li>
+
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_BaseThin">
+	<defName>Fungi21</defName>
+	<title>Torturer</title>
+	<titleShort>Torturer</titleShort>
+	<baseDesc>[PAWN_nameDef] is a proficient interrogator, skilled in extracting information from pesky human captives. However, [PAWN_pronoun] takes no joy in the pursuit of knowledge; rather, [PAWN_nameDef] derives pleasure from inflicting pain upon others.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+	</spawnCategories>
+	<skillGains>
+      <li>
+        <key>Medicine</key>
+        <value>6</value>
+      </li>
+      <li>
+        <key>Melee</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi22</defName>
+	<title>Spore acolyte</title>
+	<titleShort>Spore acolyte</titleShort>
+	<baseDesc>[PAWN_nameDef] was raised with pride in [PAWN_possessive] tribe, captivated by the art of harnessing spores for offensive purposes. [PAWN_nameDef] aspires to join the prestigious ranks of the Spore Force or the revered Plague Lords when [PAWN_pronoun] reaches maturity.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiSpore</li>
+	</spawnCategories>
+<linkedBackstory>Fungi23</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Shooting</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi24</defName>
+	<title>Flesh acolyte</title>
+	<titleShort>Flesh acolyte</titleShort>
+	<baseDesc>[PAWN_nameDef] was raised with pride in [PAWN_possessive] tribe, captivated by the intricate art of weaponizing human flesh combined with shroomans. [PAWN_nameDef] harbors a deep fascination with this dark craft and aspires to join the esteemed ranks of the Flesh Lords when [PAWN_pronoun] reaches adulthood.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiFleshlord</li>
+	</spawnCategories>
+<linkedBackstory>Fungi25</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Melee</key>
+        <value>2</value>
+      </li>
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi25</defName>
+	<title>Flesh lord</title>
+	<titleShort>Flesh lord</titleShort>
+	<baseDesc>[PAWN_nameDef] has ascended to the prestigious rank of a Flesh Lord, mastering the art of wielding flesh weapons with unparalleled skill. Alongside the formidable Spore Force, they form the formidable backbone of the Fungi army. Renowned as the epitome of cruelty, they stand as the best of the best, unmatched by any other force in their relentless pursuit of domination.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiFleshlord</li>
+	</spawnCategories>
+<linkedBackstory>Fungi24</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Melee</key>
+        <value>8</value>
+      </li>
+
+      <li>
+        <key>Shooting</key>
+        <value>8</value>
+      </li>
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi23</defName>
+	<title>Spore force</title>
+	<titleShort>Spore force</titleShort>
+	<baseDesc>[PAWN_nameDef] has earned the prestigious title of a member of the Spore Force, achieving mastery in the deployment of spores as potent weapons. Wherever the noxious scent of mold lingers, mingled with the desperate coughs of humans and the stench of decaying flesh, the Spore Force is sure to follow. Alongside the formidable Flesh Lords and the dreaded Plague Lords, they form the indomitable backbone of the Fungi army. Renowned as the epitome of cruelty, they stand as the pinnacle of excellence, unmatched by any other force in their unwavering pursuit of domination.</baseDesc>
+	<slot>Adulthood</slot>
+	
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiSpore</li>
+	</spawnCategories>
+<linkedBackstory>Fungi22</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Shooting</key>
+        <value>10</value>
+      </li>
+            <li>
+        <key>Plants</key>
+        <value>3</value>
+				<passions>
+				<skill>Plants</skill>
+				<xp>1</xp>
+				</passions>
+      </li>
+		
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi27</defName>
+	<title>Plague lord</title>
+	<titleShort>Plague lord</titleShort>
+	<baseDesc>[PAWN_nameDef] has ascended to the esteemed rank of a Plague Lord, wielding mastery over spores and diseases as lethal weapons. Alongside the formidable Spore Force and the dreaded Flesh Lords, they constitute the unyielding backbone of the Fungi army. Renowned as the pinnacle of excellence, they stand unrivaled in their cruelty, embracing the philosophy that a swift death is too merciful. Instead, they prefer to let their victims languish and wither away in agonizing torment, showcasing the true extent of their merciless power.</baseDesc>
+	<slot>Adulthood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiPlague</li>
+	</spawnCategories>
+<linkedBackstory>Fungi29</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Shooting</key>
+        <value>10</value>
+      </li>
+            <li>
+        <key>Plants</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+<AlienRace.AlienBackstoryDef ParentName="Fungi_Backstory_Base">
+	<defName>Fungi29</defName>
+	<title>Plague acolyte</title>
+	<titleShort>Plague acolyte</titleShort>
+	<baseDesc>[PAWN_nameDef] grew up with immense pride as a member of [PAWN_possessive] tribe, harboring a deep fascination with the art of utilizing diseases as weapons of attack. [PAWN_nameDef] aspires to join the esteemed ranks of the Plague Lords when [PAWN_pronoun] matures, eager to delve deeper into the dark arts of spreading pestilence and suffering.</baseDesc>
+	<slot>Childhood</slot>
+	<spawnCategories>
+		<li>FungiBackstory</li>
+                <li>FungiPlague</li>
+	</spawnCategories>
+<linkedBackstory>Fungi27</linkedBackstory>
+	<skillGains>
+      <li>
+        <key>Plants</key>
+        <value>3</value>
+      </li>
+
+    </skillGains>
+
+</AlienRace.AlienBackstoryDef>
+</Defs>

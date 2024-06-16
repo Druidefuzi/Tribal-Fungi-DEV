@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>SHROOMAN_PLANT_TWO</defName>
+    <label>wild shrooman</label>
+    <description>The revenge of the Fungi to their slavers. The same minds kept alive in this abomination, as every shrooman starting to grow will have the same DNA. The same minds , screaming in agony forever. The Fungi forgot about that long, long ago, they are just annoyed today by the begging in that weird language and all the screaming and sew the mouths of the shroomans up.Hearing all the screams is absolutely no pleasure but at least they taste very good. This wild strain developed a increase of the human dna, making them resistant to the sun.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ShroomanPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+
+
+
+    <ingestible />
+    <plant>
+
+			<growDays>8</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RAW_SHROOMANS_RESOURCE_DEF</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>ShroomanPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~1.36</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+</Defs>

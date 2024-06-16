@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>RandomWormEgg</defName>
+		<label>Shroomimal egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+		<graphicData>
+			<drawSize>2</drawSize>
+			<color>(36, 117, 47)</color>
+			
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+			
+				<thingsToHatch>
+					<li>Wormqueen</li>
+					<li>Wormimal</li>
+					<li>MushroomWorm</li>
+					<li>Wormigiant</li>
+					
+				</thingsToHatch>
+				<hatcherDaystoHatch>.5</hatcherDaystoHatch>
+				<amount>1</amount>
+			</li>
+		</comps>
+
+	</ThingDef>
+		<ThingDef ParentName="EggFertBase">
+		<defName>WormqueenEgg</defName>
+		<label>Shroomimal egg</label>
+		<description>A wormqueen can´t wait to hatch...</description>
+		<graphicData>
+			<drawSize>2</drawSize>
+			<color>(36, 117, 47)</color>
+		</graphicData>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="CompProperties_Hatcher">
+				<hatcherDaystoHatch>2</hatcherDaystoHatch>
+				<hatcherPawn>Wormqueen</hatcherPawn>
+			</li>
+		</comps>
+
+	</ThingDef>
+	
+	
+	
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Wormqueen</defName>
+    <label>Wormqueen</label>
+    <description>Occasionally,although extremely rare, a wornine undergoes a dramatic mutation, transforming into a larger and more formidable creature known as the wormqueen. This monstrous entity carries within it the genetic material of every worm animal, granting it unparalleled versatility and reproductive capabilities. The wormqueen lays eggs at a prodigious rate, each one containing the potential to hatch into a diverse array of worm animals. From tiny hatchlings to fearsome predators, the offspring of the wormqueen inherit a vast genetic legacy, ensuring their survival and proliferation in the ever-changing ecosystem. Beware the spawn of the wormqueen, for their genetic diversity makes them unpredictable and formidable adversaries in the tangled depths of the earth.</description>
+    <statBases>
+      <MoveSpeed>3.2</MoveSpeed>
+      <ComfyTemperatureMin>4</ComfyTemperatureMin>
+      <MarketValue>955</MarketValue>
+    </statBases>
+    <tools>
+
+      <li>
+        <label>front left paw</label>
+        <capacities>
+        <li>Scratch</li>
+        </capacities>
+        <power>6</power>
+           <extraMeleeDamages>
+                                <li>
+                                <def>WormInfection</def>
+                                <amount>10</amount>
+                                </li>
+                                </extraMeleeDamages>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>front right paw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>6</power>
+           <extraMeleeDamages>
+                                <li>
+                                <def>WormInfection</def>
+                                <amount>10</amount>
+                                </li>
+                                </extraMeleeDamages>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+         <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>Grinding Teeth</label>
+             <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>6</power>
+           <extraMeleeDamages>
+                                <li>
+                                <def>WormInfection</def>
+                                <amount>10</amount>
+                                </li>
+                                </extraMeleeDamages>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.5</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+	
+			<li Class="CompProperties_EggLayer">
+				<eggUnfertilizedDef>RandomWormEgg</eggUnfertilizedDef>
+				<eggFertilizedDef>WormqueenEgg</eggFertilizedDef>
+				<eggFertilizationCountMax>1</eggFertilizationCountMax>
+				<eggLayIntervalDays>1</eggLayIntervalDays>
+				<eggCountRange>1</eggCountRange>
+			</li>
+		
+    </comps>
+    <race>
+      <body>QuadrupedAnimalWithPaws</body>
+      <predator>True</predator>
+      <thinkTreeMain>Animal</thinkTreeMain>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHungerRate>2</baseHungerRate>
+      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.2</manhunterOnDamageChance>
+      <baseHealthScale>1.25</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <canBePredatorPrey>True</canBePredatorPrey>
+      <leatherDef>Leather_Worm</leatherDef>
+      <wildness>0.4</wildness>
+      <trainability>Advanced</trainability>
+      <useMeatFrom></useMeatFrom>
+	  <nuzzleMtbHours>12</nuzzleMtbHours>
+	  <packAnimal>false</packAnimal>
+      <gestationPeriodDays>10</gestationPeriodDays>
+      <lifeExpectancy>1</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.5</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1</minAge>
+          <soundWounded>MushWorm1</soundWounded>
+          <soundDeath>MushWorm2</soundDeath>
+          <soundCall>MushWorm2</soundCall>
+          <soundAngry>MushWorm1</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <wildBiomes>
+    	<Tundra>0.01</Tundra>
+    	<BorealForest>0.01</BorealForest>
+    	<TemperateForest>0.05</TemperateForest>
+		<AridShrubland>0.1</AridShrubland>
+		<TropicalSwamp>0.1</TropicalSwamp>
+		<TemperateSwamp>0.1</TemperateSwamp>
+		<ColdBog>0.05</ColdBog>
+      </wildBiomes>
+    </race>
+    <recipes>
+      <li>Fungi_Surgery_Pregnancy_Worms</li>
+      <li>RemoveBodyPart</li>
+    </recipes>		
+    <tradeTags>
+
+      <li>FungiTrade_Wormigiant</li>
+
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Wormqueen</defName>
+    <label>Wormqueen</label>
+    <race>Wormqueen</race>
+    <combatPower>95</combatPower>
+     <ecoSystemWeight>0.1</ecoSystemWeight>
+    <wildGroupSize>
+      <min>1</min>
+      <max>2</max>
+    </wildGroupSize>
+    <alternateGraphicChance>0</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Wormqueen/Wormqueen2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Wormqueen/Wormqueen3</texPath></li>
+
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormimal/YWormimal</texPath>
+          <drawSize>2</drawSize>
+		   <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormimal/Dessicated_YWormimal</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormqueen/Wormqueen</texPath>
+          <drawSize>2</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormqueen/Dessicated_Wormqueen</texPath>
+          <drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormqueen/Wormqueen</texPath>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Wormimal/Dessicated_Wormimal</texPath>
+          <drawSize>2.8</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+</Defs>

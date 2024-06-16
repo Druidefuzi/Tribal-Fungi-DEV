@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+	
+
+
+
+
+
+
+<ResearchProjectDef>
+    <defName>FungiTimeManipulation</defName>
+    <label>Time Manipulation</label>
+    <tab>Fleshforging</tab>
+    <description>Allows the usage of time shroomans to manipulate the age of a living thing.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>Fleshforging</li>
+    </prerequisites>
+	<researchViewX>2</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+
+<ResearchProjectDef>
+    <defName>FungiHeatManipulation</defName>
+    <label>Heat regulation</label>
+    <tab>Fleshforging</tab>
+    <description>Allows the usage of time shroomans to change the temperature to your will.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>FungiTimeManipulation</li>
+    </prerequisites>
+	<researchViewX>3</researchViewX>
+    <researchViewY>5</researchViewY>
+  </ResearchProjectDef>
+
+
+<ResearchProjectDef>
+    <defName>ShroomwormBiology</defName>
+    <label>Fungi Experiments</label>
+    <tab>Fleshforging</tab>
+    <description>Discovers the practical uses of the parasitic shroomworms.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>Fleshforging</li>
+    </prerequisites>
+	<researchViewX>2</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+<ResearchProjectDef>
+    <defName>AdvancedShroomwormBiology</defName>
+    <label>Advanced Fungi Research</label>
+    <tab>Fleshforging</tab>
+    <description>Discovers further uses of the shroomworms.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>ShroomwormBiology</li>
+    </prerequisites>
+	<researchViewX>3</researchViewX>
+    <researchViewY>6</researchViewY>
+  </ResearchProjectDef>
+<ResearchProjectDef>
+    <defName>InfestationFungi</defName>
+    <label>Absolute Infestation</label>
+    <tab>Fleshforging</tab>
+    <description>Discovers the instant infestation of humans.</description>
+    <baseCost>500</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <prerequisites>
+    <li>FungiInfestSecond</li>
+    </prerequisites>
+	<researchViewX>5</researchViewX>
+    <researchViewY>4</researchViewY>
+  </ResearchProjectDef>
+
+</Defs>
+
+
+

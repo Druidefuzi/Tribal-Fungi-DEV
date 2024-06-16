@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>Duplicationpregnant</defName>
+    <label>Duplicating</label>
+    <labelNoun>Pregnancy Worms</labelNoun>
+    <description>This creature is gestating offspring.It will create offspring randomly based on his genes.The offspring is like a tiny adult and is capable of everything at birth , but very weak!</description>
+    <hediffClass>Verse.Hediff_Pregnant</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <initialSeverity>0.9778</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>middle-stage</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Duplicating</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+<HediffDef>
+    <defName>Wormoidpregnant</defName>
+    <label>Wormoid infection</label>
+    <labelNoun>Wormoid Worms</labelNoun>
+    <description>Slowly turning the victim into a wormoid!</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+		<li Class="Fungi.HediffCompProperties_DoSeverityStuff">
+			<lowerOrHigher>Higher</lowerOrHigher>
+			<doAtSeverity>1</doAtSeverity>
+			<wormoidHatch>true</wormoidHatch>
+			<transformBerzerk>false</transformBerzerk>
+			<transformWarcall>false</transformWarcall>
+
+
+		</li>
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>middle-stage</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Duplicating</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+
+<HediffDef>
+    <defName>FungiLivingHeart</defName>
+    <label>Heart consciousness</label>
+    <labelNoun>Living Heart</labelNoun>
+    <description>This pawn recently received a dna changing substance.The heart of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiHeart</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+<HediffDef>
+    <defName>FungiLivingHeartShoot</defName>
+    <label>Forced consciousness</label>
+    <labelNoun>Living Heart</labelNoun>
+    <description>This pawn recently received a dna changing substance.The heart of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiHeartTwo</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>false</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+<HediffDef>
+    <defName>FungiLivingHead</defName>
+    <label>Head consciousness</label>
+    <labelNoun>Living Head</labelNoun>
+    <description>This pawn recently received a dna changing substance.The head of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiHead</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+---------------------------Arm--------------------------------
+<HediffDef>
+    <defName>FungiLivingArm</defName>
+    <label>Arm consciousness</label>
+    <labelNoun>Living Arm</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Arm of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiArm</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible></becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+-----------------------------------Leg-------------------------
+<HediffDef>
+    <defName>FungiLivingLeg</defName>
+    <label>Leg consciousness</label>
+    <labelNoun>Living Leg</labelNoun>
+    <description>This pawn recently received a dna changing substance.The leg of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiLeg</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+-----------------------------------Clockaine-------------------------------------------
+<HediffDef>
+    <defName>ClockainePoisoning</defName>
+    <label>Clockaine poisoning</label>
+    <labelNoun>Clockaine poisoning</labelNoun>
+    <description>The clockaine influence on this body part was too strong, the time of it was altered so fast, that it will be destroyed.</description>
+    <hediffClass>Hediff_TimeSickness</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.7</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+
+      <li>
+        <label>withering</label>
+        <minSeverity>0.666</minSeverity>
+        </li>
+        <li>
+        <label>rotting</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+  </li>
+    </stages>
+  </HediffDef>
+---------------------------------Infestation----------------------------
+<HediffDef>
+    <defName>FungiAbsoluteInfestationHediff</defName>
+    <label>Infestation</label>
+    <labelNoun>Worm infestation</labelNoun>
+    <description>Infests the targeted pawn with shroomworms. The worms will slowly eat the human part for part until the pawn is dead.Every time a part is eaten, a shroomworm will crawl out of it and join your colony.</description>
+    <hediffClass>Hediff_FungiAbsoluteInfest</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+----------------------------------------------Heart spore --------------------------------------
+<HediffDef>
+    <defName>FungiHeart_Spore</defName>
+    <label>&lt;color=#dceb0c&gt;Heart Spores &lt;/color&gt;</label>
+    <description>Influenced by the dissassembling worms this spores force consciousness into the heart of the victim and promising a much better life with the fungi until the heart starts to leave the former host.The spores are highly unstable , if not enough new spores are applied to the target, the heart develops back into the normal state</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>false</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>-0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+
+    </comps>
+           <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>itching</label>
+        <restFallFactorOffset>1</restFallFactorOffset>
+        <minSeverity>0.1</minSeverity>
+        <painOffset>0.3</painOffset>
+
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.6</minSeverity>
+        <painOffset>0.4</painOffset>
+
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.7</minSeverity>
+        <painOffset>0.5</painOffset>
+
+
+      </li>
+      <li>
+        <label>developing autonomy</label>
+        <minSeverity>0.95</minSeverity>
+        <painOffset>0.6</painOffset>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.01</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiLivingHeartShoot</hediff>
+            <partsToAffect>
+              <li>Heart</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+-----------------------------------------Living Eye---------------------------------------
+<HediffDef>
+    <defName>FungiLivingEye</defName>
+    <label>Eye consciousness</label>
+    <labelNoun>Living Eye</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Eye of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiEye</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+----------------------------Living Finger-----------------------------------------
+<HediffDef>
+    <defName>FungiLivingFinger</defName>
+    <label>Finger consciousness</label>
+    <labelNoun>Living Finger</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Finger of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiFinger</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+---------------------------------Toe---------------------------
+<HediffDef>
+    <defName>FungiLivingToe</defName>
+    <label>Toe consciousness</label>
+    <labelNoun>Living Toe</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Toe of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiToe</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+-------------------------------Stomach------------------------------------------
+<HediffDef>
+    <defName>FungiLivingStomach</defName>
+    <label>Stomach consciousness</label>
+    <labelNoun>Living Stomach</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Stomach of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiStomach</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+----------------------------------Nose---------------------------
+<HediffDef>
+    <defName>FungiLivingNose</defName>
+    <label>Nose consciousness</label>
+    <labelNoun>Living Nose</labelNoun>
+    <description>This pawn recently received a dna changing substance.The Nose of this pawn starts developing consciousness and will finally leave the human body.</description>
+    <hediffClass>Hediff_FungiNose</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+</Defs>

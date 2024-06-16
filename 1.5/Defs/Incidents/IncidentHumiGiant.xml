@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+  <!-- =========================== Neutral ============================-->
+  
+  <IncidentDef>
+    <defName>HumigiantPasses</defName>
+    <label>A monstrous abomination lurches forth, its grotesque form a twisted amalgamation of flesh, worms and fungal matter. With a menacing roar, it lunges forward, its jagged claws poised to strike. The air fills with the stench of decay as the abomination advances, leaving devastation in its wake. Beware, for this unholy creature shows no mercy, driven only by its insatiable hunger for destruction.</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_ShroomoidPasses2</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>13</minRefireDays>
+  </IncidentDef>
+  <IncidentDef>
+    <defName>WormSwarm</defName>
+    <label>This worms look weird!</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_WormSwarm</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>30</minRefireDays>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>FungiAbominations</defName>
+    <label>From the shadows emerges an infested pack, a horde of creatures twisted and deformed by parasitic infestation. Their movements are erratic, their bodies pulsating with grotesque growths as the infestation ravages their forms. With a guttural snarl, they surge forward, a relentless tide of corruption and decay. Beware the onslaught of the infested pack, for their numbers are many, and their hunger for flesh knows no bounds.</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_FungiExperiment</workerClass>
+    <baseChance>0.7</baseChance>
+    <minRefireDays>13</minRefireDays>
+  </IncidentDef>
+
+
+  
+  
+  
+
+</Defs>

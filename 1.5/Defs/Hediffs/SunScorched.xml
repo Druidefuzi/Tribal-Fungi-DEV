@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef Name="FungiDiseaseBase" ParentName="DiseaseBase" Abstract="True">
+    <chronic>true</chronic>
+  </HediffDef>
+
+  <HediffDef ParentName="FungiDiseaseBase">
+    <defName>FungiScorcheHediff</defName>
+    <label>Sun scorched</label>
+    <labelNoun>a scorched body</labelNoun>
+    <description>Exposed to the scorching rays of the sun for an extended period, this fungi endured irreparable damage to its body. The relentless heat seared its flesh, leaving behind lasting scars and impairments that will never fully heal. Despite any efforts at recovery, the lingering effects of the sun's wrath serve as a permanent reminder of the ordeal endured by this resilient organism.</description>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Blindness</hediff>
+            <mtbDays>0.001</mtbDays>
+            <partsToAffect>
+              <li>Eye</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

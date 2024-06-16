@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+		
+  
+------------------------Hostile-----------
+
+<FactionDef ParentName="FungiFactionBase" Name="FungiFactionBaseAIHostile" Abstract="True">
+    <defName>UnitedSpores</defName>
+    <label>United Shroomhats.</label>
+    <permanentEnemy>false</permanentEnemy>
+	<naturalEnemy>true</naturalEnemy>
+
+	</FactionDef>
+
+---------------------------------------------------------------------------------------------------------------
+Other tribes
+
+
+
+
+
+  <FactionDef ParentName="FungiFactionBaseAIHostileBreeder">
+    <defName>Fungihostilebreeder</defName>
+    <label>Fungi breeder tribe</label>
+    <permanentEnemy>false</permanentEnemy>
+	  <naturalEnemy>true</naturalEnemy>
+  </FactionDef>
+
+  <FactionDef ParentName="FungiFactionBaseAIHostileInfested">
+    <defName>Fungihostileinfested</defName>
+    <label>Fungi infested tribe</label>
+    <permanentEnemy>false</permanentEnemy>
+  </FactionDef>
+  <FactionDef ParentName="FungiFactionBaseAIHostileSpore">
+    <defName>Fungihostilespore</defName>
+    <label>Fungi Spore tribe</label>
+    <permanentEnemy>false</permanentEnemy>
+  </FactionDef>
+
+
+
+
+
+</Defs>

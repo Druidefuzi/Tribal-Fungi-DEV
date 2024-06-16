@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>FungiBaseXeno</defName>
+		<label>base fungi</label>
+		<description>The base fungi exhibit a distinct appearance shaped by their origins and evolutionary adaptations. While sharing common traits with other fungi tribes, they maintain a versatile and adaptive nature. Skilled in various forms of combat, they utilize a combination of ranged and melee tactics to engage their foes. Their arsenal includes a diverse array of weapons, ranging from plague-infused projectiles to spore bombs, capable of devastating enemy forces.</description>
+		<descriptionShort>Your basic Fungi. Full of potential.</descriptionShort>
+		<iconPath>UI/Genes/BaseFungi</iconPath>
+		<inheritable>true</inheritable>
+		<combatPowerFactor>1.3</combatPowerFactor>
+		<nameMaker>NamerPersonYttakin</nameMaker>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+
+		
+			
+			<li>DruidChemosynthesis</li>
+			<li>Skin_SheerWhite</li>
+			<li>BaseFungiSpores</li>
+			
+
+
+		</genes>
+	</XenotypeDef>
+	<XenotypeDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>FungiBreederXeno</defName>
+		<label>Breeder Fungi</label>
+		<description>The Fungi of the Breeder Tribe have significantly altered their appearance compared to other tribes due to their long separation. Breeder fungi are notably stronger than their counterparts, excelling in both physical power and resilience. They specialize in breeding humimals and humigiants, powerful hybrids that enhance their combat capabilities. When exposed to sunlight, they produce rotstink gas for protection.</description>
+		
+		<descriptionShort>The Fungi of the breeder tribe mostly changed their appearance in comparison to the other tribes due to seperation. Breeder fungi are stronger in comparison to other Fungi.</descriptionShort>
+		<iconPath>UI/Genes/BreederFungi</iconPath>
+		<inheritable>true</inheritable>
+		<combatPowerFactor>1.3</combatPowerFactor>
+		<nameMaker>NamerPersonYttakin</nameMaker>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+
+		
+			<li>DruidFungiRed</li>
+			<li>DruidFungiYellow</li>
+			<li>DruidFungiOrange</li>
+			<li>BreederSporeSpew</li>
+			<li>DruidBreederGenes</li>
+			 <li>Body_Hulk</li>
+			 <li>Body_Standard</li>
+			<li>DruidChemosynthesis</li>
+			<li>DruidRotProduction</li>
+
+
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>FungiSporeXeno</defName>
+		<label>Spore fungi</label>
+		<description>The Fungi of the Spore Tribe have evolved distinct appearances compared to other tribes due to their prolonged separation. Specializing in ranged combat, they wield plague and mold weapons and deploy devastating spore bombs. When exposed to sunlight, they produce toxic gas to shield themselves. Assisted by loyal shroomimals and towering shroomigiants, they harness diseases, mold, and spores.</description>
+		<descriptionShort>The Fungi of the spore tribe mostly changed their appearance in comparison to the other tribes due to seperation.</descriptionShort>
+		<iconPath>UI/Genes/SporeFungi</iconPath>
+		<inheritable>true</inheritable>
+		<combatPowerFactor>1.3</combatPowerFactor>
+		<nameMaker>NamerPersonYttakin</nameMaker>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+		
+			<li>DruidFungiGreen</li>
+			<li>DruidFungiPurple</li>
+			<li>DruidFungiBlue</li>
+			<li>DruidFungiTurkis</li>
+			<li>SporeSpew</li>
+			<li>DruidChemosynthesis</li>
+			<li>DruidToxProduction</li>
+			 <li>Body_Standard</li>
+			 <li>Body_Fat</li>
+			 <li>Body_Thin</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>FungiWormXeno</defName>
+		<label>Worm fungi</label>
+		<description>The Fungi of the Worm Tribe have undergone significant physical changes compared to other tribes due to their prolonged isolation. Unlike the muscular and strong Breeder Tribe, they exhibit a more slender and agile build, emphasizing agility and dexterity over raw strength. Specializing in advanced biological ranged weaponry and parasitic worms, they wield sophisticated tools of warfare with deadly precision.</description>
+		<descriptionShort>The Fungi of the Worm tribe mostly changed their appearance in comparison to the other tribes due to seperation.</descriptionShort>
+		<iconPath>UI/Genes/WormFungi</iconPath>
+		<inheritable>true</inheritable>
+		<combatPowerFactor>1.3</combatPowerFactor>
+		<nameMaker>NamerPersonYttakin</nameMaker>
+		<chanceToUseNameMaker>1</chanceToUseNameMaker>
+		<genes>
+			
+			<li>DruidFungiLightGreen</li>
+			<li>DruidFungiPink</li>
+			<li>DruidFungiMoreGreen</li>
+			<li>WormSporeSpew</li>
+			<li>DruidChemosynthesis</li>
+			<li>DruidToxProduction</li>
+			 <li>Body_Standard</li>
+			 <li>Body_Thin</li>
+		</genes>
+	</XenotypeDef>
+
+
+	<GeneDef ParentName="GeneToxResistBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidChemosynthesis</defName>
+		<label>Chemosynthesis</label>
+		<labelShortAdj>tox-immune</labelShortAdj>
+		<description>The fungi exhibit an intriguing trait: they are immune to toxgas, rotstink, and food poisoning due to a unique gene known as chemosynthesis. However, they possess a vulnerability to sunlight, which weakens them and renders them flammable. This fascinating genetic adaptation is critical for their survival, providing a potent defense against various toxins commonly encountered in their environment. Through the intricate workings of chemosynthesis, these fungi transform potential threats into inert substances, ensuring their continued well-being. Despite their resilience to toxins, their susceptibility to sunlight underscores the delicate balance of their existence, requiring careful navigation of their surroundings to thrive.</description>
+		<iconPath>UI/Genes/Chemosynthesis</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<dislikesSunlight>true</dislikesSunlight>
+		<foodPoisoningChanceFactor>0</foodPoisoningChanceFactor>
+		<immuneToToxGasExposure>true</immuneToToxGasExposure>
+		 <damageFactors>
+      <Flame>2</Flame>
+    </damageFactors>
+		<customEffectDescriptions>
+			<li>Rotstink toxgas immunity</li>
+		</customEffectDescriptions>
+			<conditionalStatAffecters>
+			<li Class="Fungi.ConditionalStatAffecter_InSunlight">
+
+				<statOffsets>
+					<MoveSpeed>-0.2</MoveSpeed>
+				</statOffsets>
+			</li>
+		</conditionalStatAffecters>
+		<statOffsets>
+			<GlobalLearningFactor>1</GlobalLearningFactor>
+			<ToxicResistance>1</ToxicResistance>
+		</statOffsets>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>4</biostatMet>
+		
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>tox</symbol>
+					<weight>3</weight>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+		
+	</GeneDef>
+	<GeneDef  MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidToxProduction</defName>
+		<label>Toxgas production</label>
+		<labelShortAdj>tox-production</labelShortAdj>
+		<description>The fungi exhibit an intriguing trait: they produce a toxic gas known as toxgas when subjected to sunlight. This fascinating defense mechanism is critical for their survival, providing a potent deterrent against the harmful effects of solar radiation. Through intricate biochemical processes, these fungi transform sunlight exposure into the emission of toxgas, effectively warding off threats from the sun while simultaneously signaling their presence to potential predators. This sophisticated adaptation underscores the fungi's resilience in navigating challenging environments, showcasing their remarkable capacity to adapt and flourish in a variety of ecological niches.</description>
+		<iconPath>UI/Genes/ToxProductionSun</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Tox gas production</li>
+		</customEffectDescriptions>
+		<statOffsets>
+		
+		</statOffsets>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>2</biostatMet>
+		<conditionalStatAffecters>
+			<li Class="Fungi.ConditionalStatAffecter_ToxgasProduction">
+
+				<statOffsets>
+					
+				</statOffsets>
+			</li>
+		</conditionalStatAffecters>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>tox</symbol>
+					<weight>3</weight>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+
+	</GeneDef>
+	
+	<GeneDef  MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidRotProduction</defName>
+		<label>Rotstink production</label>
+		<labelShortAdj>rot-production</labelShortAdj>
+		<description>The fungi possess a remarkable adaptation: they emit a potent rotstink gas when bathed in sunlight. This unique defense mechanism is essential for their survival, forming a protective barrier against the harmful effects of direct sunlight. Through a complex biochemical process, these fungi convert sunlight exposure into the release of this defensive gas, which not only shields them from the sun's rays but also serves as a warning to potential predators. This intricate adaptation underscores the fungi's resilience in the face of environmental challenges, highlighting their remarkable ability to thrive in diverse and often hostile conditions.</description>
+		<iconPath>UI/Genes/RotProductionSun</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+		<customEffectDescriptions>
+			<li>Tox gas production</li>
+		</customEffectDescriptions>
+		<statOffsets>
+		
+		</statOffsets>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>2</biostatMet>
+		<conditionalStatAffecters>
+			<li Class="Fungi.ConditionalStatAffecter_RotStinkProduction">
+
+				<statOffsets>
+					
+				</statOffsets>
+			</li>
+		</conditionalStatAffecters>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>rot</symbol>
+					<weight>3</weight>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+
+	</GeneDef>
+
+	<GeneDef ParentName="GeneMeleeDamageBase" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidBreederGenes</defName>
+		<label>enhanced fungal fibers</label>
+		<labelShortAdj>strong</labelShortAdj>
+		<description>Carriers of this gene possess extraordinary muscle strength, enabling them to thrive in various challenging environments. This gene enhances the biochemical pathways of the breeder tribe Fungi, optimizing their muscle fibers for superior power and endurance. Additionally, the Fungi physiology includes fortified kidneys and liver to support their robust physical capabilities. Their expertise in breeding ensures that these traits are effectively passed down, creating a lineage of exceptionally strong and resilient individuals within their race.</description>
+		<iconPath>UI/Genes/FungalFibers</iconPath>
+		<displayOrderInCategory>10</displayOrderInCategory>
+	
+		<customEffectDescriptions>
+			<li>strong fungi fibers</li>
+		</customEffectDescriptions>
+	
+		<statFactors>
+			<IncomingDamageFactor>0.75</IncomingDamageFactor>
+			<MeleeDamageFactor>1.25</MeleeDamageFactor>
+		</statFactors>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>1</biostatMet>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>tox</symbol>
+					<weight>3</weight>
+				</li>
+			</prefixSymbols>
+		</symbolPack>
+
+	</GeneDef>
+
+
+
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiPink</defName>
+		<label>fungi pink skin</label>
+		<labelShortAdj>pink</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a pink color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(247, 139, 240)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+			<prefixSymbols>
+				<li>
+					<symbol>ink</symbol>
+				</li>
+				<li>
+					<symbol>dark</symbol>
+				</li>
+				<li>
+					<symbol>coal</symbol>
+				</li>
+				<li>
+					<symbol>pitch</symbol>
+				</li>
+				<li>
+					<symbol>shadow</symbol>
+				</li>
+				<li>
+					<symbol>raven</symbol>
+				</li>
+				<li>
+					<symbol>jet</symbol>
+				</li>
+			</prefixSymbols>
+			<suffixSymbols>
+				<li>
+					<symbol>shadow</symbol>
+				</li>
+				<li>
+					<symbol>raven</symbol>
+				</li>
+				<li>
+					<symbol>jet</symbol>
+				</li>
+			</suffixSymbols>
+		</symbolPack>
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiMoreGreen</defName>
+		<label>fungi green skin</label>
+		<labelShortAdj>green</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a strong green color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(139, 247, 149)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>emerald</symbol>
+        </li>
+        <li>
+            <symbol>verdant</symbol>
+        </li>
+        <li>
+            <symbol>moss</symbol>
+        </li>
+        <li>
+            <symbol>lush</symbol>
+        </li>
+        <li>
+            <symbol>jade</symbol>
+        </li>
+        <li>
+            <symbol>ivy</symbol>
+        </li>
+        <li>
+            <symbol>forest</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>jade</symbol>
+        </li>
+        <li>
+            <symbol>emerald</symbol>
+        </li>
+        <li>
+            <symbol>lush</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiLightGreen</defName>
+		<label>fungi green light skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a light green color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 242, 171)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>pastel</symbol>
+        </li>
+        <li>
+            <symbol>spring</symbol>
+        </li>
+        <li>
+            <symbol>mint</symbol>
+        </li>
+        <li>
+            <symbol>celery</symbol>
+        </li>
+        <li>
+            <symbol>lime</symbol>
+        </li>
+        <li>
+            <symbol>chartreuse</symbol>
+        </li>
+        <li>
+            <symbol>pear</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>dew</symbol>
+        </li>
+        <li>
+            <symbol>mint</symbol>
+        </li>
+        <li>
+            <symbol>spring</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+		
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiOrange</defName>
+		<label>fungi orange skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a orange color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(242, 196, 150)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>fiery</symbol>
+        </li>
+        <li>
+            <symbol>tangerine</symbol>
+        </li>
+        <li>
+            <symbol>autumn</symbol>
+        </li>
+        <li>
+            <symbol>peach</symbol>
+        </li>
+        <li>
+            <symbol>marigold</symbol>
+        </li>
+        <li>
+            <symbol>flame</symbol>
+        </li>
+        <li>
+            <symbol>pumpkin</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>flame</symbol>
+        </li>
+        <li>
+            <symbol>sunburst</symbol>
+        </li>
+        <li>
+            <symbol>citrus</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiYellow</defName>
+		<label>fungi yellow skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a yellow color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(204, 245, 130)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>golden</symbol>
+        </li>
+        <li>
+            <symbol>sunshine</symbol>
+        </li>
+        <li>
+            <symbol>amber</symbol>
+        </li>
+        <li>
+            <symbol>lemon</symbol>
+        </li>
+        <li>
+            <symbol>daisy</symbol>
+        </li>
+        <li>
+            <symbol>topaz</symbol>
+        </li>
+        <li>
+            <symbol>honey</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>sunrise</symbol>
+        </li>
+        <li>
+            <symbol>topaz</symbol>
+        </li>
+        <li>
+            <symbol>golden</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiBlue</defName>
+		<label>fungi blue skin</label>
+		<labelShortAdj>blue</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a light blue color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 219, 242)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>sapphire</symbol>
+        </li>
+        <li>
+            <symbol>azure</symbol>
+        </li>
+        <li>
+            <symbol>cobalt</symbol>
+        </li>
+        <li>
+            <symbol>navy</symbol>
+        </li>
+        <li>
+            <symbol>cerulean</symbol>
+        </li>
+        <li>
+            <symbol>indigo</symbol>
+        </li>
+        <li>
+            <symbol>ocean</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>sky</symbol>
+        </li>
+        <li>
+            <symbol>ocean</symbol>
+        </li>
+        <li>
+            <symbol>sapphire</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiTurkis</defName>
+		<label>fungi blue green skin</label>
+		<labelShortAdj>turquoise</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a blueish color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(150, 242, 233)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+	<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>turquoise</symbol>
+        </li>
+        <li>
+            <symbol>aquamarine</symbol>
+        </li>
+        <li>
+            <symbol>teal</symbol>
+        </li>
+        <li>
+            <symbol>peacock</symbol>
+        </li>
+        <li>
+            <symbol>seafoam</symbol>
+        </li>
+        <li>
+            <symbol>azure</symbol>
+        </li>
+        <li>
+            <symbol>mint</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>lagoon</symbol>
+        </li>
+        <li>
+            <symbol>teal</symbol>
+        </li>
+        <li>
+            <symbol>sea</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiGreen</defName>
+		<label>fungi green skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a green color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(160, 242, 191)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>verdant</symbol>
+        </li>
+        <li>
+            <symbol>emerald</symbol>
+        </li>
+        <li>
+            <symbol>forest</symbol>
+        </li>
+        <li>
+            <symbol>fern</symbol>
+        </li>
+        <li>
+            <symbol>olive</symbol>
+        </li>
+        <li>
+            <symbol>jade</symbol>
+        </li>
+        <li>
+            <symbol>lush</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>emerald</symbol>
+        </li>
+        <li>
+            <symbol>forest</symbol>
+        </li>
+        <li>
+            <symbol>fern</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiRed</defName>
+		<label>fungi red skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a pale red color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(247, 161, 143)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>crimson</symbol>
+        </li>
+        <li>
+            <symbol>ruby</symbol>
+        </li>
+        <li>
+            <symbol>scarlet</symbol>
+        </li>
+        <li>
+            <symbol>cherry</symbol>
+        </li>
+        <li>
+            <symbol>fire</symbol>
+        </li>
+        <li>
+            <symbol>blood</symbol>
+        </li>
+        <li>
+            <symbol>rose</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>blaze</symbol>
+        </li>
+        <li>
+            <symbol>ember</symbol>
+        </li>
+        <li>
+            <symbol>rose</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+	<GeneDef ParentName="GeneSkinColorOverride" MayRequire="Ludeon.Rimworld.Biotech">
+		<defName>DruidFungiPurple</defName>
+		<label>fungi purple skin</label>
+		<labelShortAdj>noir</labelShortAdj>
+		<description>Carriers of this gene produce a pigment that turns their skin a purple color.</description>
+		<randomBrightnessFactor>0</randomBrightnessFactor>
+		<skinColorOverride>(191, 142, 250)</skinColorOverride>
+		<displayOrderInCategory>99</displayOrderInCategory>
+		<symbolPack>
+    <prefixSymbols>
+        <li>
+            <symbol>amethyst</symbol>
+        </li>
+        <li>
+            <symbol>lavender</symbol>
+        </li>
+        <li>
+            <symbol>violet</symbol>
+        </li>
+        <li>
+            <symbol>plum</symbol>
+        </li>
+        <li>
+            <symbol>lilac</symbol>
+        </li>
+        <li>
+            <symbol>orchid</symbol>
+        </li>
+        <li>
+            <symbol>purple</symbol>
+        </li>
+    </prefixSymbols>
+    <suffixSymbols>
+        <li>
+            <symbol>royal</symbol>
+        </li>
+        <li>
+            <symbol>majesty</symbol>
+        </li>
+        <li>
+            <symbol>orchid</symbol>
+        </li>
+    </suffixSymbols>
+</symbolPack>
+
+	</GeneDef>
+
+	
+
+
+</Defs>

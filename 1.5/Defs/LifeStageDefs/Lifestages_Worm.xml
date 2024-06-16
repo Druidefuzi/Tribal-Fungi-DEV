@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+	
+
+
+	<LifeStageDef>
+		<defName>WormiSporelingStage</defName>
+		<label>hatchling</label>
+		
+		<bodySizeFactor>0.2</bodySizeFactor>
+		<bodyWidth>0.95</bodyWidth>
+		<bodyDrawOffset>(0, 0, -0.03)</bodyDrawOffset>
+		<voxPitch>1.6</voxPitch>
+		<headSizeFactor>0.5</headSizeFactor>
+		<eyeSizeFactor>0.7</eyeSizeFactor>
+		<foodMaxFactor>0.625</foodMaxFactor>
+		<!-- bodySizeFactor * foodMaxFactor = maxFood = 0.125 -->
+		<hungerRateFactor>0.125</hungerRateFactor>
+		<!-- consumes 2x maxFood per day -->
+		<healthScaleFactor>0.2</healthScaleFactor>
+		<marketValueFactor>0.5</marketValueFactor>
+		<meleeDamageFactor>0.5</meleeDamageFactor>
+		<reproductive>false</reproductive>
+		<developmentalStage>Baby</developmentalStage>
+		<fallAsleepMaxThresholdOverride>.60</fallAsleepMaxThresholdOverride>
+		<naturalWakeThresholdOverride>1.0</naturalWakeThresholdOverride>
+		<alwaysDowned>true</alwaysDowned>
+		<claimable>true</claimable>
+		<involuntarySleepIsNegativeEvent>false</involuntarySleepIsNegativeEvent>
+		<!-- Babies just fall asleep randomly and they're cool with it. -->
+		<thinkTreeMainOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBaby</thinkTreeMainOverride>
+		<thinkTreeConstantOverride MayRequire="Ludeon.RimWorld.Biotech">HumanlikeBabyConstant</thinkTreeConstantOverride>
+		<canDoRandomMentalBreaks>false</canDoRandomMentalBreaks>
+		<!-- Babies have crying/giggling fits instead of mental breaks. -->
+		<canSleepWhileHeld>true</canSleepWhileHeld>
+		<canVoluntarilySleep>false</canVoluntarilySleep>
+		<!-- Babies fall asleep randomly when they're tired. -->
+		<canSleepWhenStarving>false</canSleepWhenStarving>
+		<canInitiateSocialInteraction>false</canInitiateSocialInteraction>
+		<customMoodTipString>Mood represents how happy or stressed someone is. Babies with low mood are more likely to cry, while babies with a high mood are more likely to giggle.</customMoodTipString>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>WormiYoungStage</defName>
+		<label>larvling</label>
+		<bodySizeFactor>0.7</bodySizeFactor>
+		<headSizeFactor>0.8</headSizeFactor>
+		<healthScaleFactor>0.5</healthScaleFactor>
+		<hungerRateFactor>0.5</hungerRateFactor>
+		<foodMaxFactor>3</foodMaxFactor>
+		<marketValueFactor>1</marketValueFactor>
+		<reproductive>false</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeChild</workerClass>
+		<developmentalStage>Child</developmentalStage>
+		<canSleepWhenStarving>false</canSleepWhenStarving>
+		<statFactors>
+			<MoveSpeed>1</MoveSpeed>
+		</statFactors>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>WormiAdolescentStage</defName>
+		<label>Juvenile Worm</label>
+		<bodySizeFactor>0.8</bodySizeFactor>
+		<headSizeFactor>1.0</headSizeFactor>
+		<hungerRateFactor>0.8</hungerRateFactor>
+		<foodMaxFactor>3</foodMaxFactor>
+		<visible>false</visible>
+		<reproductive>false</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<canSleepWhenStarving>false</canSleepWhenStarving>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>WormiAdultStage</defName>
+		<hungerRateFactor>1</hungerRateFactor>
+		<foodMaxFactor>3</foodMaxFactor>
+		<label>Imago</label>
+		<bodySizeFactor>1</bodySizeFactor>
+		<headSizeFactor>1</headSizeFactor>
+		<visible>false</visible>
+		<reproductive>true</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>WormiElderStage</defName>
+		<bodySizeFactor>1</bodySizeFactor>
+		<healthScaleFactor>1</healthScaleFactor>
+		<hungerRateFactor>1</hungerRateFactor>
+	
+		<headSizeFactor>1</headSizeFactor>
+		<foodMaxFactor>3</foodMaxFactor>
+		<marketValueFactor>0.8</marketValueFactor>
+		<label>Oldworm</label>
+		<visible>true</visible>
+		<reproductive>false</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<statFactors>
+			<MoveSpeed>1.5</MoveSpeed>
+		</statFactors>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
+	</LifeStageDef>
+	<LifeStageDef>
+		<defName>WormiAncientStage</defName>
+		<bodySizeFactor>0.8</bodySizeFactor>
+		<headSizeFactor>1.0</headSizeFactor>
+		<healthScaleFactor>1.2</healthScaleFactor>
+		<hungerRateFactor>1</hungerRateFactor>
+		<foodMaxFactor>3</foodMaxFactor>
+		<marketValueFactor>0.4</marketValueFactor>
+		<label>Elder Worm</label>
+		<visible>true</visible>
+		<reproductive>false</reproductive>
+		<workerClass MayRequire="Ludeon.RimWorld.Biotech">LifeStageWorker_HumanlikeAdult</workerClass>
+		<statFactors>
+			<MoveSpeed>2</MoveSpeed>
+		</statFactors>
+		<silhouetteGraphicData>
+			<texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1</drawSize>
+		</silhouetteGraphicData>
+	</LifeStageDef>
+
+</Defs>

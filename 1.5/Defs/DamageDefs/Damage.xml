@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	
+	<DamageDef ParentName="Scratch">
+    <defName>FlesheatingSpores</defName>
+		<workerClass>Fungi.DamageWorker_ExceptFungi</workerClass>
+    <label>Flesh eating spores</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} eaten to death.</deathMessage>
+	
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_Spores</hediff>
+        <severityPerDamageDealt>0.022</severityPerDamageDealt>
+	<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+    
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+	<DamageDef ParentName="Scratch">
+		<defName>FlesheatingSporesTurret</defName>
+		<workerClass>DamageWorker_Stab</workerClass>
+		<label>Flesh eating spores</label>
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} eaten to death.</deathMessage>
+
+		<additionalHediffs>
+			<li>
+				<hediff>Fungi_hediff_Spores</hediff>
+				<severityPerDamageDealt>0.022</severityPerDamageDealt>
+				<victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+
+			</li>
+		</additionalHediffs>
+		<hediffSolid>Crack</hediffSolid>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Impact_Toxic</damageEffecter>
+		<armorCategory>Sharp</armorCategory>
+		<stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+		<overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+	</DamageDef>
+
+
+
+
+	<DamageDef ParentName="Bomb" >
+		<defName>DruidFungiNoDamage</defName>
+		<label>Spore infects</label>
+		<workerClass>Fungi.DamageWorker_Nothing</workerClass>
+		<harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
+		<combatLogRules>Damage_Smoke</combatLogRules>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<defaultDamage>0</defaultDamage>
+		<deathMessage>{0} died to infection.</deathMessage>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesBlood>false</makesBlood>
+		<harmsHealth>false</harmsHealth>
+		<defaultStoppingPower>0</defaultStoppingPower>
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionCellFleck>DruidFungiRitual</explosionCellFleck>
+		<explosionColorCenter>(139, 0, 0, 1, 0.3)</explosionColorCenter>
+		<explosionColorEdge>(139, 0, 0, 1, 0.1)</explosionColorEdge>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<externalViolence>false</externalViolence>
+		<externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+		<soundExplosion>Spores</soundExplosion>
+		<impactSoundType>Toxic</impactSoundType>
+
+
+		<!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+	</DamageDef>
+	
+<DamageDef ParentName="Scratch">
+    <defName>WormPregnantDamage</defName>
+	<workerClass>Fungi.DamageWorker_ExceptFungiWorg</workerClass>
+    <label>Infestation</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was eaten up from the inside.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Wormoidpregnantshoot</hediff>
+        <severityPerDamageDealt>0.033</severityPerDamageDealt>
+       
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+<DamageDef ParentName="Scratch">
+    <defName>WormPregnantDamageTurret</defName>
+	<workerClass>Fungi.DamageWorker_ExceptFungiWorg</workerClass>
+    <label>Infestation</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was eaten up from the inside.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Wormoidpregnantshoot</hediff>
+        <severityPerDamageDealt>0.04</severityPerDamageDealt>
+       
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+<DamageDef ParentName="Scratch">
+    <defName>Heartinfluencedmg</defName>
+    <label>Infestation</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was eaten up from the inside.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>FungiLivingHeartShoot</hediff>
+        <severityPerDamageDealt>0.025</severityPerDamageDealt>
+  
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+<DamageDef ParentName="Scratch">
+    <defName>WormInfection</defName>
+    <label>Worm infection</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} was eaten up from the inside.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_WormInfection</hediff>
+        <severityPerDamageDealt>0.1</severityPerDamageDealt>
+   
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+
+  <DamageDef ParentName="Scratch">
+    <defName>FungiBlood</defName>
+    <label>Flesh eating spores</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} eaten to death.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_Blood</hediff>
+        <severityPerDamageDealt>0.01</severityPerDamageDealt>
+     
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+  <DamageDef ParentName="Scratch">
+    <defName>FungiSting</defName>
+    <label>sting</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been stung to death.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_Spores</hediff>
+        <severityPerDamageDealt>0.022</severityPerDamageDealt>
+    
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+<DamageDef ParentName="Scratch">
+    <defName>FungiMoldSpores</defName>
+    <label>mold spores</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} eaten to death.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_SporesMoldToxic</hediff>
+        <severityPerDamageDealt>0.025</severityPerDamageDealt>
+       
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+<DamageDef ParentName="Scratch">
+    <defName>FungiPlagueSpores</defName>
+    <label>rotting blade</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} eaten to death.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Fungi_hediff_SporesInfection2</hediff>
+        <severityPerDamageDealt>0.033</severityPerDamageDealt>
+        
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+
+
+
+<DamageDef ParentName="Scratch">
+    <defName>ParalyzingSpore</defName>
+    <label>Paralyzing spores</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} eaten to death.</deathMessage>
+<additionalHediffs>
+<li>
+    <hediff>Paralyzing_Spore</hediff>
+        <severityPerDamageDealt>0.022</severityPerDamageDealt>
+       
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+</li>
+</additionalHediffs>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.8</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.25~1.0</overkillPctToDestroyPart>
+  </DamageDef>
+	
+
+
+
+
+  <DamageDef ParentName="Scratch">
+    <defName>Berserkmode</defName>
+    <label>Berserk fluid</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <hediff>Fungi_hediff_Berserk</hediff>
+    <defaultArmorPenetration>4</defaultArmorPenetration>
+    <defaultDamage>1</defaultDamage>
+    <deathMessage>{0} Rot to death.</deathMessage>
+    <defaultStoppingPower>3</defaultStoppingPower>
+    <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(1, 1, 0, 0.5, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 1, 0.2, 0.1)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+    <externalViolence>false</externalViolence>
+    <externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+    <!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+  </DamageDef>
+
+  <DamageDef ParentName="Bomb">
+    <defName>Sporecapsule</defName>
+    <label>Spore consumes</label>
+    <workerClass>Fungi.DamageWorker_ExceptFungi</workerClass>
+    <hediff>Fungi_hediff_Spores2</hediff>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <defaultDamage>10</defaultDamage>
+    <deathMessage>{0} died to mold.</deathMessage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+	  <explosionCellFleck>FungiGreenSpew</explosionCellFleck>
+    <explosionColorCenter>(0.36, 0.57, 0.27, 1, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.36, 0.57, 0.27, 1, 0.1)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+    <externalViolence>true</externalViolence>
+    <externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+    <soundExplosion>Spores</soundExplosion>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+  </DamageDef>
+	<DamageDef ParentName="Bomb">
+		<defName>WorgCapsule</defName>
+		<label>Worm consumes</label>
+		<workerClass>Fungi.DamageWorker_ExceptFungiWorg</workerClass>
+		<hediff>Fungi_hediff_WormSlime</hediff>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<defaultDamage>10</defaultDamage>
+		<deathMessage>{0} died to mold.</deathMessage>
+		<defaultStoppingPower>1.5</defaultStoppingPower>
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionCellFleck>FungiYellowSpew</explosionCellFleck>
+		<explosionColorCenter>(0.36, 0.57, 0.27, 1, 0.3)</explosionColorCenter>
+		<explosionColorEdge>(0.36, 0.57, 0.27, 1, 0.1)</explosionColorEdge>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<externalViolence>true</externalViolence>
+		<externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+		<soundExplosion>Spores</soundExplosion>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Impact_Toxic</damageEffecter>
+		<!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+	</DamageDef>
+
+  <DamageDef ParentName="Bomb">
+    <defName>BloodExplodeFungi</defName>
+    <label>Blood explosion</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <hediff>Fungi_hediff_BloodSuicide</hediff>
+    <defaultArmorPenetration>2</defaultArmorPenetration>
+    <defaultDamage>3</defaultDamage>
+    <deathMessage>{0} died to a blood explosion.</deathMessage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+    <explosionCellFleck>BlastDry</explosionCellFleck>
+    <explosionColorCenter>(0.61, 0.14, 0.14, 1, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(0.61, 0.14, 0.14, 1, 0.1)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>0</explosionHeatEnergyPerCell>
+    <externalViolence>true</externalViolence>
+    <externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+    <soundExplosion>BloodSound</soundExplosion>
+    <!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+  </DamageDef>
+
+  <DamageDef ParentName="Bomb">
+    <defName>Sporecapsuleinfection</defName>
+    <label>Spore infects</label>
+    <workerClass>Fungi.DamageWorker_ExceptFungi</workerClass>
+    <hediff>Fungi_hediff_SporesInfection</hediff>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <defaultDamage>10</defaultDamage>
+    <deathMessage>{0} died to infection.</deathMessage>
+    <defaultStoppingPower>1.5</defaultStoppingPower>
+    <explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+	  <explosionCellFleck>FungiPurpleSpew</explosionCellFleck>
+    <explosionColorCenter>(176, 63, 191, 1, 0.3)</explosionColorCenter>
+    <explosionColorEdge>(176, 63, 191, 1, 0.1)</explosionColorEdge>
+    <explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+    <externalViolence>true</externalViolence>
+    <externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+    <soundExplosion>Spores</soundExplosion>
+    <impactSoundType>Toxic</impactSoundType>
+    <damageEffecter>Impact_Toxic</damageEffecter>
+    <!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+  </DamageDef>
+
+	<DamageDef ParentName="Bomb">
+		<defName>DruidWormCapsuleDamage</defName>
+		<label>Spore infects</label>
+		<workerClass>Fungi.DamageWorker_ExceptFungi</workerClass>
+		<hediff>Fungi_hediff_WormSpores</hediff>
+		<defaultArmorPenetration>0</defaultArmorPenetration>
+		<defaultDamage>2</defaultDamage>
+		<deathMessage>{0} died to infection.</deathMessage>
+		<defaultStoppingPower>1.5</defaultStoppingPower>
+		<explosionAffectOutsidePartsOnly>true</explosionAffectOutsidePartsOnly>
+		<explosionCellFleck>FungiGreenSpew</explosionCellFleck>
+		<explosionColorCenter>(173, 255, 47, 1, 0.7)</explosionColorCenter>
+		<explosionColorEdge>(240, 255, 50, 1, 0.3)</explosionColorEdge>
+		<explosionHeatEnergyPerCell>1</explosionHeatEnergyPerCell>
+		<externalViolence>true</externalViolence>
+		<externalViolenceForMechanoids>false</externalViolenceForMechanoids>
+		<soundExplosion>Spores</soundExplosion>
+		<impactSoundType>Toxic</impactSoundType>
+		<damageEffecter>Impact_Toxic</damageEffecter>
+		<!-- <makesAnimalsFlee>false</makesAnimalsFlee> -->
+	</DamageDef>
+</Defs>

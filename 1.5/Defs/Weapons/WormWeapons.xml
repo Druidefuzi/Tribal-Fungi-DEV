@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+	<ThingDef ParentName="BaseWeaponNeolithic">
+		<defName>DruidBigWormGun</defName>
+		<label>Infestor Worg thrower</label>
+		<description>The pump functionality of the heart plus the evolutionary capacities of shroomworms equals a very dangerous weapon. A big slimy egg is shot which rapidly grows in size and bursts while a worg hatches. The worg experiences accelerated aging and hatches as nearly adult creature. In this lifestage the worg will split into two younger worgs if the Worg dies. This animal is very aggressive and will attack everything after hatching or splitting.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WorgThrower/WorgThrower</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.2</drawSize>
+		</graphicData>
+		<soundInteract>BloodSound</soundInteract>
+		<stuffCategories>
+			<li>Shrooman</li>
+		</stuffCategories>
+		<costList>
+			<Meat_Human>50</Meat_Human>
+			<DruidShroomans>50</DruidShroomans>
+			<DruidShroomworms>50</DruidShroomworms>
+		</costList>
+		<statBases>
+			<WorkToMake>3500</WorkToMake>
+			<Mass>0.6</Mass>
+			<AccuracyTouch>0.8</AccuracyTouch>
+			<AccuracyShort>0.7</AccuracyShort>
+			<AccuracyMedium>0.4</AccuracyMedium>
+			<AccuracyLong>0.1</AccuracyLong>
+			<RangedWeapon_Cooldown>5</RangedWeapon_Cooldown>
+		</statBases>
+		<weaponTags>
+		
+			<li>FungiBigWormEggThrower</li>
+		</weaponTags>
+		<recipeMaker>
+			<recipeUsers>
+				<li>Fleshforge</li>
+			</recipeUsers>
+			<skillRequirements>
+				<Crafting>2</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>FungiInfestSecond</researchPrerequisite>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>DruidBigWormEggBullet</defaultProjectile>
+				<ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<ai_AvoidFriendlyFireRadius>20</ai_AvoidFriendlyFireRadius>
+				<warmupTime>8</warmupTime>
+				<minRange>15</minRange>
+				<range>40</range>
+				<soundCast>BloodSound</soundCast>
+		
+			</li>
+		</verbs>
+		<tools>
+			<li>
+				<label>Heart</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+
+		</tools>
+	</ThingDef>
+
+
+	<ThingDef ParentName="BaseGrenadeProjectile">
+		<defName>DruidBigWormEggBullet</defName>
+		<thingClass>Fungi.DruidBigWormEgg</thingClass>
+		<label>Worg egg</label>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Worg/Bullet</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(0.5)</drawSize>
+			
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>20</speed>
+		</projectile>
+	</ThingDef>
+
+</Defs>

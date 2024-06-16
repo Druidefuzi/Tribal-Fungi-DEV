@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef  Name="Fungi_Flesh" ParentName="ApparelMakeableBase" Abstract="True">
+    <defName>Fungi_Flesh</defName>
+
+    
+    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>
+
+
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+
+      <recipeUsers>
+        <li>Fleshforge</li>
+      </recipeUsers>
+    </recipeMaker>
+
+       <costList>
+       <Leather_Human>20</Leather_Human>
+       <Meat_Human>300</Meat_Human>
+       <DruidShroomans>100</DruidShroomans>
+       </costList>
+
+		<generateCommonality>0.01</generateCommonality>
+		
+    <statBases>
+      <MaxHitPoints>280</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.2</Mass>
+      <ArmorRating_Blunt>1.0</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.0</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.4</ArmorRating_Heat>
+     <StuffEffectMultiplierInsulation_Heat>1.8</StuffEffectMultiplierInsulation_Heat>
+     <StuffEffectMultiplierInsulation_Cold>1.8</StuffEffectMultiplierInsulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    <Insulation_Cold>20</Insulation_Cold>
+    <Insulation_Heat>15</Insulation_Heat>
+    </statBases>
+    <thingCategories>
+
+      <li>FungiApparel</li>
+
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>FungiFlesh</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+
+  </ThingDef>
+ 
+<ThingDef ParentName="Fungi_Flesh">
+    <defName>Fleshsuit</defName>
+    <label>Fleshsuit</label>
+    <description>Heavy Armor made with lots of Meat and Shroomans. Covers everything except the head.Extremly strong in temperature regulation due to the living material.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Armor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+       <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+ 
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Armor</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+  <ThingDef  Name="Fungi_Skin" ParentName="ApparelMakeableBase" Abstract="True">
+    <defName>Fungi_Skin</defName>
+
+    
+    <stuffCategories>
+    <li>Leathery</li>
+    </stuffCategories>
+    <costStuffCount>25</costStuffCount>
+
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+
+
+		<generateCommonality>0.01</generateCommonality>
+		
+    <statBases>
+      <MaxHitPoints>280</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.2</Mass>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+      <StuffEffectMultiplierInsulation_Heat>1.2</StuffEffectMultiplierInsulation_Heat>
+       <StuffEffectMultiplierInsulation_Cold>1.2</StuffEffectMultiplierInsulation_Cold>
+      <EquipDelay>4</EquipDelay>
+    </statBases>
+    <thingCategories>
+
+      <li>FungiApparel</li>
+
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>FungiFlesh</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+
+  </ThingDef>
+ 
+<ThingDef ParentName="Fungi_Skin">
+    <defName>Skinsuit</defName>
+    <label>Skinsuit</label>
+    <description>Light armor made of skin of whatever could be skinned.The tissue was kept living and is a strong tool to regulate the body temperature.</description>
+    <graphicData>
+      <texPath>Things/Apparel/Skinsuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+       <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+ 
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/Skinsuit</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_Skin">
+    <defName>SkinsuitWorm</defName>
+    <label>Worm Skinsuit</label>
+    <description>Light armor made of skin of whatever could be skinned.The tissue was kept living and is a strong tool to regulate the body temperature.</description>
+    <graphicData>
+      <texPath>Things/Apparel/SkinsuitWorm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+       <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>WormiNormal</li>
+      </tags>
+  
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+        <li>Hands</li>
+        <li>Feet</li>
+        <li>Waist</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/SkinsuitWorm</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+
+
+</Defs>

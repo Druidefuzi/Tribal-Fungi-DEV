@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>GiantWormGuntwo</defName>
+    <label>Giant Worm thrower</label>
+    <description>Throwable Worms!.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WormgunGiant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+
+    </graphicData>
+    <uiIconScale>1.5</uiIconScale>
+
+    <weaponTags>
+      <li>ShroomoidGunHeavyEvent</li>
+    </weaponTags>
+    <statBases>
+      <MarketValue>9000</MarketValue>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <DruidShroomans>30</DruidShroomans>
+
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>TestTestWormBulletEvent</defaultProjectile>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <warmupTime>0.5</warmupTime>
+        <minRange>0</minRange>
+        <range>30</range>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>50</power>
+        <cooldownTime>2.6</cooldownTime>
+      </li>
+            <li>
+         <label>Shroomworm</label>
+        <capacities>
+          <li>ToxicBite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>0.2</cooldownTime>
+      </li>
+<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Poke</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2</cooldownTime>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>16</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+    </tools>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>TestTestWormBulletEvent</defName>
+		<thingClass>ChickmanGun.TestTestWormBulletEvent</thingClass>
+		<label>Worms</label>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Worm/Bullet</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1.5)</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>10</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

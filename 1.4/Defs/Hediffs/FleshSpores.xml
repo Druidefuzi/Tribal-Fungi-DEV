@@ -1,0 +1,1072 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_SporesMoldToxic</defName>
+    <label>&lt;color=#7EBF16&gt;Mold Infection&lt;/color&gt;</label>
+    <description>Exposed to mold spores, the unfortunate victim experiences a relentless onslaught of sickness and torment. The spores infiltrate their system, inducing constant nausea and excruciating pain. The individual is compelled to endure endless bouts of vomiting as their body struggles to rid itself of the invasive and debilitating effects of the mold.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>5</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+<injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.02</averagePainPerSeverityPermanent>
+
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>pitted</label>
+        <minSeverity>0.5</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Being eaten up</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.001</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.3</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>-0.5</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>500</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_Spores2</defName>
+    <label>&lt;color=#7EBF16&gt;Mold Infection&lt;/color&gt;</label>
+    <description>Exposed to mold spores, the unfortunate victim experiences a relentless onslaught of sickness and torment. The spores infiltrate their system, inducing constant nausea and excruciating pain. The individual is compelled to endure endless bouts of vomiting as their body struggles to rid itself of the invasive and debilitating effects of the mold.</description>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <defaultLabelColor>(0, 1, 0)</defaultLabelColor>
+    <minSeverity>0.01</minSeverity>
+    <maxSeverity>3</maxSeverity>
+    <lethalSeverity>3.5</lethalSeverity>
+    <initialSeverity>0.02</initialSeverity>
+    <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.3</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.02</averagePainPerSeverityPermanent>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Died off</destroyedLabel>
+      <destroyedOutLabel>Died out</destroyedOutLabel>
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>pitted</label>
+        <minSeverity>0.5</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Being eaten up</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.001</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.3</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>-0.5</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>500</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>Fungi_hediff_Spores</defName>
+    <label>&lt;color=#9430ab&gt;Flesh eating spores &lt;/color&gt;</label>
+    <description>When assailed by flesh-eating spores, the victim's brain and body come under relentless attack, leading to rapid decay and putrefaction. These insidious spores ravage both mind and flesh, inducing a state of decay that manifests as physical and mental deterioration. In some cases, the onslaught may lead to the onset of dementia, further exacerbating the victim's plight as their faculties diminish amidst the ravages of the spores.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>2</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.5</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.5</severityPerDayImmune>
+         <immunityPerDayNotSick>-0.45</immunityPerDayNotSick>
+        <immunityPerDaySick>0.35</immunityPerDaySick>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.6</severityPerDayTended>
+      </li>
+    </comps>
+       <stages>
+      <li>
+        <painOffset>0.05</painOffset>
+        <label>initial</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.15</painOffset>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.3</painOffset>
+        <label>serious</label>
+        <minSeverity>0.5</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>2</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <painOffset>0.5</painOffset>
+        <label>extreme</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.05</vomitMtbDays>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>1</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.25</setMax>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <setMax>-0.5</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Dementia</hediff>
+            <mtbDays>2</mtbDays>
+            <partsToAffect>
+              <li>Brain</li>
+            </partsToAffect>
+          </li>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+    
+  <HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_SporesInfection2</defName>
+    <label>&lt;color=#B03FBF&gt;Plague Spores&lt;/color&gt;</label>
+    <description>Exposure to virulent spores inflicts sickness and agonizing pain upon the unfortunate victim. These potent spores not only induce immediate discomfort but also pose a grave risk of infection with a multitude of diseases. The victim faces the harrowing prospect of contracting various illnesses, further compounding their suffering and adding to the severity of their condition.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>5</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+    <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+
+      </li>
+      <li>
+        <label>Heavy infested</label>
+        <minSeverity>0.7</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.05</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Flu</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Malaria</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Plague</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+<HediffDef>
+    <defName>Fungi_hediff_WormInfection</defName>
+    <label>&lt;color=#B03FBF&gt;Worm Infection&lt;/color&gt;</label>
+    <description>This pawn has fallen victim to a Wornine bite, introducing the ominous possibility of small Wornines hatching inside one of their body parts. Without prompt treatment, the hatching of these parasitic creatures within the affected body part spells inevitable destruction. Immediate intervention is crucial to prevent the catastrophic consequences of the Wornine infestation.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>7500</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <severityPerDayNotImmune>0.5</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.5</severityPerDayImmune>
+         <immunityPerDayNotSick>-0.45</immunityPerDayNotSick>
+        <immunityPerDaySick>0.35</immunityPerDaySick>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.6</severityPerDayTended>
+      </li>
+    </comps>
+       <stages>
+      <li>
+        <painOffset>0.05</painOffset>
+        <label>initial</label>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+<hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiWormInfection</hediff>
+       <partsToAffect>       
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        <li>Toe</li>
+         </partsToAffect>
+            <mtbDays>0.2</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+      <li>
+        <painOffset>0.15</painOffset>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+<hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiWormInfection</hediff>
+       <partsToAffect>       
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        <li>Toe</li>
+         </partsToAffect>
+            <mtbDays>0.16</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+      <li>
+        <painOffset>0.3</painOffset>
+        <label>serious</label>
+        <minSeverity>0.5</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+
+
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.9</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiWormInfection</hediff>
+       <partsToAffect>       
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        <li>Toe</li>
+         </partsToAffect>
+            <mtbDays>0.083</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+      <li>
+        <painOffset>0.5</painOffset>
+        <label>extreme</label>
+        <minSeverity>0.7</minSeverity>
+        <vomitMtbDays>0.3</vomitMtbDays>
+        <mentalStateGivers>
+
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.9</setMax>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>FungiWormInfection</hediff>
+       <partsToAffect>       
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulder</li>
+        <li>Arm</li>
+        <li>Leg</li>
+        <li>Hand</li>
+        <li>Foot</li>
+        <li>Waist</li>
+        <li>Head</li>
+        <li>Brain</li>
+        <li>Heart</li>
+        <li>Kidney</li>
+        <li>Lung</li>
+        <li>Finger</li>
+        <li>Liver</li>
+        <li>Jaw</li>
+        <li>Toe</li>
+         </partsToAffect>
+            <mtbDays>0.083</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+
+<HediffDef>
+    <defName>FungiWormInfection</defName>
+    <label>Wornine infection</label>
+    <labelNoun>Wornine Worm</labelNoun>
+    <description>A fledgling Wornine has taken residence within this body part, poised to hatch and wreak havoc if left unchecked. In just two days, without intervention, the parasitic creature will emerge and proceed to consume and destroy the affected body part. Urgent action is imperative to halt the impending devastation wrought by the burgeoning Wornine infestation.</description>
+    <hediffClass>Verse.Hediff_FungiWormimal</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+    </comps>
+     <stages>
+      <li>
+        <minSeverity>0</minSeverity>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_SporesInfection</defName>
+    <label>&lt;color=#B03FBF&gt;Plague Spores&lt;/color&gt;</label>
+    <description>Exposure to virulent spores inflicts sickness and agonizing pain upon the unfortunate victim. These potent spores not only induce immediate discomfort but also pose a grave risk of infection with a multitude of diseases. The victim faces the harrowing prospect of contracting various illnesses, further compounding their suffering and adding to the severity of their condition.</description>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <defaultLabelColor>(0, 1, 0)</defaultLabelColor>
+    <minSeverity>0.01</minSeverity>
+    <lethalSeverity>5</lethalSeverity>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.02</initialSeverity>
+    <makesSickThought>true</makesSickThought>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>2500</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.02</averagePainPerSeverityPermanent>
+      <canMerge>false</canMerge>
+      <destroyedLabel>Died off</destroyedLabel>
+      <destroyedOutLabel>Died out</destroyedOutLabel>
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.03</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <vomitMtbDays>0.1</vomitMtbDays>
+
+      </li>
+      <li>
+        <label>Heavy infested</label>
+        <minSeverity>0.7</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>0.05</mtbDays>
+          </li>
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+          <li Class="HediffGiver_Random">
+            <hediff>Flu</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Malaria</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+          <li Class="HediffGiver_Random">
+            <hediff>Plague</hediff>
+            <mtbDays>0.166</mtbDays>
+          </li>
+
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+<HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_BloodSuicide</defName>
+    <label>&lt;color=#A50404&gt;Blood infection&lt;/color&gt;</label>
+    <description>The virus infiltrates the victim's bloodstream, drastically thinning it to a perilous degree. Despite its potency, the virus is transient, gradually wearing off after approximately two hours. While it exerts a significant impact on the victim's blood consistency during this brief window, its ephemeral nature ensures that the effects eventually dissipate, allowing the body to gradually return to its normal state.</description>
+    <hediffClass>Hediff_Injury</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <makesSickThought>true</makesSickThought>
+    <maxSeverity>1</maxSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>IllnessRevealed</taleOnVisible>
+    <tendable>true</tendable>
+ <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+<injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.02</averagePainPerSeverityPermanent>
+      <bleedRate>5</bleedRate>
+
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.1</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>heavy</label>
+        <minSeverity>0.5</minSeverity>
+
+        <mentalStateGivers>
+
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.7</minSeverity>
+        <mentalStateGivers>
+
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.45</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+<HediffDef ParentName="InfectionBase">
+    <defName>Fungi_hediff_Blood</defName>
+    <label>&lt;color=#A50404&gt;Blood infection&lt;/color&gt;</label>
+    <description>The virus infiltrates the victim's bloodstream, drastically thinning it to a perilous degree. Despite its potency, the virus is transient, gradually wearing off after approximately two hours. While it exerts a significant impact on the victim's blood consistency during this brief window, its ephemeral nature ensures that the effects eventually dissipate, allowing the body to gradually return to its normal state.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <lethalSeverity>5</lethalSeverity>
+    <makesSickThought>true</makesSickThought>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <tendable>true</tendable>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-36</immunityPerDayNotSick>
+        <immunityPerDaySick>12</immunityPerDaySick>
+        <severityPerDayNotImmune>0.1</severityPerDayNotImmune>
+        <severityPerDayImmune>-108</severityPerDayImmune>
+      </li>
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>32</baseTendDurationHours>
+        <disappearsAtTotalTendQuality>2</disappearsAtTotalTendQuality>
+        <severityPerDayTended>-0.2</severityPerDayTended>
+      </li>
+
+    </comps>
+<injuryProps>
+      <painPerSeverity>0.05</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.02</averagePainPerSeverityPermanent>
+      <bleedRate>5</bleedRate>
+
+    </injuryProps>
+    <stages>
+      <li>
+        <painOffset>0.1</painOffset>
+        <label>initial</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <label>minor</label>
+        <minSeverity>0.1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.05</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.05</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>0.3</minSeverity>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.1</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>heavy</label>
+        <minSeverity>0.5</minSeverity>
+
+        <mentalStateGivers>
+
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.3</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>0.7</minSeverity>
+        <mentalStateGivers>
+
+        </mentalStateGivers>
+        <capMods>
+          <li>
+            <capacity>BloodPumping</capacity>
+            <offset>-0.45</offset>
+          </li>
+          <li>
+            <capacity>Metabolism</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+        <hediffGivers>
+        </hediffGivers>
+      </li>
+    </stages>
+  </HediffDef>
+<HediffDef>
+    <defName>Wormoidpregnantshoot</defName>
+    <label>Wormoid infection</label>
+    <labelNoun>Wormoid Worms</labelNoun>
+    <description>This creature harbors a burgeoning wormoid within its body, a parasitic entity poised to hatch and spell doom if provided with sufficient growth-boosting substances from external sources. Once adequately fueled, the wormoid will undergo a violent and fatal hatching process, ultimately resulting in the demise of the host creature. Extreme caution must be exercised to prevent the catastrophic consequences of this parasitic infestation.</description>
+    <hediffClass>Verse.Hediff_FungiWormimpregnationShoot</hediffClass>
+    <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
+    <isBad>true</isBad>
+    <initialSeverity>0.5</initialSeverity>
+    <taleOnVisible>ToxicityRevealed</taleOnVisible>
+    <comps>
+      <li Class="HediffCompProperties_Discoverable">
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>5000</disappearsAfterTicks>
+      </li>
+    </comps>
+     <stages>
+      <li>
+        <label>early-stage</label>
+        <becomeVisible>true</becomeVisible>
+        <vomitMtbDays>2.5</vomitMtbDays>
+      </li>
+      <li>
+        <label>growing</label>
+        <minSeverity>0.333</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.15</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moving</label>
+        <minSeverity>0.666</minSeverity>
+        <vomitMtbDays>2</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+        </li>
+        <li>
+        <label>Hatching</label>
+        <minSeverity>1</minSeverity>
+        <destroyPart>true</destroyPart>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.30</offset>
+          </li>
+        </capMods>
+  </li>
+    </stages>
+  </HediffDef>
+
+
+</Defs>

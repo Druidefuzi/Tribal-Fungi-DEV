@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Name="FleshLord" Parentname="FungiBase">
+		<defName>FleshLord</defName>
+		<label>Flesh lord</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+
+				<FungiBreederXeno>50</FungiBreederXeno>
+
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiFleshlord</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>950</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiFleshAxe</li>
+			<li>FungiFleshSword</li>
+			<li>FungiFistHammer</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef Name="HeartLord" Parentname="FungiBase">
+		<defName>Heartlord</defName>
+		<label>Heart lord</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+
+				<FungiBreederXeno>50</FungiBreederXeno>
+
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiFleshlord</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>950</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiHeartGun</li>
+			<li>FungiHeartRipper</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+</Defs>

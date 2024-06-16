@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Name="FungiWorm" Parentname="FungiBase">
+		<defName>FungiWorm</defName>
+		<label>Wormer</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+
+				<FungiWormXeno>50</FungiWormXeno>
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<combatPower>100</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>350</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiInfestorSpread</li>
+			<li>FungiInfestorRifle</li>
+			<li>FungiWormGun</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+			<li>FungiTraditional</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="FungiWormLord" Parentname="FungiBase">
+		<defName>FungiWormLord</defName>
+		<label>Worm expert</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+		
+			<FungiWormXeno>50</FungiWormXeno>
+			<FungiBaseXeno>50</FungiBaseXeno>
+				</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiBackstory</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>RawAgave</invFoodDef>
+		<combatPower>600</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>350</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>8000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiWormSpore</li>
+			<li>FungiBigWormEggThrower</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+			<li>FungiTraditional</li>
+		</apparelTags>
+	</PawnKindDef>
+</Defs>

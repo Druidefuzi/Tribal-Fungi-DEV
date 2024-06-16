@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="CavePlantBase">
+    <defName>SHROOMAN_PLANT_DEF</defName>
+    <label>Shrooman</label>
+	  <description>This abomination, a grotesque fusion of mushroom and human, stands as a chilling testament to the revenge of the Fungi upon their slavers. Trapped within its fungal form, the same tormented minds endure endless agony, each shrooman bearing the burden of identical DNA and shared consciousness.
+
+Forgotten are the origins of this macabre creation, lost to the mists of time. Yet, the incessant cries and pleas in their strange language serve as a grim reminder of the suffering inflicted upon them. In a cruel attempt to silence the ceaseless wails, the Fungi have resorted to sewing shut the mouths of the shroomans, a macabre solution to their discomfort.
+
+Though the screams offer no solace, the Fungi find some small comfort in the taste of the shroomans, their flesh providing sustenance amidst the chaos and despair. But even as they consume their former tormentors, the echoes of their anguish continue to haunt the Fungi, a grim reminder of the price of their vengeance.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.4</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>ShroomanPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+
+
+
+    <ingestible/>
+    <plant>
+             <sowResearchPrerequisites>
+	 	<li>Fleshforging</li>
+             </sowResearchPrerequisites>
+			<growDays>4</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>DruidShroomans</harvestedThingDef>
+			<harvestYield>5</harvestYield>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>ShroomanPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~1.36</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+</Defs>

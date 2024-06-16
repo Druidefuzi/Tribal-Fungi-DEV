@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="EggFertBase">
+    <defName>Shroomimal_ShroomimalEgg</defName>
+    <label>Shroomimal egg</label>
+    <description>A shroomimal can´t wait to hatch..</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>2</hatcherDaystoHatch>
+        <hatcherPawn>Shroomimal</hatcherPawn>
+      </li>
+    </comps>
+	<recipeMaker>
+                      <recipeUsers>
+			<li>DrugLab</li>
+                 </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>LifeformManipulation</researchPrerequisite>		
+		</recipeMaker>
+                                <costList>
+                <Meat_Human>50</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+               </costList>
+  </ThingDef>
+
+<ThingDef ParentName="EggFertBase">
+    <defName>Human_Egg</defName>
+    <label>Human egg</label>
+    <description>A Human can´t wait to hatch..</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>0.000000000001</hatcherDaystoHatch>
+        <hatcherPawn>WildMan</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+<ThingDef ParentName="EggFertBase">
+    <defName>Wormi_Egg</defName>
+    <label>Wormoid egg</label>
+    <description>A Human can´t wait to hatch..</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>0.000000000001</hatcherDaystoHatch>
+        <hatcherPawn>WormiMelee</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>	
+
+<ThingDef ParentName="EggFertBase">
+    <defName>Chickman_Egg</defName>
+    <label>Chickman egg</label>
+    <description>A Chickman can´t wait to hatch..</description>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>7.0</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>2</hatcherDaystoHatch>
+        <hatcherPawn>Chickman</hatcherPawn>
+      </li>
+    </comps>
+	<recipeMaker>
+                      <recipeUsers>
+			<li>DrugLab</li>
+                 </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>LifeformManipulation</researchPrerequisite>		
+		</recipeMaker>
+                                <costList>
+                <Meat_Human>100</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+               </costList>
+  </ThingDef>			
+</Defs>

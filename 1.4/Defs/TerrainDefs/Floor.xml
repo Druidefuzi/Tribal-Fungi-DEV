@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  
+    <TerrainDef ParentName="FloorBase">
+    <defName>FungiFloor</defName>
+    <label>flesh floor</label>
+    <description>A cheap and fleshy floor.</description>
+    <texturePath>Things/Building/Structure/FungiFloor</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>70</renderPrecedence>
+    <statBases>
+      <WorkToBuild>100</WorkToBuild>
+    </statBases>
+    <costList>
+      <Meat_Human>3</Meat_Human>
+    </costList>
+    <researchPrerequisites>
+      <li>Fleshforging</li>
+    </researchPrerequisites>
+
+  </TerrainDef>
+
+
+
+
+  
+  
+  
+  
+</Defs>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>HUMANOIDFUNGI_PLANT_DEF</defName>
+    <label>Human Blob</label>
+    <description>Shroomans combined with a template of human DNA. A wild Human will grow out of this.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>HumanFungiPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+    <ingestible />
+
+
+    <plant>
+
+
+             <sowResearchPrerequisites>
+	 	<li>HumanCreation</li>
+             </sowResearchPrerequisites>
+			<growDays>10</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RAW_SHROOMANS_RESOURCE_DEF</harvestedThingDef>
+			<harvestYield>30</harvestYield>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>HumanFungiPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~2</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+
+<comps>
+<li Class="Fungi.CompProperties_PawnGrower">
+        <canspawn>true</canspawn>
+        <spawnwild>true</spawnwild>
+        <spawnChance>0.9</spawnChance>
+        <Races>
+                        <Human>8</Human>
+        </Races>
+      </li>
+  </comps>
+  </ThingDef>
+</Defs>

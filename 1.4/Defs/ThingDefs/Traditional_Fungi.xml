@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef  Name="Fungi_Leather" ParentName="ApparelMakeableBase" Abstract="True">
+    <defName>Fungi_Leather</defName>
+
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+    </stuffCategories>
+
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <researchPrerequisite>Fleshforging</researchPrerequisite>
+
+      <recipeUsers>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+    </recipeMaker>
+
+       <costList>
+       <Leather_Human>25</Leather_Human>
+       </costList>
+
+		<generateCommonality>0.01</generateCommonality>
+		
+    <statBases>
+      <MaxHitPoints>140</MaxHitPoints>
+      <WorkToMake>3000</WorkToMake>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>10</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>10</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2.5</EquipDelay>
+    <Insulation_Cold>10</Insulation_Cold>
+    <Insulation_Heat>10</Insulation_Heat>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
+    </statBases>
+    <thingCategories>
+
+      <li>FungiApparel</li>
+
+    </thingCategories>
+    <apparel>
+      <tags>
+        <li>FungiFlesh</li>
+      </tags>
+      <defaultOutfitTags>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+
+  </ThingDef>
+ 
+
+
+
+<ThingDef ParentName="Fungi_Leather">
+    <defName>Traditional</defName>
+    <label>Traditional</label>
+    <description>Traditional clothing of the Fungi</description>
+    <graphicData>
+      <texPath>Things/Apparel/TRD</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <apparel>
+  <hatRenderedFrontOfFace>false</hatRenderedFrontOfFace>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Apparel/TRD</wornGraphicPath>
+      <layers>
+        <li>Middle</li>
+      </layers>
+    </apparel>
+  </ThingDef>
+
+
+</Defs>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="PlantFoodRawBase">
+  <defName>Timeberry</defName>
+  <label>Timeberry</label>
+  <description>Looks like a regular berry. If ingested it will let the being that ate it age rapidly, it gets 1 year older.</description>
+		<graphicData>
+			<texPath>Things/FungiPlants/TimeBush/Resource</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+  <statBases>
+    <MarketValue>5</MarketValue>
+    <Mass>0.3</Mass>
+  </statBases>
+  <comps>
+    <li Class="CompProperties_Rottable">
+      <daysToRotStart>16</daysToRotStart>
+      <rotDestroys>false</rotDestroys>
+    </li>
+  </comps>
+  <ingestible>
+<outcomeDoers>
+        <li Class="IngestionOutcomeDoer_AgeShrooms">
+
+        </li>
+
+      </outcomeDoers>
+    <foodType>Meat</foodType>
+<nurseable>true</nurseable>
+  </ingestible>
+
+    <stuffProps>
+      <commonality>0.05</commonality>
+      <statFactors>
+        <Beauty>.1</Beauty>
+      </statFactors>
+
+    </stuffProps>
+
+</ThingDef>
+</Defs>

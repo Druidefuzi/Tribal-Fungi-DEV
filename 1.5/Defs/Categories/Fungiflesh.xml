@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <StuffCategoryDef>
+    <defName>Fungiflesh</defName>
+    <label>Fungiflesh</label>
+  </StuffCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>FungiApparel</defName>
+      <label>FungiApparel</label>
+      <parent>Apparel</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>FungiWeapons</defName>
+      <label>Fungi Weapons</label>
+      <parent>Weapons</parent>
+    </ThingCategoryDef>
+
+  <StuffCategoryDef>
+    <defName>Shrooman</defName>
+    <label>Shrooman</label>
+  </StuffCategoryDef>
+      <ThingCategoryDef>
+        <defName>BodyPartsFungi</defName>
+        <label>fungi</label>
+        <parent>BodyParts</parent>
+      </ThingCategoryDef>
+  
+</Defs>

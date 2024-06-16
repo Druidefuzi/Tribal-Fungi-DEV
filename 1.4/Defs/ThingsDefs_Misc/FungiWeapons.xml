@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_HumanFleshsword</defName>
+		<label>Fleshsword</label>
+		<description>A sword made of human flesh and shroomans. The former mind got reactived and twisted. It screams and bites.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Fleshsword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>	
+                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>FleshLord</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>50</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+                
+		
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+                                        <li>Bite</li>
+					<li>Stab</li>
+                                        <li>ToxicBite</li>
+				</capacities>
+				<power>34</power>
+				<armorPenetration>0.5</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                      <recipeUsers>
+			<li>Fleshforge</li>
+                 </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>		
+		</recipeMaker>
+
+  </ThingDef>
+
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_HumanPlaguesword</defName>
+		<label>Plaguesword</label>
+		<description>A sword made of human flesh and shroomans. The former mind got reactived and twisted. It screams and bites. It is infused with plague spores and will infect the things it hits</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Plaguesword</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>	
+                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>PlagueLord</li>
+		</weaponTags>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>50</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+                
+		
+		<tools>
+
+
+			<li>
+				<label>Diseased blade</label>
+				<capacities>
+                                        <li>Bite</li>
+				</capacities>
+				<power>4</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>FungiPlagueSpores</def>
+                                <amount>9</amount>
+                                </li>
+                                </extraMeleeDamages>
+                                </li>
+		</tools>		
+         
+		<recipeMaker>
+                      <recipeUsers>
+			<li>Fleshforge</li>
+                        <li>Sporeforge</li>
+                 </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>AdvancedShroomwormBiology</researchPrerequisite>		
+		</recipeMaker>
+
+  </ThingDef>
+
+
+
+         <DamageDef ParentName="Arrow">
+		<defName>Sporeburn</defName>
+		<label>Spore</label>
+		<deathMessage>{0} Toxic spores melt his face.</deathMessage>
+	</DamageDef>
+	
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>spores</defName>
+    <label>Swarm</label>
+    <graphicData>
+      <texPath>Things/Projectile/spores</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>FlesheatingSpores</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>8</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Plaguespores</defName>
+    <label>Plagueswarm</label>
+    <graphicData>
+      <texPath>Things/Projectile/spores</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>FungiPlagueSpores</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>8</damageAmountBase>
+      <speed>50</speed>
+    </projectile>
+  </ThingDef>
+
+<ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>PlagueGun</defName>
+    <label>Plague gun</label>
+    <description>A twisted mass of spine, flesh , a face and a stomach.This weapon pukes a small cloudish swarm of spores at a great range! The spores will infect the target!It is infused with plague spores and will infect the things it hits.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/PlagueGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>Bow_Small</soundInteract>
+                        <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.67</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>SporeForce</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Sporeforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>AdvancedShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Plaguespores</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <range>20</range>
+        <soundCast>SporegunSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>SporeGun</defName>
+    <label>Spore gun</label>
+    <description>A twisted mass of spine, flesh , a face and a stomach.This weapon pukes a small cloudish swarm of spores at a great range! The spores will infect the target!</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/SporeGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>Bow_Small</soundInteract>
+                        <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.67</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>SporeForce</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Sporeforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>Sporeforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>spores</defaultProjectile>
+        <warmupTime>1.4</warmupTime>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <burstShotCount>3</burstShotCount>
+        <range>20</range>
+        <soundCast>SporegunSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Blade</label>
+        <capacities>
+          <li>Cut</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+
+
+                <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_HumanFleshdagger</defName>
+		<label>Fleshdagger</label>
+		<description>A dagger made from human meat and shroomans. It can think and it would be possible to hear it speak, sadly its teeth grew bigger than its mouth. All this poor soul can do is watch.
+
+Will infect the target with paralyzing spores, causing cramps and huge pain, the target wont be able to walk if enough spores are injected.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Fleshdagger</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<techLevel>Neolithic</techLevel>
+                                   <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<weaponTags>
+			<li>FungiMelee</li>
+		</weaponTags>
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+                <Meat_Human>30</Meat_Human>
+                </costList>
+		<tools> 
+                       <li>
+                            <label>Shaft</label>
+				<capacities>
+                                        <li>Blunt</li>
+				</capacities>
+				<power>10</power>
+				<armorPenetration>0.9</armorPenetration>
+				<cooldownTime>1.2</cooldownTime>
+                        </li>
+
+   
+			<li>
+				<label>Mutated Tooth</label>
+				<capacities>
+                                        <li>Bite</li>
+				</capacities>
+				<power>10</power>
+				<armorPenetration>0.1</armorPenetration>
+				<cooldownTime>2</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>ParalyzingSpore</def>
+                                <amount>9</amount>
+                                </li>
+                                </extraMeleeDamages>
+                                </li>
+		</tools>		
+         
+		<recipeMaker>
+                      <recipeUsers>
+			<li>Fleshforge</li>
+                      </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+                <researchPrerequisite>Fleshforging</researchPrerequisite>			
+		</recipeMaker>
+
+
+
+
+	</ThingDef>
+
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_Fleshaxe</defName>
+		<label>Fleshaxe</label>
+		<description>A horrific abomination made from human meat and shroomans. The head got a functioning brain inside.Actually the feeling of hurting something is pretty relieving for the mind of the axe. Making something suffer to forget the own suffering for a few seconds is quite enjoyable, making this weapon a trustful tool against the pesky humans.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Fleshaxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>	
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>		
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>FleshLord</li>
+		</weaponTags>
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>70</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+
+
+		
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+			<li>
+				<label>Teeth</label>
+				<capacities>
+                                        <li>Bite</li>
+                                        <li>ToxicBite</li>
+				</capacities>
+				<power>34</power>
+				<armorPenetration>1.2</armorPenetration>
+				<cooldownTime>1.8</cooldownTime>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                         <recipeUsers>
+			<li>Fleshforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>Fleshforging</researchPrerequisite>		
+		</recipeMaker>
+
+
+
+	</ThingDef>
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_Moldaxe</defName>
+		<label>Moldaxe</label>
+		<description>A horrific abomination made from human meat and shroomans. The head got a functioning brain inside.Actually the feeling of hurting something is pretty relieving for the mind of the axe. Making something suffer to forget the own suffering for a few seconds is quite enjoyable, making this weapon a trustful tool against the pesky humans.It is infused with mold spores and will infect the things it hits</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Moldaxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>	
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>		
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>FleshLord</li>
+		</weaponTags>
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>70</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+
+
+		
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+			<li>
+				<label>Teeth</label>
+				<capacities>
+                                        <li>Bite</li>
+                                        <li>ToxicBite</li>
+				</capacities>
+				<power>34</power>
+				<armorPenetration>1.2</armorPenetration>
+				<cooldownTime>1.8</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>FungiMoldSpores</def>
+                                <amount>9</amount>
+                                </li>
+                                </extraMeleeDamages>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                         <recipeUsers>
+			<li>Sporeforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>Sporeforging</researchPrerequisite>		
+		</recipeMaker>
+
+
+
+	</ThingDef>
+
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_MoldaxeBattle</defName>
+		<label>Molden Battleaxe</label>
+		<description>A horrific abomination made from human meat and shroomans. The head got a functioning brain inside.Actually the feeling of hurting something is pretty relieving for the mind of the axe. Making something suffer to forget the own suffering for a few seconds is quite enjoyable, making this weapon a trustful tool against the pesky humans.It is infused with mold spores and will infect the things it hits.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/MoldBattleaxe</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>	
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>		
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>SporeForce</li>
+		</weaponTags>
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>70</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+
+
+		
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>10</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+			<li>
+				<label>Teeth</label>
+				<capacities>
+                                        <li>Bite</li>
+                                        <li>ToxicBite</li>
+				</capacities>
+				<power>55</power>
+				<armorPenetration>1.2</armorPenetration>
+				<cooldownTime>4.5</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>FungiMoldSpores</def>
+                                <amount>8</amount>
+                                </li>
+                                </extraMeleeDamages>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                         <recipeUsers>
+                        <li>Sporeforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>SporeInfusion</researchPrerequisite>		
+		</recipeMaker>
+
+
+
+	</ThingDef>
+
+<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_HumanToothhammer</defName>
+		<label>Toothhammer</label>
+		<description>A hammer made of human teeth and shroomans</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Toothhammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<techLevel>Neolithic</techLevel>
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<weaponTags>
+			<li>FungiMelee</li>
+		</weaponTags>
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>30</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+                
+		
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8</power>
+				<cooldownTime>1.9</cooldownTime>
+			</li>
+			<li>
+				<label>point</label>
+				<capacities>
+                                        <li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>15</power>
+				<armorPenetration>1.5</armorPenetration>
+				<cooldownTime>3.5</cooldownTime>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>Fleshforging</researchPrerequisite>
+      <recipeUsers>
+			<li>Fleshforge</li>
+      </recipeUsers>		
+		</recipeMaker>
+
+
+
+	</ThingDef>
+
+            <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_Fisthammer</defName>
+		<label>Fisthammer</label>
+		<description>A very strong weapon.The normal fist strength was increased absurdly by the shrooman ingredients. However, this made this weapon very heavy and slow.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Fisthammer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>FleshLord</li>
+		</weaponTags>
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>30</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+                
+		
+		<tools>
+
+			<li>
+				<label>Fist</label>
+				<capacities>
+                                        <li>Blunt</li>
+				</capacities>
+				<power>60</power>
+				<armorPenetration>0</armorPenetration>
+				<cooldownTime>7</cooldownTime>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                        <recipeUsers>
+			<li>Fleshforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>		
+		</recipeMaker>
+
+
+
+
+	</ThingDef>
+
+<DamageDef ParentName="Arrow">
+		<defName>Bloodburn</defName>
+		<label>Bloodburn</label>
+		<deathMessage>{0} The Bloodstream collapsed , the different blood groups clumped together </deathMessage>
+	</DamageDef>
+	
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Blood</defName>
+    <label>Blood drop</label>
+    <graphicData>
+      <texPath>Things/Projectile/Blood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>FungiBlood</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>4.5</damageAmountBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>MoldBlood</defName>
+    <label>Mold drop</label>
+    <graphicData>
+      <texPath>Things/Projectile/Mold</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>FungiMoldSpores</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>3</damageAmountBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>WormBlood</defName>
+    <label>Worm drop</label>
+    <graphicData>
+      <texPath>Things/Projectile/Mold</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>WormPregnantDamage</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>3</damageAmountBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>HeartGun</defName>
+    <label>Heart Gun</label>
+    <description>The pump functionality of the heart plus the regenerative abilities of shroomans equals a very disgusting weapon. Low damage but high bleeds for the enemies.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/HeartGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>BloodSound</soundInteract>
+                         <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.67</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>HeartLord</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Fleshforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Blood</defaultProjectile>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <burstShotCount>10</burstShotCount>
+        <warmupTime>0.1</warmupTime>
+        <range>20</range>
+        <soundCast>BloodSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Heart</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>WormHeartGun</defName>
+    <label>Infestor spread gun</label>
+    <description>The pump functionality of the heart plus shroomworms equals a very infesting "pumpgun". The targets of this weapon will grow a wormoid inside it , hatching and killing it if enough growth boosting substance is shot at the target.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfestorGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>BloodSound</soundInteract>
+                         <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.4</AccuracyMedium>
+      <AccuracyLong>0.1</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>HeartLord</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Fleshforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>WormBlood</defaultProjectile>
+        <ticksBetweenBurstShots>0</ticksBetweenBurstShots>
+        <burstShotCount>6</burstShotCount>
+        <warmupTime>0.5</warmupTime>
+        <range>10</range>
+        <soundCast>BloodSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Heart</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+
+ <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>WormHeartGunTwo</defName>
+    <label>Infestor rifle</label>
+    <description>The pump functionality of the heart plus shroomworms equals a very infesting rifle. The targets of this weapon will grow a wormoid inside it , hatching and killing it if enough growth boosting substance is shot at the target.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/InfestorRangeGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>BloodSound</soundInteract>
+                         <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.8</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.5</AccuracyLong>
+      <RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>HeartLord</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Fleshforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>WormBlood</defaultProjectile>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <burstShotCount>7</burstShotCount>
+        <warmupTime>0.1</warmupTime>
+        <range>10</range>
+        <soundCast>BloodSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Heart</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+
+<ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>FungiHeartripper</defName>
+    <label>Heart ripper</label>
+    <description>A very , very horrifying weapon. Every shot infects the bloodstream, the heart of the target starts developing consciousness and will leave its former body forcefully if the bloodstream is too infected. The heart is very unstable and will explode if it is hurt too much.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Heartripper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+			
+
+    </graphicData>
+	 <soundInteract>BloodSound</soundInteract>
+                         <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.6</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1.6</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>HeartLord</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Fleshforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>AdvancedFleshforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>FungiHeartBlood</defaultProjectile>
+        <warmupTime>1</warmupTime>
+        <range>30</range>
+        <soundCast>BloodSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Heart</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>FungiHeartBlood</defName>
+    <label>Heart drop</label>
+    <graphicData>
+<texPath>Things/Pawn/Animal/Worm/Bullet</texPath>
+<graphicClass>Graphic_Random</graphicClass>
+<drawSize>(1.5)</drawSize>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Heartinfluencedmg</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>12</damageAmountBase>
+      <speed>60</speed>
+    </projectile>
+  </ThingDef>
+<ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>MoldHeartGun</defName>
+    <label>Mold heart gun</label>
+    <description>The pump functionality of the heart plus the regenerative abilities of shroomans equals a very disgusting weapon. Low damage but high bleeds for the enemies, also applies a mold infection.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/MoldHeartGun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	 <soundInteract>BloodSound</soundInteract>
+                         <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+    <costList>
+      <Meat_Human>30</Meat_Human>
+      <RAW_SHROOMANS_RESOURCE_DEF>30</RAW_SHROOMANS_RESOURCE_DEF>
+    </costList>
+    <statBases>
+      <WorkToMake>3500</WorkToMake>
+      <Mass>0.6</Mass>
+      <AccuracyTouch>0.96</AccuracyTouch>
+      <AccuracyShort>0.87</AccuracyShort>
+      <AccuracyMedium>0.67</AccuracyMedium>
+      <AccuracyLong>0.54</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiRanged</li>
+      <li>HeartLord</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+			<li>Sporeforge</li>
+      </recipeUsers>
+		<skillRequirements>
+			<Crafting>2</Crafting>
+      </skillRequirements>
+    <researchPrerequisite>Sporeforging</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MoldBlood</defaultProjectile>
+        <warmupTime>0.1</warmupTime>
+        <range>20</range>
+        <soundCast>BloodSound</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>Heart</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>Fleshmouth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>	 
+  </ThingDef>
+
+  <ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>Bow_Fungi</defName>
+    <label>Fungi bow</label>
+    <description>A bow made of flesh and bones. The arrows are made of shroomans and are infused with paralyzing spores.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Fleshbow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Bow_Recurve</soundInteract>
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<costStuffCount>5</costStuffCount>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>30</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.3</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.78</AccuracyShort>
+      <AccuracyMedium>0.65</AccuracyMedium>
+      <AccuracyLong>0.35</AccuracyLong>
+      <RangedWeapon_Cooldown>1.65</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiMelee</li>
+    </weaponTags>
+    <recipeMaker>
+      <recipeUsers>
+        <li>Fleshforge</li>
+      </recipeUsers>
+      <researchPrerequisite>Fleshforging</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Arrow_Fungi</defaultProjectile>
+        <warmupTime>1.45</warmupTime>
+        <range>25.9</range>
+        <soundCast>Bow_Recurve</soundCast>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>limb</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Arrow_Fungi</defName>
+    <label>fungi bow arrow</label>
+    <graphicData>
+      <texPath>Things/Projectile/Fungi_Arrow</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>ParalyzingSpore</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <stoppingPower>1</stoppingPower>
+      <speed>56</speed>
+    </projectile>
+  </ThingDef>
+
+<ThingDef ParentName="BaseWeaponNeolithic">
+    <defName>FungiSpear</defName>
+    <label>Armspear</label>
+    <description>This disgusting  weapon infects the blood of the target. It needs a short while to throw it but it hits hard.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Fleshjavelin</texPath>
+      <drawSize>1</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_BeatFire</soundInteract>
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<costStuffCount>5</costStuffCount>
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>30</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+    <statBases>
+      <WorkToMake>7000</WorkToMake>
+      <Mass>4</Mass>
+      <AccuracyTouch>0.50</AccuracyTouch>
+      <AccuracyShort>0.9</AccuracyShort>
+      <AccuracyMedium>0.9</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>FungiMelee</li>
+    </weaponTags>
+		<recipeMaker>
+                        <recipeUsers>
+			<li>Fleshforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>Fleshforging</researchPrerequisite>		
+		</recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Fleshjavelin</defaultProjectile>
+        <warmupTime>4</warmupTime>
+        <range>18.9</range>
+        <soundCast>Interact_BeatFire</soundCast>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>9</power>
+         <cooldownTime>2</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>FungiBlood</def>
+                                <amount>10</amount>
+                                </li>
+                                </extraMeleeDamages>
+      </li>
+    </tools>
+  </ThingDef>
+	<ThingDef ParentName="BaseProjectileNeolithic">
+    <defName>Fleshjavelin</defName>
+    <label>Blood drop</label>
+    <graphicData>
+      <texPath>Things/Projectile/Fleshjavelin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+     <drawSize>2</drawSize>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>FungiBlood</damageDef>  <!-- Find and make a new one -->
+      <damageAmountBase>25</damageAmountBase>
+      <speed>26</speed>
+    </projectile>
+  </ThingDef>
+
+            <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>MeleeWeapon_FungiParaSpear</defName>
+		<label>Paraspear</label>
+		<description>Some limbforger had the idea to give the fleshdagger a longer spine to increase the force when thrusting it into an enemy, but also lowering the speed. Turned out that this was a good idea.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponMelee/Fleshspear</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>		
+		<techLevel>Neolithic</techLevel>
+		<weaponTags>
+			<li>FungiMelee</li>
+                        <li>FleshLord</li>
+		</weaponTags>
+                                    <stuffCategories>
+    <li>Shrooman</li>
+    </stuffCategories>	
+		<costStuffCount>5</costStuffCount>
+		<statBases>
+			<WorkToMake>5000</WorkToMake>
+			<Mass>1.5</Mass>
+		</statBases>	
+		<equippedAngleOffset>0</equippedAngleOffset>
+                <costList>
+                <Meat_Human>30</Meat_Human>
+                <RAW_SHROOMANS_RESOURCE_DEF>15</RAW_SHROOMANS_RESOURCE_DEF>
+                </costList>
+                
+		
+		<tools>
+
+			<li>
+				<label>Back</label>
+				<capacities>
+                                        <li>Blunt</li>
+				</capacities>
+				<power>6</power>
+				<armorPenetration>0</armorPenetration>
+				<cooldownTime>1.5</cooldownTime>
+			</li>
+
+			<li>
+				<label>Tooth</label>
+				<capacities>
+                                        <li>Bite</li>
+				</capacities>
+				<power>20</power>
+				<armorPenetration>0</armorPenetration>
+				<cooldownTime>2.5</cooldownTime>
+                                <extraMeleeDamages>
+                                <li>
+                                <def>ParalyzingSpore</def>
+                                <amount>5</amount>
+                                </li>
+                                </extraMeleeDamages>
+			</li>
+		</tools>		
+         
+		<recipeMaker>
+                        <recipeUsers>
+			<li>Fleshforge</li>
+                        </recipeUsers>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>	
+                <researchPrerequisite>Fleshforging</researchPrerequisite>		
+		</recipeMaker>
+
+
+
+
+	</ThingDef>
+
+</Defs>
+
+

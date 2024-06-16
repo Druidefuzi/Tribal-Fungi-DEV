@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+
+
+  <ThingDef Name="FungiWallBase" Abstract="True">
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <selectable>true</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_Blood</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.70</SellPriceFactor>
+		</statBases>
+<comps>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>20</heatPerSecond>
+        <heatPushMaxTemperature>35</heatPushMaxTemperature>
+      </li>
+    </comps>
+  </ThingDef>
+
+  
+  <ThingDef ParentName="FungiWallBase" Name="FungiWall">
+     <stuffCategories>
+      <li>Shrooman</li>
+    </stuffCategories>
+    <defName>FleshWall</defName>
+    <label>flesh wall</label>
+    <thingClass>Building</thingClass>
+    <category>Building</category>
+    <description>A wall formed from human flesh and shroomans.</description>
+    <graphicData>
+      <texPath>Things/Building/Structure/Wall/Wall_Atlas_Fungi</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>CornerFiller</linkType>
+      <linkFlags>
+        <li>Wall</li>
+        <li>Rock</li>
+      </linkFlags>
+      <damageData>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <uiIconPath>Things/Building/Structure/Wall/Wall_Atlas_Fungi</uiIconPath>
+    <statBases>
+      <MaxHitPoints>190</MaxHitPoints>
+      <WorkToBuild>150</WorkToBuild>
+      <Flammability>0</Flammability>
+    </statBases>
+    <costStuffCount>1</costStuffCount>
+    <costList>
+      <Meat_Human>4</Meat_Human>
+    </costList>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <blockWind>true</blockWind>
+    <castEdgeShadows>true</castEdgeShadows>
+    <fillPercent>1</fillPercent>
+    <coversFloor>true</coversFloor>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <tickerType>Never</tickerType>
+    <rotatable>false</rotatable>
+    <selectable>true</selectable>
+    <neverMultiSelect>true</neverMultiSelect>
+    <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+    <holdsRoof>true</holdsRoof>
+    <designationCategory>Structure</designationCategory>
+    <staticSunShadowHeight>1.0</staticSunShadowHeight>
+    <blockLight>true</blockLight>
+    <canOverlapZones>false</canOverlapZones>
+    <building>
+		<blueprintGraphicData>
+			<texPath>Things/Building/Structure/Wall/Wall_Blueprint_Atlas</texPath>
+		</blueprintGraphicData>
+		<ai_chillDestination>false</ai_chillDestination>
+        <isInert>true</isInert>
+    </building>
+    <damageMultipliers>
+      <li>
+        <damageDef>Bomb</damageDef>
+        <multiplier>2</multiplier>
+      </li>
+    </damageMultipliers>
+    <designationHotKey>Misc3</designationHotKey>
+	<techLevel>Neolithic</techLevel>
+    <researchPrerequisites>
+		<li>Fleshforging</li>
+    </researchPrerequisites>
+<comps>
+      <li Class="CompProperties_HeatPusher">
+        <compClass>CompHeatPusherPowered</compClass>
+        <heatPerSecond>20</heatPerSecond>
+        <heatPushMaxTemperature>35</heatPushMaxTemperature>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  
+  
+</Defs>

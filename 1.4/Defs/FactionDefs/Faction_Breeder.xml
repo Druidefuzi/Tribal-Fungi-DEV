@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef ParentName="FungiFactionBaseHostile" Name="FungiFactionBaseAIHostileBreeder" Abstract="True">
+    <defName>FungiHostileBreeder</defName>
+    <label>Hostile fungi breeder tribe</label>
+    <permanentEnemy>false</permanentEnemy>
+	<naturalEnemy>true</naturalEnemy>
+	<basicMemberKind>FungiMelee</basicMemberKind>
+		<description>In the depths of their secluded domain, a tribe of xenophobic Fungis thrives, shrouded in an aura of distrust toward outsiders. Their society presents a peculiar amalgamation of Stone Age practices intertwined with advanced biological technologies, evoking an eerie and unsettling atmosphere. Among those who dare to venture into their territory, no human has ever returned unscathed; those fortunate enough to reappear are transformed into feral beings, resembling animals in both form and behavior. Whispers speak of chilling screams echoing through the night, a haunting reminder of the horrors lurking within their domain. Villages that have dared to report sightings of this enigmatic tribe have since fallen silent, their fate veiled in ominous uncertainty. Despite these ominous signs, all appears calm on the surface.</description>
+		
+		<pawnSingular>Fungi</pawnSingular>
+		<pawnsPlural>Fungis</pawnsPlural>
+	<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>false</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<factionIconPath>World/BreederVillage</factionIconPath>
+		<settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+			
+		<factionNameMaker>NamerFactionTribal</factionNameMaker>
+		<settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+		
+		<techLevel>Neolithic</techLevel>
+		<backstoryCategories>
+			<li>Tribal</li>
+		</backstoryCategories>
+	<allowedCultures>
+		<li>Corunan</li>
+	</allowedCultures>
+		<leaderTitle>Leader of Flesh</leaderTitle>
+				<caravanTraderKinds>
+			<li>Caravan_Fungi_Breeder</li>
+		</caravanTraderKinds>
+		<visitorTraderKinds>
+			<li>Caravan_Fungi_Breeder</li>
+		</visitorTraderKinds>
+		<baseTraderKinds>
+			<li>Base_Fungi_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-40</min>
+			<max>50</max>
+		</allowedArrivalTemperatureRange>		
+
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(800, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>		
+		
+				<pawnGroupMakers>
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+					<FungiMelee>12</FungiMelee>
+					<FungiRanged>12</FungiRanged>
+                                        <Heartlord>12</Heartlord>
+                                        <FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+                                        <Humimals>20</Humimals>
+                                         <Humigiants>4</Humigiants>
+                                         <Humike>1</Humike>
+			  </options>
+			</li>	
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+
+
+                                        <Heartlord>12</Heartlord>
+                                        <FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+                                        <Humigiants>4</Humigiants>
+
+			  </options>
+			</li>	
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+
+                                        <Heartlord>12</Heartlord>
+					<FungiChief>5</FungiChief>
+                                        <Humimals>20</Humimals>
+                                         <Humigiants>4</Humigiants>
+                                         <Humike>1</Humike>
+			  </options>
+			</li>	
+			<li>
+			  <!-- Normal fights, ranged with melee mix-ins -->
+			  <kindDef>Combat</kindDef>
+			  <commonality>0.5</commonality>
+			  <options>
+
+					<FungiMelee>12</FungiMelee>
+                                        <FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+                                        <Humimals>5</Humimals>
+                                         <Humigiants>5</Humigiants>
+                                         <Humike>1</Humike>
+			  </options>
+			</li>		
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<FungiMelee>12</FungiMelee>
+					<FungiRanged>12</FungiRanged>
+                                        <Heartlord>12</Heartlord>
+                                        <FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+                                        <Humimals>20</Humimals>
+                                         <Humigiants>4</Humigiants>
+                                         <Humike>1</Humike>
+				</options>
+			</li>
+			
+<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<FungiTrader>1</FungiTrader>
+				</traders>
+				<carriers>
+					<Humigiants>5</Humigiants>
+
+				</carriers>
+				<guards>
+					<FungiMelee>2</FungiMelee>
+                                         <Humimals>2</Humimals>
+                                         <Humigiants>1</Humigiants>					
+				</guards>
+			</li>
+
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<FungiMelee>12</FungiMelee>
+					<FungiRanged>12</FungiRanged>
+                                        <Heartlord>12</Heartlord>
+                                        <FleshLord>12</FleshLord>
+					<FungiChief>5</FungiChief>
+                                        <Humimals>20</Humimals>
+                                         <Humigiants>4</Humigiants>
+                                         <Humike>1</Humike>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	<raidLootValueFromPointsCurve>
+		<points>
+			<li>(35,     30)</li>
+			<li>(100,   200)</li>
+			<li>(1000,  500)</li>
+			<li>(2000,  800)</li>
+			<li>(4000, 1000)</li>
+		</points>
+	</raidLootValueFromPointsCurve>
+	</FactionDef>
+
+</Defs>

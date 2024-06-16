@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="BuildingBase">
+		<defName>DruidFungiTransformer</defName>
+		<label>Wormformer</label>
+		<description>The Wormformer is a biological entity capable of transforming a humanoid into a wormoid. This process is not a true transformation but a complete replacement. During the procedure, all previous characteristics of the humanoid disappear due to the drastic change. The process ends with the humanoid bursting into a cloud of blood, from which the wormoid emerges. The newly formed wormoid perceives the former humanoid as its parent, yet the humanoid has now met its demise, leaving behind only a memory and a vague desire that the wormoid cannot comprehend, resulting in an unquenchable rage.Additionally, the Wormformer can cultivate parasitic worms within the humanoid. These worms are periodically extracted, causing significant harm to the humanoid as the worms consume their host from within.</description>
+		<thingClass>Fungi.Building_DruidFungiTransformer</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/DruidInfestor/DruidInfestor</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.8, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2, 2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>true</hasInteractionCell>
+		<interactionCellOffset>(1, 0, 2)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<designationCategory>FungiBuildings</designationCategory>
+		<uiOrder>2169</uiOrder>
+		
+		<building>
+			<buildingTags>
+				<li>Fungi</li>
+			</buildingTags>
+	
+		</building>
+		
+		
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<DruidShroomworms>200</DruidShroomworms>
+			<Meat_Human>50</Meat_Human>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+
+			<li Class="Fungi.CompProperties_Refuelable">
+				<fuelConsumptionRate>1</fuelConsumptionRate>
+				<fuelLabel>Myceliumlevel</fuelLabel>
+				<fuelCapacity>1000</fuelCapacity>
+				<fuelFilter>
+					<thingDefs>
+						<li>DruidShroomans</li>
+					</thingDefs>
+				</fuelFilter>
+				<consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+				<showAllowAutoRefuelToggle>true</showAllowAutoRefuelToggle>
+			</li>
+			<li Class="Fungi.CompProperties_Refuel">
+			</li>
+			<li Class="Fungi.CompProperties_Extractor">
+				<transformPawn>WormiHatched</transformPawn>
+				<extractThing>DruidShroomworms</extractThing>
+				<extractAmount>2</extractAmount>
+				<extractDamage>Bite</extractDamage>
+				<extractDamageAmount>3</extractDamageAmount>
+				<extractEveryXSeconds>10</extractEveryXSeconds>
+				<ticksSecondsHoursDaysYears>hours</ticksSecondsHoursDaysYears>
+				<canSelect>true</canSelect>
+				<canEvolve>false</canEvolve>
+				<canTransform>true</canTransform>
+				<canExtract>true</canExtract>
+				<finishInXTime>5</finishInXTime>
+				<!-- Select icon has a default, it uses the vanilla select if you dont write anything -->
+				<extractIconPath>InfestedShroomanPlant/Resource/DruidShroomworm</extractIconPath>
+				<transformIconPath>UI/Icon/Wormoid</transformIconPath>
+			
+				<evolveDescription></evolveDescription>
+				<transformDescription>This irreversible process is not a mere transformation; the former being will dissolve into a cloud of blood, giving rise to the wormoid from the remnants</transformDescription>
+				<oldHediffs>
+				</oldHediffs>
+				<newHediffs>
+				</newHediffs>
+				<bodySizes>
+					<li>0</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</bodySizes>
+				<pawnsToSpawn>
+					<li>MushroomWorm</li>
+					<li>Wormimal</li>
+					<li>DruidWorg</li>
+					<li>DruidWorg</li>
+				</pawnsToSpawn>
+
+				<humanLikePawn>WormiHatched</humanLikePawn>
+				
+			</li>
+			
+		
+			
+		</comps>
+		<researchPrerequisites>
+			<li>FungiInfestSecond</li>
+		</researchPrerequisites>
+	</ThingDef>
+
+
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>DruidFungiZerger</defName>
+		<label>creepformer</label>
+		<description>The Wormformer is a biological entity capable of transforming a humanoid into a wormoid. This process is not a true transformation but a complete replacement. During the procedure, all previous characteristics of the humanoid disappear due to the drastic change. The process ends with the humanoid bursting into a cloud of blood, from which the wormoid emerges. The newly formed wormoid perceives the former humanoid as its parent, yet the humanoid has now met its demise, leaving behind only a memory and a vague desire that the wormoid cannot comprehend, resulting in an unquenchable rage.Additionally, the Wormformer can cultivate parasitic worms within the humanoid. These worms are periodically extracted, causing significant harm to the humanoid as the worms consume their host from within.</description>
+		<thingClass>Fungi.Building_DruidFungiZerger</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/SporeCreeper/SporeCreeper</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4, 4)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.8, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(4, 4)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>false</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 0)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<designationCategory>FungiBuildings</designationCategory>
+		<uiOrder>2169</uiOrder>
+
+		<building>
+			<buildingTags>
+				<li>Fungi</li>
+			</buildingTags>
+
+		</building>
+
+
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<DruidShroomworms>200</DruidShroomworms>
+			<Meat_Human>50</Meat_Human>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+
+		
+
+			<li Class="Fungi.CompProperties_Extractor">
+				<!-- Select icon has a default, it uses the vanilla select if you dont write anything -->
+				<extractIconPath>InfestedShroomanPlant/Resource/DruidShroomworm</extractIconPath>
+				<transformIconPath>UI/Icon/Wormoid</transformIconPath>
+
+				
+				<canZerg>true</canZerg>
+				<creepTickInterval>60</creepTickInterval>
+				<maxRadius>25</maxRadius>
+				<gasTickInterval>10</gasTickInterval>
+				<gasAtOnce>10</gasAtOnce>
+				<terrainAtOnce>4</terrainAtOnce>
+				<zergTerrain>FungiDruidMycelium</zergTerrain>
+				<zergRevive>true</zergRevive>
+				<corpseToPawn>false</corpseToPawn>
+				<corpseToThingDef>true</corpseToThingDef>
+				<reviveTickInterval>120</reviveTickInterval>
+				<humanLikePawn>WormiHatched</humanLikePawn>
+				<bodySizes>
+					<li>0</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</bodySizes>
+				<pawnsToSpawn>
+					<li>MushroomWorm</li>
+					<li>Wormimal</li>
+					<li>DruidWorg</li>
+					<li>DruidWorg</li>
+				</pawnsToSpawn>
+				<changePlants>true</changePlants>
+				<treeDef>FungiShroomTree</treeDef>
+				<grassDef>FungiPlant_DotGrass</grassDef>
+				<largeGrassDef>FungiPlant_TallGrass</largeGrassDef>
+				<bushDef>DruidFungiPuffBall</bushDef>
+				
+			
+
+			</li>
+
+
+
+		</comps>
+		<researchPrerequisites>
+			<li>FungiInfestSecond</li>
+		</researchPrerequisites>
+	</ThingDef>
+	<ThingDef ParentName="BuildingBase">
+		<defName>DruidFungiGas</defName>
+		<label>gasformer</label>
+		<description>The Wormformer is a biological entity capable of transforming a humanoid into a wormoid. This process is not a true transformation but a complete replacement. During the procedure, all previous characteristics of the humanoid disappear due to the drastic change. The process ends with the humanoid bursting into a cloud of blood, from which the wormoid emerges. The newly formed wormoid perceives the former humanoid as its parent, yet the humanoid has now met its demise, leaving behind only a memory and a vague desire that the wormoid cannot comprehend, resulting in an unquenchable rage.Additionally, the Wormformer can cultivate parasitic worms within the humanoid. These worms are periodically extracted, causing significant harm to the humanoid as the worms consume their host from within.</description>
+		<thingClass>Fungi.Building_DruidFungiZerger</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/SporeGaser/SporeGaser</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(4, 4)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.8, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(4, 4)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>false</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 0)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<designationCategory>FungiBuildings</designationCategory>
+		<uiOrder>2169</uiOrder>
+
+		<building>
+			<buildingTags>
+				<li>Fungi</li>
+			</buildingTags>
+
+		</building>
+
+
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<DruidShroomworms>200</DruidShroomworms>
+			<Meat_Human>50</Meat_Human>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+
+
+
+			<li Class="Fungi.CompProperties_Extractor">
+
+
+
+
+
+				<!-- Select icon has a default, it uses the vanilla select if you dont write anything -->
+				<extractIconPath>InfestedShroomanPlant/Resource/DruidShroomworm</extractIconPath>
+				<transformIconPath>UI/Icon/Wormoid</transformIconPath>
+
+
+				<canGasCreep>true</canGasCreep>
+				<zergTerrain>FungiDruidMycelium</zergTerrain>
+				<creepTickInterval>60</creepTickInterval>
+				<maxRadius>25</maxRadius>
+				<gasTickInterval>10</gasTickInterval>
+				<needCreep>true</needCreep>
+				<gasAtOnce>10</gasAtOnce>
+					<zergRevive>true</zergRevive>
+				<reviveTickInterval>120</reviveTickInterval>
+				<humanLikePawn>WormiHatched</humanLikePawn>
+				<bodySizes>
+					<li>0</li>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</bodySizes>
+				<pawnsToSpawn>
+					<li>MushroomWorm</li>
+					<li>Wormimal</li>
+					<li>DruidWorg</li>
+					<li>DruidWorg</li>
+				</pawnsToSpawn>
+				
+
+
+
+			</li>
+
+
+
+		</comps>
+		<researchPrerequisites>
+			<li>FungiInfestSecond</li>
+		</researchPrerequisites>
+		</ThingDef>
+
+	<ThingDef ParentName="BuildingBase">
+		<defName>DruidFungiCorpse</defName>
+		<label>corpseformer</label>
+		<description>The Wormformer is a biological entity capable of transforming a humanoid into a wormoid. This process is not a true transformation but a complete replacement. During the procedure, all previous characteristics of the humanoid disappear due to the drastic change. The process ends with the humanoid bursting into a cloud of blood, from which the wormoid emerges. The newly formed wormoid perceives the former humanoid as its parent, yet the humanoid has now met its demise, leaving behind only a memory and a vague desire that the wormoid cannot comprehend, resulting in an unquenchable rage.Additionally, the Wormformer can cultivate parasitic worms within the humanoid. These worms are periodically extracted, causing significant harm to the humanoid as the worms consume their host from within.</description>
+		<thingClass>Fungi.Building_DruidFungiZerger</thingClass>
+		<containedPawnsSelectable>true</containedPawnsSelectable>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<drawerType>MapMeshAndRealTime</drawerType>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>Things/Building/SporeGaser/SporeGaser</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(2, 2)</drawSize>
+			<shadowData>
+				<volume>(1.7, 0.8, 1.7)</volume>
+			</shadowData>
+		</graphicData>
+		<size>(2, 2)</size>
+		<canOverlapZones>false</canOverlapZones>
+		<hasInteractionCell>false</hasInteractionCell>
+		<interactionCellOffset>(0, 0, 0)</interactionCellOffset>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<designationCategory>FungiBuildings</designationCategory>
+		<uiOrder>2169</uiOrder>
+
+		<building>
+			<buildingTags>
+				<li>Fungi</li>
+			</buildingTags>
+
+		</building>
+
+
+		<statBases>
+			<MaxHitPoints>350</MaxHitPoints>
+			<WorkToBuild>9000</WorkToBuild>
+			<Mass>85</Mass>
+			<Flammability>0.5</Flammability>
+		</statBases>
+		<costList>
+			<DruidShroomworms>200</DruidShroomworms>
+			<Meat_Human>50</Meat_Human>
+		</costList>
+		<constructionSkillPrerequisite>4</constructionSkillPrerequisite>
+		<comps>
+			<li Class="Fungi.CompProperties_Extractor">
+				<corpseToThingDef>true</corpseToThingDef>
+				<zergTerrain>FungiDruidMycelium</zergTerrain>
+				<needCreep>true</needCreep>				
+				<maxRadius>25</maxRadius>
+				<zergRevive>true</zergRevive>
+				<reviveTickInterval>120</reviveTickInterval>
+			</li>
+		</comps>
+		<researchPrerequisites>
+			<li>FungiInfestSecond</li>
+		</researchPrerequisites>
+	</ThingDef>
+	
+		</Defs>

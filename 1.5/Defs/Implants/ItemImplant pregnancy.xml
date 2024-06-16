@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Pregnancy_Worms</defName>
+    <label>Pregnancy Worms</label>
+    <description>Pregnancy worms, once implanted, the target begins to form a human being on his skin. Every two days a "newborn" human will spawn. Victims hunger massively increased. Causes high pain!</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>100</DruidShroomworms>
+      <Meat_Human>50</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Pregnancy_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Wormoid_Worms</defName>
+    <label>Wormoid Worms</label>
+    <description>Wormoid worms, once implanted, the target begins to transform into a wormoid , a savage creature.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Fleshforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>FungiInfestTribe</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>10</DruidShroomworms>
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Wormoid_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Dissassembly_Worms</defName>
+    <label>Dissassembly Worms</label>
+    <description>Dissassembly worms infest the limbs, heart and head of the target, the parts start developing independence until they leave the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>10</DruidShroomworms>
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Dissassembly_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Heart_Worms</defName>
+    <label>Heart Worms</label>
+    <description>Heart worms infest the heart of the target, the heart starts developing independence until it leaves the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>10</DruidShroomworms>
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Heart_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Head_Worms</defName>
+    <label>Head Worms</label>
+    <description>Head worms infest the heart of the target, the head starts developing independence until it leaves the body.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Sporeforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>ShroomwormBiology</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>10</DruidShroomworms>
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Head_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+<ThingDef ParentName="Fungi_OrgBase">
+    <defName>Fungi_Item_Infestation_Worms</defName>
+    <label>Infestation Worms</label>
+    <description>Infestation worms infest the target, slowly infesting every body part of the target, eating and reproducing everything until the target is dead.</description>
+    <recipeMaker>
+                      <recipeUsers>
+			<li>Fleshforge</li>
+                 </recipeUsers>
+      <researchPrerequisite>FungiInfestTribe</researchPrerequisite>
+    </recipeMaker>
+    <costList>
+      <DruidShroomworms>10</DruidShroomworms>
+      <Meat_Human>10</Meat_Human>
+    </costList>
+    <descriptionHyperlinks><RecipeDef>Fungi_Surgery_Infestation_Worms</RecipeDef></descriptionHyperlinks>
+  </ThingDef>
+
+
+</Defs>

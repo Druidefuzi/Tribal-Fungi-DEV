@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+	<PawnKindDef Name="SporeForce" Parentname="FungiBase">
+		<defName>SporeForce</defName>
+		<label>Spore force</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>50</FungiSporeXeno>
+
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiSpore</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>60</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiSporeGun</li>
+			<li>FungiPlagueGun</li>
+			<li>FungiHeartGunMold</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="MoldForce" Parentname="FungiBase">
+		<defName>MoldForce</defName>
+		<label>Mold force</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>50</FungiSporeXeno>
+
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiSpore</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>60</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Fungi
+			</li>
+			<li>SporeBombPlague</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef Name="FungiPlague" Parentname="FungiBase">
+		<defName>FungiPlague</defName>
+		<label>plague lord</label>
+		<race>Alien_Fungi</race>
+		<useFactionXenotypes>true</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<FungiSporeXeno>50</FungiSporeXeno>
+
+				<FungiBaseXeno>50</FungiBaseXeno>
+			</xenotypeChances>
+		</xenotypeSet>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>FungiPlague</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.02</chemicalAddictionChance>
+
+		<initialResistanceRange>10~16</initialResistanceRange>
+
+
+		<initialWillRange>4~6</initialWillRange>
+		<invNutrition>2.3</invNutrition>
+		<invFoodDef>Meat_Human</invFoodDef>
+		<combatPower>50</combatPower>
+		<maxGenerationAge>15</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>150</min>
+			<max>1000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>400</min>
+			<max>1000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>FungiPlagueSword</li>
+			<li>FungiMoldAxe</li>
+			<li>FungiMoldBattleAxe</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>FungiFlesh</li>
+
+		</apparelTags>
+	</PawnKindDef>
+</Defs>

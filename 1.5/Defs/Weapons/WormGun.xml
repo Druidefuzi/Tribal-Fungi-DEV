@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>WormGun</defName>
+    <label>Worm thrower</label>
+    <description>Utilized worms for the wormgun.They are not fully under control, they are in a berzerk state and very agressive.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/Wormgun/Wormgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    			<drawSize>(1)</drawSize>
+    </graphicData>
+    <uiIconScale>0.35</uiIconScale>
+	<stuffCategories>
+		<li>Shrooman</li>
+	</stuffCategories>
+    <weaponTags>
+      <li>FungiWorm</li>
+		<li>FungiWormGun</li>
+    </weaponTags>
+    <statBases>
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.2</Mass>
+      <AccuracyTouch>0.9</AccuracyTouch>
+      <AccuracyShort>0.7</AccuracyShort>
+      <AccuracyMedium>0.7</AccuracyMedium>
+      <AccuracyLong>0.7</AccuracyLong>
+      <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+    </statBases>
+    <costList>
+      <DruidShroomans>30</DruidShroomans>
+      <DruidShroomworms>30</DruidShroomworms>
+
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+       <ai_AvoidFriendlyFireRadius>15</ai_AvoidFriendlyFireRadius>
+        <defaultProjectile>WormBullet</defaultProjectile>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+        <warmupTime>1</warmupTime>
+        <range>20</range>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>grip</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+	<recipeMaker>
+		<recipeUsers>
+			<li>Fleshforge</li>
+		</recipeUsers>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+		<researchPrerequisite>FungiInfestTribe</researchPrerequisite>
+	</recipeMaker>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseBullet">
+		<defName>WormBullet</defName>
+		<thingClass>ChickmanGun.WormBullet</thingClass>
+		<label>Worms</label>
+		<graphicData>
+			<texPath>Things/Pawn/Animal/Worm/Bullet</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<drawSize>(1.5)</drawSize>
+		</graphicData>
+		<projectile>
+			<flyOverhead>false</flyOverhead>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>3</damageAmountBase>
+			<speed>25</speed>
+		</projectile>
+	</ThingDef>
+</Defs>

@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Wormi_AverageFemale</defName>
+		<graphicPath>Things/Pawn/Humanlike/Wormi/Head/Female_Wormi_Average</graphicPath>
+		<gender>Female</gender>
+	</HeadTypeDef>
+	<HeadTypeDef ParentName="AverageBase">
+		<defName>Wormi_AverageMale</defName>
+		<graphicPath>Things/Pawn/Humanlike/Wormi/Head/Male_Wormi_Average</graphicPath>
+		<gender>Male</gender>
+	</HeadTypeDef>
+	
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_Evfu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_Evfu_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_Evfu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_Evfu2_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_Evfu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_Evfu3_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+	
+
+	<HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiBob</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiBob</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiBobBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiBobBlue</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiBobRed</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiBobRed</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiLong</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiLong</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiLongBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiLongBlue</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiLongBlueTwo</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiLongBlueTwo</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiSchnorres</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiSchnorres</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiSchnorresBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiSchnorresBlue</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_FungiSchnorresGreen</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_FungiSchnorresGreen</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_NorFu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_NorFu_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_NorFu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_NorFu2_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_NorFu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_NorFu3_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_stefu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_stefu_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_stefu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_stefu2_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_stefu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Female_stefu3_Normal</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_Evfu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_Evfu_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_Evfu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_Evfu2_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_Evfu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_Evfu3_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiBob</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiBob</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiBobBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiBobBlue</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiBobRed</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiBobRed</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiLong</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiLong</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiLongBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiLongBlue</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiLongBlueTwo</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiLongBlueTwo</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiSchnorres</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiSchnorres</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiSchnorresBlue</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiSchnorresBlue</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_FungiSchnorresGreen</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_FungiSchnorresGreen</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_NorFu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_NorFu_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_NorFu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_NorFu2_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_NorFu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_NorFu3_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_stefu_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_stefu_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_stefu2_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_stefu2_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_stefu3_Normal</defName>
+    <graphicPath>Things/Pawn/Humanlike/Fungi/Head/Male_stefu3_Normal</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+</Defs>

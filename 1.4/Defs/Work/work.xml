@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<WorkGiverDef>
+	<defName>RearmTurretsFungi</defName>
+	<label>rearm turrets</label>
+	<giverClass>WorkGiver_Refuel_Turret</giverClass>
+	<workType>Hauling</workType>
+	<verb>rearm</verb>
+	<gerund>rearming</gerund>
+	<priorityInType>150</priorityInType>
+	<requiredCapacities>
+		<li>Manipulation</li>
+	</requiredCapacities>
+	<prioritizeSustains>true</prioritizeSustains>
+	<canBeDoneWhileDrafted>true</canBeDoneWhileDrafted>
+</WorkGiverDef>
+</Defs>

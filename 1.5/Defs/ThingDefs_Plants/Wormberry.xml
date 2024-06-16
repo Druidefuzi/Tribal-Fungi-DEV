@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<ThingDef ParentName="PlantFoodRawBase">
+  <defName>Wormberry</defName>
+  <label>Worm berry</label>
+  <description>This berry has a chemical inside it, which cures nearly all shroomworm infections.</description>
+		<graphicData>
+			<texPath>Things/FungiPlants/WormBush/Resource</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+  <statBases>
+    <MarketValue>2</MarketValue>
+    <Mass>0.3</Mass>
+  </statBases>
+  <comps>
+    <li Class="CompProperties_Rottable">
+      <daysToRotStart>16</daysToRotStart>
+      <rotDestroys>false</rotDestroys>
+    </li>
+  </comps>
+  <ingestible>
+<outcomeDoers>
+        <li Class="IngestionOutcomeDoer_Dewormer">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerArms">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerLegs">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerHeart">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerHead">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerEye">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerFinger">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerToe">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerStomach">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerNose">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_Wormimal">
+
+        </li>
+        <li Class="IngestionOutcomeDoer_DewormerWormimal2">
+
+        </li>
+      </outcomeDoers>
+    <foodType>Meat</foodType>
+<nurseable>true</nurseable>
+  </ingestible>
+    <stuffProps>
+      <commonality>0.05</commonality>
+      <statFactors>
+        <Beauty>.1</Beauty>
+      </statFactors>
+
+    </stuffProps>
+
+</ThingDef>
+</Defs>

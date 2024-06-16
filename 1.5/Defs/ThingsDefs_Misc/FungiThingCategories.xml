@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+      <ThingCategoryDef>
+        <defName>Fungi_BodyParts</defName>
+        <label>shroomed body parts</label>
+        <parent>BodyParts</parent>
+      </ThingCategoryDef>
+
+</Defs>

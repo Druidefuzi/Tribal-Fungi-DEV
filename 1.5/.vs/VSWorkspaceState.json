@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Defs",
+    "\\Defs\\Buildings",
+    "\\Defs\\DamageDefs",
+    "\\Defs\\LifeStageDefs",
+    "\\Defs\\mental",
+    "\\Defs\\Research",
+    "\\Defs\\Scenarios",
+    "\\Defs\\ThingDefs_Races",
+    "\\Defs\\Weapons"
+  ],
+  "SelectedNode": "\\Defs\\Buildings\\Transformer.xml",
+  "PreviewInSolutionExplorer": false
+}

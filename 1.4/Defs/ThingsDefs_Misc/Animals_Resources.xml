@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Shroom</defName>
+    <label>Mushroom hide</label>
+    <graphicData>
+      <color>(245,245,245)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+      <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(209,168,39)</color>
+      <commonality>0.075</commonality>
+    </stuffProps>
+  </ThingDef>
+    <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Worm</defName>
+    <label>worm hide</label>
+    <graphicData>
+      <color>(59,168,86)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>2.0</MarketValue>
+      <StuffPower_Insulation_Cold>14</StuffPower_Insulation_Cold>
+    </statBases>
+    <stuffProps>
+      <color>(209,168,39)</color>
+      <commonality>0.075</commonality>
+    </stuffProps>
+  </ThingDef>
+	
+	
+ 
+
+
+
+
+  
+</Defs>

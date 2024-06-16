@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="PlantBase">
+    <defName>HUMAN_PLANT_DEF</defName>
+    <label>Meat Bush</label>
+    <description>Growing meat. Shroomans are such a wonderful material!</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/MeatBush</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+
+
+
+    <plant>
+             <sowResearchPrerequisites>
+	 	<li>Fleshforging</li>
+             </sowResearchPrerequisites>
+           <harvestAfterGrowth>0.25</harvestAfterGrowth>
+			<growDays>2</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>Meat_Human</harvestedThingDef>
+			<harvestYield>8</harvestYield>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>Things/Plant/MeatBushgrow</immatureGraphicPath>
+      <visualSizeRange>0.35~1.36</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+</Defs>

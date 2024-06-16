@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ 
+
+  <!--============================ Trees ============================-->
+  <ThingDef ParentName="PlantBase" Name="FungiTreeBase" Abstract="True">
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <Flammability>0.8</Flammability>
+      <Nutrition>1.7</Nutrition>
+    </statBases>
+    <altitudeLayer>Building</altitudeLayer>
+    <selectable>true</selectable>
+    <fillPercent>0.25</fillPercent>
+    <graphicData>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(0,0,-0.42)</offset>
+      </shadowData>
+    </graphicData>
+    <passability>PassThroughOnly</passability>
+    <pathCost>130</pathCost>
+    <blockWind>true</blockWind>
+    <ingestible>
+      <foodType>Tree</foodType>
+      <preferability>RawBad</preferability>
+    </ingestible>
+    <plant>
+      <lifespanDaysPerGrowDays>9</lifespanDaysPerGrowDays>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <soundHarvesting>Harvest_Tree</soundHarvesting>
+      <soundHarvestFinish>Harvest_Tree_Finish</soundHarvestFinish>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <harvestWork>800</harvestWork>
+      <harvestedThingDef>WoodLog</harvestedThingDef>
+      <harvestYield>25</harvestYield>
+      <harvestTag>Wood</harvestTag>
+      <harvestMinGrowth>0.40</harvestMinGrowth>
+      <harvestFailable>false</harvestFailable>
+      <blockAdjacentSow>true</blockAdjacentSow>
+      <visualSizeRange>1.3~2.0</visualSizeRange>
+      <topWindExposure>0.25</topWindExposure>
+      <wildClusterRadius>8</wildClusterRadius>
+      <wildClusterWeight>24</wildClusterWeight>
+      <wildOrder>3</wildOrder>
+      <interferesWithRoof>true</interferesWithRoof>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase" Name="FungiTreeBaseBase" Abstract="True">
+    <graphicData>
+      <shaderParameters>
+        <_FallColorSource>(0.3803, 0.4352, 0.1451)</_FallColorSource>
+        <_FallColorDestination>/Other/TreeFallGradient</_FallColorDestination>
+        <_FallTransitionRange>(0.02, 0.10)</_FallTransitionRange>
+        <_FallBehaviorEnabled>1</_FallBehaviorEnabled>
+      </shaderParameters>
+    </graphicData>
+  </ThingDef>
+<ThingDef ParentName="PlantBase">
+    <defName>Plant_WormBerry</defName>
+    <label>Worm berry bush</label>
+    <description>A bushy plant which yields delicious worm berries. The berries contain a strange chemical, curing all worm infections.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/FungiPlants/WormBush/WormBerry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>30</pathCost>
+    <plant>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>6</growDays>
+      <harvestYield>10</harvestYield>
+      <harvestWork>250</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <harvestedThingDef>Wormberry</harvestedThingDef>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+
+             <sowResearchPrerequisites>
+	 	<li>AdvancedShroomwormBiology</li>
+             </sowResearchPrerequisites>
+      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterWeight>250</wildClusterWeight>
+      <visualSizeRange>0.95~1.7</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+<ThingDef ParentName="PlantBase">
+    <defName>Plant_TimeBerry</defName>
+    <label>Time berry bush</label>
+    <description>Nestled amidst the untamed wilderness thrives a bushy wild plant, adorned with succulent time berries. These berries, with their tantalizing taste, conceal a peculiar secret: a potent chemical that accelerates the aging process of any being that partakes. Consuming a single berry adds a year to the age of the eater, a strange and enigmatic phenomenon that adds a layer of intrigue to this otherwise delectable treat. Venture cautiously, for the allure of the time berries belies their transformative effects.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.35</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/FungiPlants/TimeBush/TimeBerry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+        <offset>(0,0,-0.25)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <neverMultiSelect>false</neverMultiSelect>
+    <fillPercent>0.20</fillPercent>
+    <pathCost>30</pathCost>
+    <plant>
+      <fertilityMin>0.5</fertilityMin>
+      <fertilitySensitivity>0.5</fertilitySensitivity>
+      <growDays>6</growDays>
+      <harvestYield>10</harvestYield>
+      <harvestWork>250</harvestWork>
+      <harvestTag>Standard</harvestTag>
+      <harvestAfterGrowth>0.30</harvestAfterGrowth>
+      <harvestedThingDef>Timeberry</harvestedThingDef>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+
+             <sowResearchPrerequisites>
+<li>FungiTimeManipulation</li>
+             </sowResearchPrerequisites>
+      <wildClusterRadius>5</wildClusterRadius>
+      <wildClusterWeight>250</wildClusterWeight>
+      <visualSizeRange>0.95~1.7</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+  <ThingDef ParentName="PlantBase">
+    <defName>FungiPlant_Dandelion</defName>
+    <label>dandelions</label>
+    <description>A tiny red flower which grows in large clusters. Though it is often considered a weed, dandelions in bloom are quite beautiful. The strange soil of the Fungi forrest changed the color of this flower.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Beauty>4</Beauty>
+      <Nutrition>0.18</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/FungiDandelion</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.0</fertilitySensitivity>
+      <growDays>2.5</growDays>
+      <fertilityMin>0.05</fertilityMin>
+      <maxMeshCount>25</maxMeshCount>
+      <visualSizeRange>0.3~0.4</visualSizeRange>
+      <topWindExposure>0.3</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>8</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <purpose>Beauty</purpose>
+    </plant>
+  </ThingDef>
+  <ThingDef ParentName="FungiTreeBaseBase">
+    <defName>FungiPlant_TreeOak</defName>
+    <label>blood oak tree</label>
+    <description>Standing tall in the heart of the Fungi forest is the Blood Oak, a hardwood tree of remarkable resilience and strength. These majestic trees take an eternity to reach maturity, but their wood is so formidable that 'oak' has become synonymous with strength across numerous cultures. However, the peculiar soil of the Fungi forest has wrought a transformation upon the Blood Oak. The nutrient-rich soil has imbued the tree with unparalleled vitality, rendering photosynthesis unnecessary for its sustenance. As a consequence, the leaves of the Blood Oak have turned a ghostly grey, devoid of the vibrant green hue of chlorophyll. Despite this eerie change, the Blood Oak remains a symbol of enduring strength within the mystical depths of the forest.</description>
+    <graphicData>
+      <texPath>Things/Plants/FungiOak</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <plant>
+      <growDays>30</growDays>
+      <harvestWork>1000</harvestWork>
+      <harvestYield>45</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+  </ThingDef>
+
+<ThingDef ParentName="FungiTreeBaseBase">
+    <defName>ShroomanTree</defName>
+    <label>Shrooman tree</label>
+    <description>In ages past, the fungi delved into daring experiments, seeking to merge the essence of humans with that of trees. However, these endeavors yielded no tangible benefits, prompting the fungi to abandon their ventures. One curious result of these experiments was the creation of the Shrooman Tree, a peculiar hybrid that combines the traits of both human and tree. While the Shrooman Tree exhibits accelerated growth compared to its conventional counterparts, it produces a lesser yield of wood. Despite its shortcomings, the Shrooman Tree stands as a testament to the fungi's unyielding curiosity and their penchant for unconventional creations.</description>
+    <graphicData>
+      <texPath>Things/Plants/ShroomanTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <plant>
+      <growDays>15</growDays>
+      <harvestWork>500</harvestWork>
+      <harvestYield>23</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+  </ThingDef>
+<ThingDef ParentName="FungiTreeBaseBase">
+    <defName>FungiShroomTree</defName>
+    <label>Mushtree</label>
+    <description>The Mushtree, as its name suggests, is a curious fusion of tree and mushroom, defying conventional classification. Despite its arboreal appearance, the Mushtree harbors no wood within its structure. Instead, it is composed entirely of a peculiar fungus that permeates its form. However, this fungal component of the Mushtree holds a fortunate advantage—it is edible. Adventurers stumbling upon the Mushtree find themselves presented with a unique opportunity to partake in its nutritious fungal bounty, providing sustenance in the depths of the forest where conventional food sources may be scarce.</description>
+    <graphicData>
+      <texPath>Things/Plants/Fungitree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.35, 0.13)</volume>
+        <offset>(-0.03,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>2</Beauty>
+    </statBases>
+    <plant>
+      <growDays>15</growDays>
+      <harvestedThingDef>RawFungus</harvestedThingDef>
+      <harvestWork>500</harvestWork>
+      <harvestYield>23</harvestYield>
+      <wildClusterWeight>35</wildClusterWeight>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>FungiPlant_Grass</defName>
+    <label>grass</label>
+    <description>Wild grass. Grows anywhere there is a little light and minimally fertile ground.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Flammability>1.3</Flammability>
+      <Nutrition>0.25</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plants/FungiGrass</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilityMin>0.05</fertilityMin>
+      <fertilitySensitivity>0.3</fertilitySensitivity>
+      <growDays>2.5</growDays>
+      <harvestWork>40</harvestWork>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>0.4~0.6</visualSizeRange>
+      <topWindExposure>0.4</topWindExposure>
+      <wildOrder>1</wildOrder>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>FungiPlant_TallGrass</defName>
+    <label>tall grass</label>
+    <description>Wild tall grass. Slows down anyone moving over it.</description>
+    <statBases>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Flammability>1.3</Flammability>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <pathCost>15</pathCost>
+    <graphicData>
+      <texPath>Things/Plants/FungiGrass</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <hideAtSnowDepth>0.5</hideAtSnowDepth>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>3</growDays>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>9</maxMeshCount>
+      <visualSizeRange>0.7~0.85</visualSizeRange>
+      <topWindExposure>0.4</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>10</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+    </plant>
+  </ThingDef>
+ <ThingDef ParentName="BushBase">
+    <defName>FungiPlant_Bush</defName>
+    <label>red bush</label>
+    <description>A short shrub. Does not typically talk.Is red due to the strange soil in the area.</description>
+    <graphicData>
+      <texPath>Things/Plants/FungiBush</texPath>
+      <drawSize>1.15</drawSize>
+      <shadowData>
+        <volume>(0.55, 0.2, 0.2)</volume>
+      </shadowData>
+    </graphicData>
+    <uiIconScale>0.85</uiIconScale>
+    <plant>
+      <growDays>3</growDays>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>FungiRedshrooms</defName>
+    <label>Redshrooms</label>
+    <description>In the sprawling expanse of the fungi lands, the ubiquitous presence of Redshrooms is an undeniable reality. These mushrooms, while not inherently toxic, offer neither sustenance nor culinary delight to those who encounter them. Despite their vibrant hue, Redshrooms lack any nutritional value and are renowned for their repugnant taste. While they may not pose a direct threat to those who ingest them, their foul flavor and lack of nutrients render them a decidedly unappealing option for foragers and explorers traversing the fungi-infested terrain.</description>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Nutrition>0.2</Nutrition>
+    </statBases>
+    <pathCost>15</pathCost>
+    <graphicData>
+      <texPath>Things/Plants/FungiRedshroom</texPath>
+      <drawSize>1.7</drawSize>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <ingestible />
+    <plant>
+      <fertilitySensitivity>0.7</fertilitySensitivity>
+      <growDays>3</growDays>
+      <harvestWork>60</harvestWork>
+      <maxMeshCount>4</maxMeshCount>
+      <visualSizeRange>0.7~0.85</visualSizeRange>
+      <topWindExposure>0.15</topWindExposure>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <wildOrder>1</wildOrder>
+      <wildEqualLocalDistribution>false</wildEqualLocalDistribution>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="HealrootBase">
+    <defName>FungiPlant_HealrootWild</defName>
+    <label>wild healroot</label>
+    <description>A slow-growing plant which yields herbal medicine when harvested.\n\nThis wild breed of healroot is hardier than domesticated healroot, but too difficult to cultivate. This variety looks a bit different due to the strange soil in this region but it still has the same characteristics.</description>
+    <neverMultiSelect>false</neverMultiSelect>
+    <graphicData>
+      <texPath>Things/Plants/FungiHealroot</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <plant>
+      <wildClusterRadius>4</wildClusterRadius>
+      <wildClusterWeight>80</wildClusterWeight>
+    </plant>
+  </ThingDef>
+ 
+
+</Defs>

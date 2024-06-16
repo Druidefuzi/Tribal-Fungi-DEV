@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>Shroomigiant</defName>
+    <label>Shroomigiant</label>
+    <description>Wild mushroom animals. Got friends with the Fungis thousands of years ago. They hit very hard and their body is very toxic!</description>
+    <statBases>
+      <MoveSpeed>2</MoveSpeed>
+      <ComfyTemperatureMin>-25</ComfyTemperatureMin>
+      <MarketValue>850</MarketValue>
+		<ToxicEnvironmentResistance>1</ToxicEnvironmentResistance>
+		<ToxicResistance>1</ToxicResistance>
+    </statBases>
+
+    <tools>
+      <li>
+        <label>front left paw</label>
+        <capacities>
+        <li>FungiMoldSpores</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+      <li>
+        <label>front right paw</label>
+        <capacities>
+          <li>FungiPlagueSpores</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+         <chanceFactor>0.2</chanceFactor>
+      </li>
+
+      <li>
+        <label>Teeth</label>
+        <capacities>
+          <li>Bite</li>
+          <li>FungiSting</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>2.5</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+         <chanceFactor>0.2</chanceFactor>
+      </li>
+
+    </tools>
+    <comps>
+    </comps>
+    <race>
+		<bloodDef>Filth_DruidFungi</bloodDef>
+		<fleshType>DruidFungi</fleshType>
+      <predator>False</predator>
+      <body>QuadrupedAnimalWithPawsAndTailFungi</body>
+      <herdAnimal>false</herdAnimal>
+      <baseBodySize>1.8</baseBodySize>
+      <baseHungerRate>0.9</baseHungerRate>
+      <baseHealthScale>1.9</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef>Leather_Worm</leatherDef>
+      <wildness>0</wildness>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.5</manhunterOnDamageChance>
+      <trainability>Advanced</trainability>
+      <useMeatFrom></useMeatFrom>
+	  <nuzzleMtbHours>180</nuzzleMtbHours>
+	  <packAnimal>true</packAnimal>
+      <gestationPeriodDays>2</gestationPeriodDays>
+      <lifeExpectancy>3</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.35</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Shroomigiant2</soundWounded>
+          <soundDeath>Shroomigiant2</soundDeath>
+          <soundCall>Shroomigiant1</soundCall>
+          <soundAngry>Shroomigiant1</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <wildBiomes>
+    	<Tundra>0.01</Tundra>
+    	<BorealForest>0.01</BorealForest>
+    	<TemperateForest>0.05</TemperateForest>
+		<AridShrubland>0.1</AridShrubland>
+		<TropicalSwamp>0.1</TropicalSwamp>
+		<TemperateSwamp>0.1</TemperateSwamp>
+		<ColdBog>0.05</ColdBog>
+      </wildBiomes>
+    </race>
+    <tradeTags>
+      <li>FungiTrade_Shroomimal</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>Shroomigiant</defName>
+    <label>Shroomigiant</label>
+    <race>Shroomigiant</race>
+    <combatPower>95</combatPower>
+     <ecoSystemWeight>0.2</ecoSystemWeight>
+    <wildGroupSize>
+      <min>1</min>
+      <max>3</max>
+    </wildGroupSize>
+<alternateGraphicChance>0</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Shroomigiant/Shroomigiant2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Shroomigiant/Shroomigiant3</texPath></li>
+
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Shroomigiant</texPath>
+          <drawSize>1.8</drawSize>
+		   <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Dessicated_Shroomigiant</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Shroomigiant</texPath>
+          <drawSize>1.8</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Dessicated_Shroomigiant</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Shroomigiant</texPath>
+          <drawSize>3.5</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Shroomigiant/Dessicated_Shroomigiant</texPath>
+          <drawSize>3.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

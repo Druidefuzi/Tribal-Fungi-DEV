@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="CavePlantBase">
+    <defName>SHROOMANINFESTED_PLANT_DEF</defName>
+    <label>Infested Shrooman</label>
+    <description>Shroomworms grow inside of living shroomans.The Agony is unimaginable.</description>
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <Nutrition>0.3</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>InfestedShroomanPlant/Plant</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>20</pathCost>
+
+
+
+    <ingestible />
+    <plant>
+             <sowResearchPrerequisites>
+	 	<li>Sporeforging</li>
+             </sowResearchPrerequisites>
+			<growDays>5</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<harvestTag>Standard</harvestTag>
+      <harvestedThingDef>RAW_SHROOMANSINFESTED_RESOURCE_DEF</harvestedThingDef>
+			<harvestYield>10</harvestYield>
+			<sowMinSkill>1</sowMinSkill>
+      <sowTags>
+				<li>Ground</li>
+                                <li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+      <immatureGraphicPath>InfestedShroomanPlant/Immature</immatureGraphicPath>
+      <visualSizeRange>0.35~1.36</visualSizeRange>
+     	<wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+    </plant>
+  </ThingDef>
+</Defs>

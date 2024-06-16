@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiGreenSpew</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuff</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiGreenSpewBig</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffGreenBig</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiRedSpewBig</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffRedBig</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>DruidFungiRitual</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffRedBig</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiYellowSpew</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffYellow</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiYellowSpewBig</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffYellowBig</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiPurpleSpew</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffPurple</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiPurpleSpewBig</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuffPurpleBig</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+	<FleckDef ParentName="FleckBase_Thrown">
+		<defName>FungiRitual</defName>
+		<graphicData>
+			<texPath>Things/Mote/FungiSporePuff</texPath>
+			<renderInstanced>true</renderInstanced>
+		</graphicData>
+		<altitudeLayer>MoteOverhead</altitudeLayer>
+		<fadeInTime>0.1</fadeInTime>
+		<solidTime>1.25</solidTime>
+		<fadeOutTime>1</fadeOutTime>
+		<growthRate>1.2</growthRate>
+	</FleckDef>
+</Defs>

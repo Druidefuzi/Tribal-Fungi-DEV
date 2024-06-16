@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>InfestedWorm</defName>
+    <label>Shroomworm</label>
+    <description>Once parasitic and very dangerous, the Fungi managed to tame this disgusting worms and make them only infest shroomans(most of the time). Now they use them to create specialized worms for multiple tasks in the human body of their victims.Sometimes very big worms hatch out of the shroomans, the Fungi use them as guards.</description>
+    <statBases>
+    <ToxicResistance>0</ToxicResistance>
+      <MoveSpeed>4</MoveSpeed>
+      <ComfyTemperatureMin>5</ComfyTemperatureMin>
+<ComfyTemperatureMax>30</ComfyTemperatureMax>
+      <MarketValue>1</MarketValue>
+    </statBases>
+    <tools>
+            <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>0.3</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>1.0</chanceFactor>
+      </li>
+    </tools>
+    <comps>
+    </comps>
+    <race>
+      <body>MushroomWorm</body>
+      <herdAnimal>false</herdAnimal>
+<deathActionWorkerClass>DeathActionWorker_FungiDestroyselfdeath</deathActionWorkerClass>
+      <baseBodySize>0.9</baseBodySize>
+      <baseHungerRate>4</baseHungerRate>
+      <baseHealthScale>0.1</baseHealthScale>
+      <foodType>CarnivoreAnimal</foodType>
+      <leatherDef></leatherDef>
+      <wildness>0</wildness>
+      <trainability>Advanced</trainability>
+      <useMeatFrom>Megaspider</useMeatFrom>
+	  <nuzzleMtbHours>12</nuzzleMtbHours>
+	  <packAnimal>false</packAnimal>
+      <gestationPeriodDays>1</gestationPeriodDays>
+      <lifeExpectancy>3</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.35</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>MushWorm1</soundWounded>
+          <soundDeath>MushWorm2</soundDeath>
+          <soundCall>MushWorm2</soundCall>
+          <soundAngry>MushWorm1</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+      <wildBiomes>
+    	<Tundra>0.01</Tundra>
+    	<BorealForest>0.01</BorealForest>
+    	<TemperateForest>0.05</TemperateForest>
+		<AridShrubland>0.1</AridShrubland>
+		<TropicalSwamp>0.1</TropicalSwamp>
+		<TemperateSwamp>0.1</TemperateSwamp>
+		<ColdBog>0.05</ColdBog>
+      </wildBiomes>
+    </race>
+    <tradeTags>
+      <li>FungiTrade_Wormigiant</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>MushroomWorm</defName>
+    <label>Mushroom Worm</label>
+    <race>InfestedWorm</race>
+    <combatPower>2</combatPower>
+     <ecoSystemWeight>0.2</ecoSystemWeight>
+<alternateGraphicChance>0</alternateGraphicChance>
+    <alternateGraphics>
+<li><texPath>Things/Pawn/Animal/Worm/Worm2</texPath></li>
+<li><texPath>Things/Pawn/Animal/Worm/Worm3</texPath></li>
+
+    </alternateGraphics>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Worm</texPath>
+          <drawSize>1.3</drawSize>
+		   <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Dessicated_Worm</texPath>
+          <drawSize>1.3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Worm</texPath>
+          <drawSize>1.7</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.4, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Dessicated_Worm</texPath>
+          <drawSize>1.7</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Worm</texPath>
+          <drawSize>2.4</drawSize>
+          <shadowData>
+            <volume>(0.5, 0.5, 0.5)</volume>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Worm/Dessicated_Worm</texPath>
+          <drawSize>2.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+</Defs>

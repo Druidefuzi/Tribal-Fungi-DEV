@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>FungiGrowEgg</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.75</drawSize>
+
+
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<statBases>
+			<MarketValue>7.0</MarketValue>
+		</statBases>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+
+					<li>MushroomWorm</li>
+
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+				<spawnsThings>true</spawnsThings>
+				<thingToSpawn>FungiGiantWormTwo</thingToSpawn>
+				<amountOfThings>1</amountOfThings>
+
+
+				<destroyPawn>true</destroyPawn>
+			</li>
+		</comps>
+
+	</ThingDef>
+	<ThingDef ParentName="EggFertBase">
+		<defName>FungiGiantWormTwo</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.25</drawSize>
+
+
+		</graphicData>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+					<li>MushroomWorm</li>
+
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+				<spawnsThings>true</spawnsThings>
+				<thingToSpawn>FungiGiantWormThree</thingToSpawn>
+				<amountOfThings>1</amountOfThings>
+
+
+				<destroyPawn>true</destroyPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>FungiGiantWormThree</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>1.5</drawSize>
+
+
+		</graphicData>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+					<li>MushroomWorm</li>
+
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+				<spawnsThings>true</spawnsThings>
+				<thingToSpawn>FungiGiantWormFour</thingToSpawn>
+				<amountOfThings>1</amountOfThings>
+
+
+				<destroyPawn>true</destroyPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>FungiGiantWormFour</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2</drawSize>
+
+
+		</graphicData>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+					<li>MushroomWorm</li>
+
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+				<spawnsThings>true</spawnsThings>
+				<thingToSpawn>FungiGiantWormFive</thingToSpawn>
+				<amountOfThings>1</amountOfThings>
+
+
+				<destroyPawn>true</destroyPawn>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="EggFertBase">
+		<defName>FungiGiantWormFive</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.4</drawSize>
+
+
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+
+					<li>DruidWorg</li>
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+
+				<scanForFaction>true</scanForFaction>
+				<factionString>Alien_Fungi</factionString>
+
+				<spawnsFilth>true</spawnsFilth>
+				<filthDef>Filth_Slime</filthDef>
+				<amountOfFilth>5</amountOfFilth>
+
+				<berzerkAfterHatch>true</berzerkAfterHatch>
+				<changeAge>true</changeAge>
+				<ageInYears>2</ageInYears>
+		
+
+
+
+				<doExplosion>true</doExplosion>
+				<explosionRadius>2</explosionRadius>
+				<getsKilledInExplosion>false</getsKilledInExplosion>
+				<filthOrBloodToSpawn>Filth_DruidWorm</filthOrBloodToSpawn>
+				<explosionDamageDef>WorgCapsule</explosionDamageDef>
+				<armorPenetrationExplosion>10</armorPenetrationExplosion>
+				<damageAmountExplosion>5</damageAmountExplosion>
+
+				<destroyPawn>false</destroyPawn>
+			</li>
+		</comps>
+
+	</ThingDef>
+	
+		<ThingDef ParentName="EggFertBase">
+		<defName>WormSporeEgg</defName>
+		<label>Worm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>0.5</drawSize>
+
+
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+
+					<li>DruidWorg</li>
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+
+
+				<changeFaction>true</changeFaction>
+				<factionForPawn>AncientsHostile</factionForPawn>
+
+				<spawnsFilth>true</spawnsFilth>
+				<filthDef>Filth_Slime</filthDef>
+				<amountOfFilth>1</amountOfFilth>
+
+				<berzerkAfterHatch>true</berzerkAfterHatch>
+				<changeAge>false</changeAge>
+				<ageInYears>0</ageInYears>
+		
+
+
+
+				<doExplosion>true</doExplosion>
+				<explosionRadius>1</explosionRadius>
+				<getsKilledInExplosion>false</getsKilledInExplosion>
+				<filthOrBloodToSpawn>Filth_DruidWorm</filthOrBloodToSpawn>
+				<explosionDamageDef>WorgCapsule</explosionDamageDef>
+				<armorPenetrationExplosion>0</armorPenetrationExplosion>
+				<damageAmountExplosion>0</damageAmountExplosion>
+
+				<destroyPawn>false</destroyPawn>
+			</li>
+		</comps>
+
+	</ThingDef>
+<!--
+	<ThingDef ParentName="EggFertBase">
+		<defName>TestEgg</defName>
+		<label>gWorm egg</label>
+		<description>Which kind of worm will hatch out of this one?</description>
+
+		<graphicData>
+			<texPath>Things/Eggs/WormEgg/FungiWormEgg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>2.4</drawSize>
+
+
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<comps>
+			<li Class="Fungi.CompProperties_customHatcher">
+
+				<thingsToHatch>
+
+					<li>PlayerFungi</li>
+
+				</thingsToHatch>
+				<hatcherDaystoHatch>0.0005</hatcherDaystoHatch>
+				
+				<child>Fungi24</child>
+				<adult>Fungi25</adult>
+				
+				<mutantType>Ghoul</mutantType>
+
+
+				<changeFaction>true</changeFaction>
+				<factionForPawn>AncientsHostile</factionForPawn>
+
+				<spawnsFilth>true</spawnsFilth>
+				<filthDef>Filth_Slime</filthDef>
+				<amountOfFilth>5</amountOfFilth>
+
+				<berzerkAfterHatch>true</berzerkAfterHatch>
+				<changeAge>true</changeAge>
+				<ageInYears>8</ageInYears>
+
+
+
+
+				<doExplosion>true</doExplosion>
+				<explosionRadius>2</explosionRadius>
+				<getsKilledInExplosion>false</getsKilledInExplosion>
+				<filthOrBloodToSpawn>Filth_DruidWorm</filthOrBloodToSpawn>
+				<explosionDamageDef>WorgCapsule</explosionDamageDef>
+				<armorPenetrationExplosion>10</armorPenetrationExplosion>
+				<damageAmountExplosion>5</damageAmountExplosion>
+
+				<destroyPawn>false</destroyPawn>
+			</li>
+		</comps>
+
+	</ThingDef>
+	-->
+
+
+</Defs>
