@@ -227,7 +227,7 @@
 
 	<ThingDef ParentName="PlantBase">
 		<defName>DruidFungiPlant_Haygrass</defName>
-		<label>haygrass</label>
+		<label>haymold</label>
 		<description>A mixture of nutrient-rich grasses which yield large amounts of hay. Hay is edible for animals, but not humans.</description>
 		<statBases>
 			<MaxHitPoints>85</MaxHitPoints>
