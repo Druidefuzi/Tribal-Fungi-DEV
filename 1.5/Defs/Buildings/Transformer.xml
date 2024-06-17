@@ -193,10 +193,30 @@
 					<li>DruidWorg</li>
 				</pawnsToSpawn>
 				<changePlants>true</changePlants>
-				<treeDef>FungiShroomTree</treeDef>
-				<grassDef>FungiPlant_DotGrass</grassDef>
-				<largeGrassDef>FungiPlant_TallGrass</largeGrassDef>
-				<bushDef>DruidFungiPuffBall</bushDef>
+				<easyPlantLabels>
+					<li>Haygrass</li>
+					<li>tall grass</li>
+					<li>grass</li>
+					<li>tree</li>
+					<li>bush</li>
+					<li>dandelion</li>
+					<li>bramble</li>
+				
+					
+					
+				</easyPlantLabels>
+				<easyPlants>
+					<li>DruidFungiPlant_Haygrass</li>
+					<li>FungiPlant_TallGrass</li>
+					<li>FungiPlant_DotGrass</li>
+					<li>FungiShroomTree</li>
+					<li>DruidFungiPuffBall</li>
+					<li>FungiPlant_Dandelion</li>
+					<li>FungiRedshrooms</li>
+					
+					
+				</easyPlants>
+			
 				
 			
 

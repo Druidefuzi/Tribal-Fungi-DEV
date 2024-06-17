@@ -223,6 +223,45 @@
 			<wildClusterWeight>35</wildClusterWeight>
 		</plant>
 	</ThingDef>
+
+
+	<ThingDef ParentName="PlantBase">
+		<defName>DruidFungiPlant_Haygrass</defName>
+		<label>haygrass</label>
+		<description>A mixture of nutrient-rich grasses which yield large amounts of hay. Hay is edible for animals, but not humans.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Flammability>1.3</Flammability>
+			<Nutrition>0.3</Nutrition>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/FungiHay</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>14</pathCost>
+		<ingestible />
+		<plant>
+			<immatureGraphicPath>Things/Plants/FungiHay</immatureGraphicPath>
+			<fertilitySensitivity>0.6</fertilitySensitivity>
+			<growDays>7</growDays>
+			<dieIfLeafless>true</dieIfLeafless>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>Hay</harvestedThingDef>
+			<harvestYield>18</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+			<visualSizeRange>0.5~0.8</visualSizeRange>
+			<wildOrder>1</wildOrder>
+			<purpose>Food</purpose>
+		</plant>
+	</ThingDef>
+	
+	
+	
 	<ThingDef ParentName="FungiTreeBaseBase">
 		<defName>FungiShroomTree</defName>
 		<label>Mushtree</label>
@@ -240,6 +279,7 @@
 		</statBases>
 		<plant>
 			<growDays>15</growDays>
+			<visualSizeRange>0.4~1.5</visualSizeRange>
 			<harvestedThingDef>RawFungus</harvestedThingDef>
 			<harvestWork>500</harvestWork>
 			<harvestYield>23</harvestYield>
