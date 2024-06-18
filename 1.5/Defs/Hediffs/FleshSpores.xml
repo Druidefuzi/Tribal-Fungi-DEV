@@ -1135,7 +1135,7 @@
     <hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.7, 1.0, 0.7)</defaultLabelColor>
     <isBad>true</isBad>
-    <initialSeverity>0.5</initialSeverity>
+    <initialSeverity>0.1</initialSeverity>
     <taleOnVisible>ToxicityRevealed</taleOnVisible>
     <comps>
       <li Class="HediffCompProperties_Discoverable">
