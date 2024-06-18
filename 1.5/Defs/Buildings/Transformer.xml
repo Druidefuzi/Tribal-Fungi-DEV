@@ -176,6 +176,8 @@
 				<terrainAtOnce>4</terrainAtOnce>
 				<zergTerrain>FungiDruidMycelium</zergTerrain>
 				<zergRevive>true</zergRevive>
+				<blackPlantDefs>
+					<li>HUMANOIDFUNGI_PLANT_DEF</li></blackPlantDefs>
 				<corpseToPawn>false</corpseToPawn>
 				<corpseToThingDef>true</corpseToThingDef>
 				<reviveTickInterval>120</reviveTickInterval>
@@ -376,6 +378,9 @@
 			<li Class="Fungi.CompProperties_Extractor">
 				<corpseToThingDef>true</corpseToThingDef>
 				<zergTerrain>FungiDruidMycelium</zergTerrain>
+				<blackPlantDefs>
+					<li>HUMANOIDFUNGI_PLANT_DEF</li>
+				</blackPlantDefs>
 				<needCreep>true</needCreep>				
 				<maxRadius>25</maxRadius>
 				<zergRevive>true</zergRevive>
