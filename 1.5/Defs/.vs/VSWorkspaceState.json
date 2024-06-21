@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Research",
     "\\Scenarios",
     "\\SoundDefs",
     "\\Terrain",
     "\\TerrainDefs",
     "\\ThingDefs",
     "\\ThingDefs_Plants",
+    "\\ThingDefs_Races",
     "\\ThingsDefs_Misc",
     "\\Work"
   ],
+  "SelectedNode": "\\ThingDefs_Races\\shroad.xml",
   "PreviewInSolutionExplorer": false
 }
